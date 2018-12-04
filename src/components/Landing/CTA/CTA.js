@@ -2,21 +2,21 @@ import React, {Component} from 'react';
 import Lottie from 'react-lottie';
 import { isMobile } from 'react-device-detect';
 
-import network from 'assets/cta/network.svg';
-import sparkles from 'assets/cta/sparkles.svg';
-import collaborate from 'assets/cta/collaborate.svg';
-
 import networkData from 'assets/cta/network.json';
 import sparklesData from 'assets/cta/sparkles.json';
 import collaborateData from 'assets/cta/collaborate.json';
 
 class CTA extends Component {
-  state = {
-    concept: false,
-    collaborate: false,
-    create: false,
-    position: 9999999,
+  constructor(props) {
+    super(props)
+    this.state = {
+      concept: false,
+      collaborate: false,
+      create: false,
+      position: 9999999,
+    }
   }
+
   componentDidMount() {
     document.onscroll = () => {
       if (window.scrollY >= this.state.position) {
@@ -32,13 +32,13 @@ class CTA extends Component {
     }
     this.setState({position: document.querySelector('.cta__title').offsetTop - 600})
   }
-  render() {  
+  render() {
     return (
       <div className="cta-container">
         <div className="cta">
           <Lottie options={{
                 loop: false,
-                autoplay: true, 
+                autoplay: true,
                 animationData: networkData,
                 rendererSettings: {
                   preserveAspectRatio: 'xMidYMid slice'
@@ -54,7 +54,7 @@ class CTA extends Component {
         <div className="cta">
         <Lottie options={{
                 loop: false,
-                autoplay: true, 
+                autoplay: true,
                 animationData: collaborateData,
                 rendererSettings: {
                   preserveAspectRatio: 'xMidYMid slice'
@@ -70,7 +70,7 @@ class CTA extends Component {
         <div className="cta">
         <Lottie options={{
                 loop: false,
-                autoplay: true, 
+                autoplay: true,
                 animationData: sparklesData,
                 rendererSettings: {
                   preserveAspectRatio: 'xMidYMid slice'
