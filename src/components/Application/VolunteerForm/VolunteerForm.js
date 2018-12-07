@@ -77,7 +77,7 @@ class VolunteerForm extends Component {
           <div className="form-container">
             <h2 className="form-container__title">Volunteer Application</h2>
             <p className="form-container__text text-center">
-              <span>Note: Only UCSC Students can Volunteer at CruzHacks!</span>
+              <span>Note: Only UCSC Students can Volunteer at CruzHacks; volunteers are also welcome to come to the event as hackers!</span>
             </p>
             <form className="form" onSubmit={this.handleSubmit}>
               <div className="form__group">
