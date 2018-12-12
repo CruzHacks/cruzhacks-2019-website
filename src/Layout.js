@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createGlobalStyle } from 'styled-components';
 import HttpsRedirect from 'react-https-redirect';
+import OgImage from 'assets/ogimage.png';
+import Favicon from 'assets/favicon.png';
 
 import Landing from 'components/Landing';
 import Application from 'components/Application';
@@ -21,7 +23,7 @@ class Layout extends Component {
   render() {
     return (
       <HttpsRedirect>
-        <GlobalStyle />
+      <GlobalStyle />
         <div className="layout">
           <Router>
             <Switch>
