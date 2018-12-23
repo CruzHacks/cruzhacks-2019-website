@@ -15,6 +15,12 @@ import UCSCArtsKilo from 'assets/sponsors/UCSC Arts Division - KILO/artsdivision
 import SCTBPartner from 'assets/sponsors/Santa Cruz Tech Beat - PARTNER/SCTB-logo.png'
 import StickerMulePartner from 'assets/sponsors/Sticker Mule - PARTNER/sticker-mule-logo-light-bg.svg'
 import YerbaMatePartner from 'assets/sponsors/Yerba Mate - PARTNER/Guayaki-Partner-Logo-Web.png'
+import CrowdForgePartner from 'assets/sponsors/CrowdForge - PARTNER/crowdforgelogox2.png'
+import EMSSlugsPartner from 'assets/sponsors/EMS Slugs - PARTNER/logo.png'
+import CITRISGiga from 'assets/sponsors/CITRIS - GIGA/citris_vertical.png'
+import CPSRCPartner from 'assets/sponsors/CPSRC - PARTNER/CPSRCLogo_v2-CircularLogo-600dpi.png'
+import OmniscienceCenti from 'assets/sponsors/Omniscience - CENTI/Omniscience Invert Vertical w-Website.ai'
+import HederaKilo from 'assets/sponsors/Hedera - KILO/Hedera-alternate-logo2.png'
 
 class Sponsors extends Component {
   render() {
@@ -97,6 +103,19 @@ class Sponsors extends Component {
         <div className="sponsors__partner">
           <a href="https://guayaki.com/" target="_blank" rel="noopener noreferrer">
           <img src={YerbaMatePartner}  alt="Yerba Mate" width="225px" height="110px"/>
+          </a>
+        </div>
+        <div className="sponsors__partner">
+          <a href="https://crowdforge.io/" target="_blank" rel="noopener noreferrer">
+          <img src={CrowdForgePartner}  alt="CrowdForge" width="225px" height="110px"/>
+          </a>
+        </div>
+        <div className="sponsors__partner">
+          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
+        </div>
+        <div className="sponsors__partner">
+          <a href="https://cps.soe.ucsc.edu/" target="_blank" rel="noopener noreferrer">
+          <img src={CPSRCPartner}  alt="CPSRC" width="225px" height="110px"/>
           </a>
         </div>
       </div>
