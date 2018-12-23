@@ -310,6 +310,15 @@ body, html {
   to {
     transform: translateY(3px); } }
 
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 25rem);
+  color: white;
+  font-size: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem; }
+
 .mission {
   padding: 16rem 32rem 3rem;
   display: flex;
