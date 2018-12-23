@@ -15,9 +15,9 @@ class Hero extends Component {
   }
 
   componentDidMount() {
-    this.animateCount(0, 500, "hackers");
-    this.animateCount(0, 100, "projects");
     this.animateCount(0, 36, "hours");
+    this.animateCount(0, 100, "projects");
+    this.animateCount(0, 500, "hackers");
   }
 
   getEmail = (event) => {
@@ -48,10 +48,11 @@ class Hero extends Component {
     let el = document.getElementById(id)
     let begin = start
 
-    let step = 3500 / Math.abs(end - start);
+    let step = 3000 / Math.abs(end - start);
     
     function run() {
-      el.innerHTML = ++begin + " " + id
+      begin++
+      el.innerHTML = `${begin} ${id}`
       if (begin == end) {
         clearInterval(timer)
       }
