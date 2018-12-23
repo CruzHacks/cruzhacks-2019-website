@@ -14,6 +14,12 @@ class Hero extends Component {
     }
   }
 
+  componentDidMount() {
+    this.animateCount(0, 36, "hours");
+    this.animateCount(0, 100, "projects");
+    this.animateCount(0, 500, "hackers");
+  }
+
   getEmail = (event) => {
     this.setState({email: event.target.value})
   }
@@ -38,6 +44,23 @@ class Hero extends Component {
     })
   }
 
+  animateCount(start, end, id) {
+    let el = document.getElementById(id)
+    let begin = start
+
+    let step = 3000 / Math.abs(end - start);
+    
+    function run() {
+      begin++
+      el.innerHTML = `${begin} ${id}`
+      if (begin == end) {
+        clearInterval(timer)
+      }
+    }    
+    let timer = setInterval(run, step);
+    run()
+  }
+
   render() {
     return (
       <div className="hero">
@@ -49,6 +72,11 @@ class Hero extends Component {
           <NavLink to="/apply" className="hero__button__cta hero__button">Apply!</NavLink>
           <a href="/Sponsorship_Packet_E.pdf" className="hero__button" target="_blank" rel="noopener noreferrer">Sponsoring?</a>
           <span className="hero__text__alt deadline">Deadline to Apply: December 20th</span>
+        </div>
+        <div className="hero__stats">
+          <span id="hackers" className="hero__stats__item">500+ hackers</span>
+          <span id="projects" className="hero__stats__item">100+ projects</span>
+          <span id="hours" className="hero__stats__item">36 Hours</span>
         </div>
         <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span>
         <img src={hero} alt="" className="hero__bg"/>
