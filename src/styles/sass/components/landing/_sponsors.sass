@@ -1,12 +1,12 @@
 .sponsors
     &__container
-        padding: 10rem 15rem 10rem 15rem
+        padding: 1rem 15rem 2rem 15rem
         text-align: center
         @include respond(tab-land)
             padding: 2rem
             margin-bottom: 0
         @include respond(phone)
-            margin-bottom: 0
+            margin-top: 0
     &__title
         font-size: 4rem
         text-transform: uppercase
@@ -14,6 +14,7 @@
         margin-bottom: 5rem
     &__logos
             &.gigas
+                padding: 2rem 15% 0rem 15%
                 display: flex
                 flex-wrap: wrap
                 justify-items: center
@@ -21,12 +22,12 @@
                 @include respond(tab-land)
                     padding-bottom: 0rem
                 @include respond(phone)
-                        padding: 2rem 2% 2rem 2%
+                        position: sticky
                         padding-top: 0
                         transform: scale(.85)
 
             &.kilos
-                padding: 2rem 15% 2rem 15%
+                padding: 0rem 15% 2rem 15%
                 padding-bottom: 0rem
                 display: flex
                 flex-wrap: wrap
@@ -40,7 +41,7 @@
                         padding: 6rem 14% 1rem 14%
                         
             &.centis
-                padding: 2rem 2% 2rem 2%
+                padding: 0rem 2% 2rem 2%
                 display: flex
                 flex-wrap: wrap
                 justify-items: center
@@ -53,7 +54,7 @@
                         padding-bottom: 7.5rem
 
             &.partners
-                padding: 2rem 20% 2rem 20%
+                padding: 2rem 20% 0rem 20%
                 padding-bottom: 0rem
                 display: flex
                 flex-wrap: wrap
@@ -67,10 +68,12 @@
                         padding: 6rem 14% 1rem 14%    
                         padding-bottom: 0rem
     &__giga
+        position: relative
+        cursor: pointer
         background-color: $color-bg-alt
         min-height: 21rem
         margin: 2rem 1rem
-        padding: 4rem 3rem 2rem
+        padding: 4rem 2rem 2rem
         border-radius: 20px
         display: flex
         flex-direction: column
@@ -85,6 +88,7 @@
             transform: scale(.75)
         
     &__kilo
+        cursor: pointer
         background-color: $color-bg-alt
         max-height: 19rem
         margin: 1rem 1rem
@@ -100,6 +104,7 @@
             background-color: lighten($color-bg, 5%)
 
     &__centi
+        cursor: pointer
         background-color: $color-bg-alt
         max-height: 9.5rem
         margin: 1rem 1rem
@@ -115,6 +120,7 @@
             background-color: lighten($color-bg, 5%)
 
     &__partner
+        cursor: pointer
         background-color: $color-bg-alt
         max-height: 19rem
         margin: 1rem 1rem

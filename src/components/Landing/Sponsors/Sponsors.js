@@ -17,107 +17,127 @@ import StickerMulePartner from 'assets/sponsors/Sticker Mule - PARTNER/sticker-m
 import YerbaMatePartner from 'assets/sponsors/Yerba Mate - PARTNER/Guayaki-Partner-Logo-Web.png'
 import CrowdForgePartner from 'assets/sponsors/CrowdForge - PARTNER/crowdforgelogox2.png'
 import EMSSlugsPartner from 'assets/sponsors/EMS Slugs - PARTNER/logo.png'
-import CITRISGiga from 'assets/sponsors/CITRIS - GIGA/citris_vertical.png'
+import CITRISGiga from 'assets/sponsors/CITRIS - GIGA/logo.png'
 import CPSRCPartner from 'assets/sponsors/CPSRC - PARTNER/CPSRCLogo_v2-CircularLogo-600dpi.png'
-import OmniscienceCenti from 'assets/sponsors/Omniscience - CENTI/Omniscience Invert Vertical w-Website.ai'
+import OmniscienceCenti from 'assets/sponsors/Omniscience - CENTI/Omniscience Invert Vertical w-Website.jpg'
 import HederaKilo from 'assets/sponsors/Hedera - KILO/Hedera-alternate-logo2.png'
-
+import JumpstartPartner from 'assets/sponsors/Jumpstart - PARTNER/jumpstart logo.png'
 class Sponsors extends Component {
   render() {
     return (
      <div className="sponsors__container"> 
       <h2 className="sponsors__title">Thank You to Our Wonderful Sponsors</h2>
       <div className="sponsors__logos gigas">
+        <a href="https://graddiv.ucsc.edu" target = "_blank">
         <div className="sponsors__giga">
-          <a href="https://graddiv.ucsc.edu" target = "_blank">
           <img src={UCSCGradDivGiga} alt="UCSC Graduate Division" height="200px" width="500px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://aws.amazon.com/education/awseducate/" target = "_blank">
         <div className="sponsors__giga">
-          <a href="https://aws.amazon.com/education/awseducate/" target = "_blank">
-          <img src={AmazonGiga} alt="Amazon" height="200px" width="500px"/>
-          </a>
+            <img src={AmazonGiga} alt="Amazon" height="200px" width="500px"/>
         </div>
+        </a>
+        <a href="https://citris-uc.org/campus/uc-santa-cruz/" target = "_blank">
+        <div className="sponsors__giga">
+          <img src={CITRISGiga} alt="CITRIS" height="200px" width="500px"/>
+        </div>
+        </a>
       </div>          
       <div className="sponsors__logos kilos">
+        <a href="https://www.bsoe.ucsc.edu" target = "_blank">
         <div className="sponsors__kilo">
-          <a href="https://www.bsoe.ucsc.edu" target = "_blank">
           <img src={BSOEKilo} alt="Baskin School of Engineering" height="100px" width="225px"/>
-          </a>
         </div>
+        </a>
+        <a href="http://arts.ucsc.edu" target = "_blank">
         <div className="sponsors__kilo">
-          <a href="http://arts.ucsc.edu" target = "_blank">
           <img src={UCSCArtsKilo} alt="UCSC Arts" height="100px" width="225px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://looker.com/" target = "_blank">
         <div className="sponsors__kilo">
-          <a href="https://looker.com/" target = "_blank">
           <img src={LookerKilo} alt="Looker" height="100px" width="225px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://www.productops.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__kilo">
-          <a href="https://www.productops.com/" target="_blank" rel="noopener noreferrer">
           <img src={ProductOpsKilo}  alt="ProductOps" height="100px" width="225px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://www.plantronics.com" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__kilo">
-          <a href="https://www.plantronics.com" target="_blank" rel="noopener noreferrer">
           <img src={PlantronicsKilo}  alt="Plantronics" height="100px" width="225px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://www.santacruzworks.org/members/south-swell-ventures" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__kilo">
-          <a href="https://www.santacruzworks.org/members/south-swell-ventures" target="_blank" rel="noopener noreferrer">
           <img src={SouthSwellKilo}  alt="South Swell Ventures" height="100px" width="225px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://hedera.com" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__kilo">
+          <img src={HederaKilo}  alt="Hedera" height="100px" width="225px"/>
+        </div>
+        </a>
       </div>
       <div className="sponsors__logos centis">
+        <a href="https://choosesantacruz.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__centi">
-          <a href="https://choosesantacruz.com/" target="_blank" rel="noopener noreferrer">
-          <img src={ChooseSCCenti}  alt="Choose Santa Cruz" height="100px"/>
-          </a>
+          <img src={ChooseSCCenti}  alt="Choose Santa Cruz" height="80px" width="80px"/>
         </div>
+        </a>
+        <a href="https://www.omni.sc/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__centi">
+          <img src={OmniscienceCenti}  alt="Omniscience" height="80px" width="80px"/>
+        </div>
+        </a>
       </div>
       <h2 className="sponsors__title">and Our Great Partners</h2>
       <div className="sponsors__logos partners">
+        <a href="https://mlh.io/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="https://mlh.io/" target="_blank" rel="noopener noreferrer">
           <img src={MLHPartner}  alt="Major League Hacking" width="225px" height="110px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://challengerocket.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="https://challengerocket.com/" target="_blank" rel="noopener noreferrer">
-          <img src={ChallengeRocketPartner}  alt="Challenge Rocket" width="225px" height="110px"/>
-          </a>
+          <img src={ChallengeRocketPartner}  alt="Challenge Rocket" width="225px" height="110px"/>  
         </div>
+        </a>
+        <a href="http://santacruztechbeat.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="http://santacruztechbeat.com/" target="_blank" rel="noopener noreferrer">
-          <img src={SCTBPartner}  alt="Santa Cruz Tech Beat" width="225px" height="110px"/>
-          </a>
+          <img src={SCTBPartner}  alt="Santa Cruz Tech Beat" width="225px" height="110px"/>  
         </div>
+        </a>
+        <a href="https://hackp.ac/mlh-stickermule-hackathons" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="https://hackp.ac/mlh-stickermule-hackathons" target="_blank" rel="noopener noreferrer">
           <img src={StickerMulePartner}  alt="Sticker Mule" width="225px" height="110px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://guayaki.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="https://guayaki.com/" target="_blank" rel="noopener noreferrer">
           <img src={YerbaMatePartner}  alt="Yerba Mate" width="225px" height="110px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://crowdforge.io/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="https://crowdforge.io/" target="_blank" rel="noopener noreferrer">
           <img src={CrowdForgePartner}  alt="CrowdForge" width="225px" height="110px"/>
-          </a>
         </div>
+        </a>
         <div className="sponsors__partner">
           <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
         </div>
+        <a href="https://cps.soe.ucsc.edu/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
-          <a href="https://cps.soe.ucsc.edu/" target="_blank" rel="noopener noreferrer">
           <img src={CPSRCPartner}  alt="CPSRC" width="225px" height="110px"/>
-          </a>
         </div>
+        </a>
+        <a href="https://jumpstart.me/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={JumpstartPartner}  alt="Jumpstart" width="225px" height="110px"/>
+        </div>
+        </a>
       </div>
     </div>
     );
