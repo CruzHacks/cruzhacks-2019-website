@@ -57,7 +57,6 @@ class Hero extends Component {
         clearInterval(timer)
         if (id === "hackers" || id === "projects") {
           var plus = String(begin) + "+";
-          console.log(plus)
           el.innerHTML = `${plus} ${id}`
         }
       }
