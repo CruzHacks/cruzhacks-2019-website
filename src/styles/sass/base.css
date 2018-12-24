@@ -311,13 +311,17 @@ body, html {
     transform: translateY(3px); } }
 
 .hero__stats {
-  display: grid;
-  grid-template-columns: repeat(3, 25rem);
+  display: flex;
+  padding: 2rem 10rem 2rem 10rem;
   color: white;
   font-size: 4rem;
   justify-content: center;
-  align-items: center;
-  margin: 1rem; }
+  align-items: center; }
+
+#hackers, #projects, #hours {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding: 0rem 0rem 10rem 0rem; }
 
 .mission {
   padding: 16rem 32rem 3rem;
@@ -464,7 +468,7 @@ body, html {
       color: rgba(252, 249, 255, 0.7); }
 
 .sponsors__container {
-  padding: 1rem 15rem 2rem 15rem;
+  padding: 0rem 15rem 2rem 15rem;
   text-align: center; }
   @media (max-width: 75em) {
     .sponsors__container {
@@ -478,6 +482,7 @@ body, html {
   font-size: 4rem;
   text-transform: uppercase;
   color: white;
+  margin-top: 2rem;
   margin-bottom: 5rem; }
 
 .sponsors__logos.gigas {
@@ -491,9 +496,8 @@ body, html {
       padding-bottom: 0rem; } }
   @media (max-width: 37.5em) {
     .sponsors__logos.gigas {
-      position: sticky;
-      padding-top: 0;
-      transform: scale(0.85); } }
+      padding: 0rem 5% 0rem 5%;
+      margin-top: -5rem; } }
 
 .sponsors__logos.kilos {
   padding: 0rem 15% 2rem 15%;
@@ -512,23 +516,21 @@ body, html {
       padding: 6rem 14% 1rem 14%; } }
 
 .sponsors__logos.centis {
-  padding: 0rem 2% 2rem 2%;
+  padding: 0rem 2% 6rem 2%;
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
-  justify-content: center;
-  padding-bottom: 5rem; }
+  justify-content: center; }
   @media (max-width: 75em) {
     .sponsors__logos.centis {
       padding-bottom: 7.5rem; } }
   @media (max-width: 37.5em) {
     .sponsors__logos.centis {
       max-height: 19rem;
-      padding-bottom: 7.5rem; } }
+      margin-bottom: -4rem; } }
 
 .sponsors__logos.partners {
-  padding: 2rem 20% 0rem 20%;
-  padding-bottom: 0rem;
+  padding: 0rem 20% 0rem 20%;
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
@@ -541,28 +543,27 @@ body, html {
   @media (max-width: 37.5em) {
     .sponsors__logos.partners {
       padding: 6rem 14% 1rem 14%;
-      padding-bottom: 0rem; } }
+      margin-top: -6.25rem; } }
 
 .sponsors__giga {
-  position: relative;
   cursor: pointer;
   background-color: #312D38;
-  min-height: 21rem;
-  margin: 2rem 1rem;
-  padding: 4rem 2rem 2rem;
+  max-height: 21rem;
+  margin: 1rem 1rem;
+  padding: 3rem 2rem 2rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 0 0 20%;
   transition: all .2s; }
   .sponsors__giga:hover {
     background-color: #282430; }
   @media (max-width: 37.5em) {
     .sponsors__giga {
-      transform: scale(0.75); } }
+      transform: scale(0.625);
+      margin-bottom: -8.5rem; } }
 
 .sponsors__kilo {
   cursor: pointer;

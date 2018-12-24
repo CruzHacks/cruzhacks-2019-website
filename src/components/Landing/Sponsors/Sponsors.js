@@ -133,7 +133,7 @@ class Sponsors extends Component {
           <img src={CPSRCPartner}  alt="CPSRC" width="225px" height="110px"/>
         </div>
         </a>
-        <a href="https://jumpstart.me/" target="_blank" rel="noopener noreferrer">
+        <a href="https://jumpstart.me/r/Cruzhacks" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={JumpstartPartner}  alt="Jumpstart" width="225px" height="110px"/>
         </div>

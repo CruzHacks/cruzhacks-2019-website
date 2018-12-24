@@ -1,6 +1,6 @@
 .sponsors
     &__container
-        padding: 1rem 15rem 2rem 15rem
+        padding: 0rem 15rem 2rem 15rem
         text-align: center
         @include respond(tab-land)
             padding: 2rem
@@ -11,6 +11,7 @@
         font-size: 4rem
         text-transform: uppercase
         color: white
+        margin-top: 2rem
         margin-bottom: 5rem
     &__logos
             &.gigas
@@ -22,9 +23,8 @@
                 @include respond(tab-land)
                     padding-bottom: 0rem
                 @include respond(phone)
-                        position: sticky
-                        padding-top: 0
-                        transform: scale(.85)
+                    padding: 0rem 5% 0rem 5%
+                    margin-top: -5rem
 
             &.kilos
                 padding: 0rem 15% 2rem 15%
@@ -39,23 +39,22 @@
                     padding-bottom: 0rem
                 @include respond(phone)
                         padding: 6rem 14% 1rem 14%
+                
                         
             &.centis
-                padding: 0rem 2% 2rem 2%
+                padding: 0rem 2% 6rem 2%
                 display: flex
                 flex-wrap: wrap
                 justify-items: center
                 justify-content: center
-                padding-bottom: 5rem
                 @include respond(tab-land)
                     padding-bottom: 7.5rem
                 @include respond(phone)
                         max-height: 19rem
-                        padding-bottom: 7.5rem
+                        margin-bottom: -4rem
 
             &.partners
-                padding: 2rem 20% 0rem 20%
-                padding-bottom: 0rem
+                padding: 0rem 20% 0rem 20%
                 display: flex
                 flex-wrap: wrap
                 justify-items: center
@@ -65,27 +64,26 @@
                     padding: 2rem
                     padding-bottom: 0rem
                 @include respond(phone)
-                        padding: 6rem 14% 1rem 14%    
-                        padding-bottom: 0rem
+                        padding: 6rem 14% 1rem 14%
+                        margin-top: -6.25rem
     &__giga
-        position: relative
         cursor: pointer
         background-color: $color-bg-alt
-        min-height: 21rem
-        margin: 2rem 1rem
-        padding: 4rem 2rem 2rem
+        max-height: 21rem
+        margin: 1rem 1rem
+        padding: 3rem 2rem 2rem
         border-radius: 20px
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         text-align: center
-        flex: 0 0 20%
         transition: all .2s
         &:hover
             background-color: lighten($color-bg, 5%)
         @include respond(phone)
-            transform: scale(.75)
+            transform: scale(.625)
+            margin-bottom: -8.5rem
         
     &__kilo
         cursor: pointer
