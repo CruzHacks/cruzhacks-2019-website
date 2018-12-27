@@ -53,8 +53,12 @@ class Hero extends Component {
     function run() {
       begin++
       el.innerHTML = `${begin} ${id}`
-      if (begin == end) {
+      if (begin === end) {
         clearInterval(timer)
+        if (id === "hackers" || id === "projects") {
+          var plus = String(begin) + "+";
+          el.innerHTML = `${plus} ${id}`
+        }
       }
     }    
     let timer = setInterval(run, step);
