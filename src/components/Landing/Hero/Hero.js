@@ -49,7 +49,7 @@ class Hero extends Component {
     let begin = start
 
     let step = 3000 / Math.abs(end - start);
-    
+
     function run() {
       begin++
       el.innerHTML = `${begin} ${id}`
@@ -60,7 +60,7 @@ class Hero extends Component {
           el.innerHTML = `${plus} ${id}`
         }
       }
-    }    
+    }
     let timer = setInterval(run, step);
     run()
   }
@@ -75,7 +75,6 @@ class Hero extends Component {
         <div className="hero__button-container">
           <NavLink to="/apply" className="hero__button__cta hero__button">Apply!</NavLink>
           <a href="/Sponsorship_Packet_E.pdf" className="hero__button" target="_blank" rel="noopener noreferrer">Sponsoring?</a>
-          <span className="hero__text__alt deadline">Deadline to Apply: December 20th</span>
         </div>
         <div className="hero__stats">
           <span id="hackers" className="hero__stats__item">500+ hackers</span>
