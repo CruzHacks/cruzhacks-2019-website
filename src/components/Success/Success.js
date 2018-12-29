@@ -5,8 +5,8 @@ class Success extends Component {
   render() {
     return (
       <div className="success">
-        <p className="success__text">{this.props.text}</p>      
         <img className="success__img" src={success} alt="success"/>
+        <p className="success__text">{this.props.text}</p>      
       </div>
     );
   }

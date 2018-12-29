@@ -58,6 +58,9 @@ body, html {
 .error__text {
   color: #EF5C65; }
 
+.success__text {
+  color: #EEAD7C; }
+
 .error__img {
   height: 35rem; }
 
@@ -735,7 +738,8 @@ body, html {
         font-size: 1rem; } }
 
 .application {
-  text-align: center; }
+  text-align: center;
+  min-height: 100vh; }
   .application__logo {
     position: sticky;
     height: 16rem;
