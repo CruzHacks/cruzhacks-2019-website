@@ -11,7 +11,6 @@ class Hero extends Component {
     this.state = {
       email: '',
       subscribe: 'Subscribe',
-      apply: 'Judges, Mentors & Volunteers...'
     }
   }
 
@@ -65,15 +64,8 @@ class Hero extends Component {
     let timer = setInterval(run, step);
     run()
   }
-  onMouseover (e) {
-    this.setState({apply : 'some text'})
-  }
-  
-  onMouseout (e) {
-    this.setState({apply : ''})
-  }
+
   render() {
-    const apply = this.state;
     return (
       <div className="hero">
         <img className="hero__logo" src={logo} alt="logo"/>
