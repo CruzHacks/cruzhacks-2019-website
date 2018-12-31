@@ -489,6 +489,7 @@ body, html {
   padding: 2rem 15% 0rem 15%;
   display: flex;
   flex-wrap: wrap;
+  flex: 0 0 10%;
   justify-items: center;
   justify-content: center; }
   @media (max-width: 75em) {
@@ -500,6 +501,7 @@ body, html {
       margin-top: -5rem; } }
 
 .sponsors__logos.kilos {
+  margin-top: -2rem;
   padding: 0rem 15% 2rem 15%;
   padding-bottom: 0rem;
   display: flex;
@@ -546,9 +548,9 @@ body, html {
       margin-top: -6.25rem; } }
 
 .sponsors__giga {
-  cursor: pointer;
+  position: sticky;
   background-color: #312D38;
-  max-height: 21rem;
+  height: 21rem;
   margin: 1rem 1rem;
   padding: 3rem 2rem 2rem;
   border-radius: 20px;
@@ -566,8 +568,8 @@ body, html {
       margin-bottom: -8.5rem; } }
 
 .sponsors__kilo {
-  cursor: pointer;
   background-color: #312D38;
+  position: sticky;
   max-height: 19rem;
   margin: 1rem 1rem;
   padding: 3rem 2rem 2rem;
@@ -582,9 +584,9 @@ body, html {
     background-color: #282430; }
 
 .sponsors__centi {
-  cursor: pointer;
   background-color: #312D38;
-  max-height: 9.5rem;
+  position: sticky;
+  max-height: 8rem;
   margin: 1rem 1rem;
   padding: 3rem 2rem 2rem;
   border-radius: 20px;
@@ -598,8 +600,8 @@ body, html {
     background-color: #282430; }
 
 .sponsors__partner {
-  cursor: pointer;
   background-color: #312D38;
+  position: sticky;
   max-height: 19rem;
   margin: 1rem 1rem;
   padding: 3rem 2rem 2rem;

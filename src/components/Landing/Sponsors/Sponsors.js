@@ -22,6 +22,11 @@ import CPSRCPartner from 'assets/sponsors/CPSRC - PARTNER/CPSRCLogo_v2-CircularL
 import OmniscienceCenti from 'assets/sponsors/Omniscience - CENTI/Omniscience Invert Vertical w-Website.jpg'
 import HederaKilo from 'assets/sponsors/Hedera - KILO/Hedera-alternate-logo2.png'
 import JumpstartPartner from 'assets/sponsors/Jumpstart - PARTNER/jumpstart logo.png'
+import SellHoundPartner from 'assets/sponsors/SellHound - PARTNER/Final Logo.png'
+import SCNTPartner from 'assets/sponsors/SCNT - PARTNER/SCNT MeetUp logo lowRes.png'
+import GCPKilo from 'assets/sponsors/GCP - KILO/GCP logo, transparent.png'
+import MicrosoftKilo from 'assets/sponsors/Microsoft - KILO/logo.png'
+
 class Sponsors extends Component {
   render() {
     return (
@@ -80,6 +85,16 @@ class Sponsors extends Component {
           <img src={HederaKilo}  alt="Hedera" height="100px" width="225px"/>
         </div>
         </a>
+        <a href="https://cloud.google.com/edu/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={GCPKilo}  alt="Google Cloud Platform" height="100px" width="225px"/>
+        </div>
+        </a>
+        <a href="https://www.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={MicrosoftKilo}  alt="Microsoft" height="100px" width="225px"/>
+        </div>
+        </a>
       </div>
       <div className="sponsors__logos centis">
         <a href="https://choosesantacruz.com/" target="_blank" rel="noopener noreferrer">
@@ -125,9 +140,6 @@ class Sponsors extends Component {
           <img src={CrowdForgePartner}  alt="CrowdForge" width="225px" height="110px"/>
         </div>
         </a>
-        <div className="sponsors__partner">
-          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
-        </div>
         <a href="https://cps.soe.ucsc.edu/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={CPSRCPartner}  alt="CPSRC" width="225px" height="110px"/>
@@ -138,6 +150,19 @@ class Sponsors extends Component {
           <img src={JumpstartPartner}  alt="Jumpstart" width="225px" height="110px"/>
         </div>
         </a>
+        <a href="https://www.sellhound.com/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={SellHoundPartner}  alt="SellHound" width="225px" height="110px"/>
+        </div>
+        </a>
+        <a href="https://www.meetup.com/santacruznewtech/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={SCNTPartner}  alt="Santa Cruz New Tech Meetup" width="225px" height="110px"/>
+        </div>
+        </a>
+        <div className="sponsors__partner" id="EMSSlugs">
+          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
+        </div>
       </div>
     </div>
     );

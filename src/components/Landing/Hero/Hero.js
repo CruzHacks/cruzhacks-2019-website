@@ -10,7 +10,8 @@ class Hero extends Component {
     super(props)
     this.state = {
       email: '',
-      subscribe: 'Subscribe'
+      subscribe: 'Subscribe',
+      apply: 'Judges, Mentors & Volunteers...'
     }
   }
 
@@ -49,7 +50,7 @@ class Hero extends Component {
     let begin = start
 
     let step = 3000 / Math.abs(end - start);
-
+    
     function run() {
       begin++
       el.innerHTML = `${begin} ${id}`
@@ -60,12 +61,19 @@ class Hero extends Component {
           el.innerHTML = `${plus} ${id}`
         }
       }
-    }
+    }    
     let timer = setInterval(run, step);
     run()
   }
-
+  onMouseover (e) {
+    this.setState({apply : 'some text'})
+  }
+  
+  onMouseout (e) {
+    this.setState({apply : ''})
+  }
   render() {
+    const apply = this.state;
     return (
       <div className="hero">
         <img className="hero__logo" src={logo} alt="logo"/>
@@ -73,8 +81,11 @@ class Hero extends Component {
         <span className="hero__text">Create something that makes a difference.</span>
         <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
         <div className="hero__button-container">
-          <NavLink to="/apply" className="hero__button__cta hero__button">Apply!</NavLink>
+          <NavLink to="/apply" className="hero__button__cta hero__button">
+            Apply!
+          </NavLink>
           <a href="/Sponsorship_Packet_E.pdf" className="hero__button" target="_blank" rel="noopener noreferrer">Sponsoring?</a>
+          <span className="hero__text__alt deadline">Deadline to Apply: December 20th</span>
         </div>
         <div className="hero__stats">
           <span id="hackers" className="hero__stats__item">500+ hackers</span>
