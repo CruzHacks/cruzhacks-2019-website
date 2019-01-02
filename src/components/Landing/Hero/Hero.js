@@ -48,7 +48,7 @@ class Hero extends Component {
     let el = document.getElementById(id)
     let begin = start
 
-    let step = 3000 / Math.abs(end - start);
+    let step = 2250 / Math.abs(end - start);
     
     function run() {
       begin++

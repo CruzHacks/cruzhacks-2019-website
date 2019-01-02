@@ -21,7 +21,8 @@ const GlobalStyle = createGlobalStyle`
 class Layout extends Component {
   render() {
     return (
-      
+      <HttpsRedirect>
+        <GlobalStyle />
         <div className="layout">
           <Router>
             <Switch>
@@ -31,7 +32,7 @@ class Layout extends Component {
             </Switch>
           </Router>
         </div>
-    
+      </HttpsRedirect>
     );
   }
 }
