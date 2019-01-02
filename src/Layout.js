@@ -31,7 +31,7 @@ class Layout extends Component {
             </Switch>
           </Router>
         </div>
-     
+    
     );
   }
 }

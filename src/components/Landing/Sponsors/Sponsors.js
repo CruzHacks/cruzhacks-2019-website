@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, {Component} from 'react';
-import AmazonGiga from 'assets/sponsors/Amazon-GIGA/Amazon-GIGA.svg';
+import AmazonGiga from 'assets/sponsors/Amazon-GIGA/Amazon-GIGA.png';
 import UCSCGradDivGiga from 'assets/sponsors/UCSC Grad Division - GIGA/GRADDIVLOGO.png'
 import BSOEKilo from 'assets/sponsors/BSOE - KILO/baskin-logo-stacked-wht.png';
 import LookerKilo from 'assets/sponsors/Looker - KILO/Web_Looker_Logo_Charcoal (1).png';
@@ -33,19 +33,19 @@ class Sponsors extends Component {
      <div className="sponsors__container"> 
       <h2 className="sponsors__title">Thank You to Our Wonderful Sponsors</h2>
       <div className="sponsors__logos gigas">
-        <a href="https://graddiv.ucsc.edu" target = "_blank">
-        <div className="sponsors__giga">
-          <img src={UCSCGradDivGiga} alt="UCSC Graduate Division" height="200px" width="500px"/>
-        </div>
-        </a>
         <a href="https://aws.amazon.com/education/awseducate/" target = "_blank">
         <div className="sponsors__giga">
-            <img src={AmazonGiga} alt="Amazon" height="200px" width="500px"/>
+            <img src={AmazonGiga} alt="Amazon" height="150px" width="375px"/>
         </div>
         </a>
         <a href="https://citris-uc.org/campus/uc-santa-cruz/" target = "_blank">
         <div className="sponsors__giga">
-          <img src={CITRISGiga} alt="CITRIS" height="200px" width="500px"/>
+          <img src={CITRISGiga} alt="CITRIS" height="150px" width="375px"/>
+        </div>
+        </a>
+        <a href="https://graddiv.ucsc.edu" target = "_blank">
+        <div className="sponsors__giga">
+          <img src={UCSCGradDivGiga} alt="UCSC Graduate Division" height="150px" width="375"/>
         </div>
         </a>
       </div>          
@@ -110,6 +110,11 @@ class Sponsors extends Component {
       </div>
       <h2 className="sponsors__title">and Our Great Partners</h2>
       <div className="sponsors__logos partners">
+        <a>
+        <div className="sponsors__partner" id="EMSSlugs">
+          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
+        </div>
+        </a>
         <a href="https://mlh.io/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={MLHPartner}  alt="Major League Hacking" width="225px" height="110px"/>
@@ -158,11 +163,6 @@ class Sponsors extends Component {
         <a href="https://www.meetup.com/santacruznewtech/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={SCNTPartner}  alt="Santa Cruz New Tech Meetup" width="225px" height="110px"/>
-        </div>
-        </a>
-        <a>
-        <div className="sponsors__partner" id="EMSSlugs">
-          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
         </div>
         </a>
       </div>
