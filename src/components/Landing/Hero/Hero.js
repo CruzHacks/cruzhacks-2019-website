@@ -77,7 +77,6 @@ class Hero extends Component {
             Apply!
           </NavLink>
           <a href="/Sponsorship_Packet_E.pdf" className="hero__button" target="_blank" rel="noopener noreferrer">Sponsoring?</a>
-          <span className="hero__text__alt deadline">Deadline to Apply: December 20th</span>
         </div>
         <div className="hero__stats">
           <span id="hackers" className="hero__stats__item">500+ hackers</span>
