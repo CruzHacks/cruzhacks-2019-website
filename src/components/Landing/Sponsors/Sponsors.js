@@ -86,12 +86,12 @@ class Sponsors extends Component {
         </div>
         </a>
         <a href="https://cloud.google.com/edu/" target="_blank" rel="noopener noreferrer">
-        <div className="sponsors__partner">
+        <div className="sponsors__kilo">
           <img src={GCPKilo}  alt="Google Cloud Platform" height="100px" width="225px"/>
         </div>
         </a>
         <a href="https://www.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer">
-        <div className="sponsors__partner">
+        <div className="sponsors__kilo">
           <img src={MicrosoftKilo}  alt="Microsoft" height="100px" width="225px"/>
         </div>
         </a>
@@ -99,12 +99,12 @@ class Sponsors extends Component {
       <div className="sponsors__logos centis">
         <a href="https://choosesantacruz.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__centi">
-          <img src={ChooseSCCenti}  alt="Choose Santa Cruz" height="80px" width="80px"/>
+          <img src={ChooseSCCenti}  alt="Choose Santa Cruz" height="90px" width="90px"/>
         </div>
         </a>
         <a href="https://www.omni.sc/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__centi">
-          <img src={OmniscienceCenti}  alt="Omniscience" height="80px" width="80px"/>
+          <img src={OmniscienceCenti}  alt="Omniscience" height="90px" width="90px"/>
         </div>
         </a>
       </div>
@@ -160,9 +160,11 @@ class Sponsors extends Component {
           <img src={SCNTPartner}  alt="Santa Cruz New Tech Meetup" width="225px" height="110px"/>
         </div>
         </a>
+        <a>
         <div className="sponsors__partner" id="EMSSlugs">
           <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
         </div>
+        </a>
       </div>
     </div>
     );

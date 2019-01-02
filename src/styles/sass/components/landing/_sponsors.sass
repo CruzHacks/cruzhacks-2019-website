@@ -15,7 +15,8 @@
         margin-bottom: 5rem
     &__logos
             &.gigas
-                padding: 2rem 15% 0rem 15%
+                padding: 0
+                position: sticky
                 display: flex
                 flex-wrap: wrap
                 flex: 0 0 10%
@@ -23,13 +24,18 @@
                 justify-content: center
                 @include respond(tab-land)
                     padding-bottom: 0rem
+                    margin-top: 0rem
+                @include respond(tab-port)
+                    margin-top: -2.75rem
+                    padding-bottom: 2.75rem
                 @include respond(phone)
-                    padding: 0rem 5% 0rem 5%
-                    margin-top: -5rem
-
+                    transform: scale(.7)
+                    margin-top: -140px
+                    margin-bottom: -160px
+                    
             &.kilos
-                margin-top: -2rem
-                padding: 0rem 15% 2rem 15%
+                padding: 0
+                position: sticky
                 padding-bottom: 0rem
                 display: flex
                 flex-wrap: wrap
@@ -37,14 +43,15 @@
                 justify-content: center
                 flex: 0 0 10%
                 @include respond(tab-land)
-                    padding: 2rem
-                    padding-bottom: 0rem
+                    padding: 0rem 2rem 0rem 2rem
+                @include respond(tab-port)
+                    padding: 0rem 2rem 0rem 2rem
                 @include respond(phone)
-                        padding: 6rem 14% 1rem 14%
-                
+                    padding: 45px 2rem 0rem 2rem
                         
             &.centis
-                padding: 0rem 2% 6rem 2%
+                padding: 0
+                position: sticky
                 display: flex
                 flex-wrap: wrap
                 justify-items: center
@@ -52,11 +59,11 @@
                 @include respond(tab-land)
                     padding-bottom: 7.5rem
                 @include respond(phone)
-                        max-height: 19rem
-                        margin-bottom: -4rem
-
+                    padding-bottom: 4rem
+          
             &.partners
-                padding: 0rem 20% 0rem 20%
+                padding: 0
+                position: sticky
                 display: flex
                 flex-wrap: wrap
                 justify-items: center
@@ -66,14 +73,14 @@
                     padding: 2rem
                     padding-bottom: 0rem
                 @include respond(phone)
-                        padding: 6rem 14% 1rem 14%
-                        margin-top: -6.25rem
+                        padding: 7.5rem 14% 1rem 14%
+                        margin-top: -8rem
+    
     &__giga
         position: sticky
         background-color: $color-bg-alt
-        height: 21rem
         margin: 1rem 1rem
-        padding: 3rem 2rem 2rem
+        padding: 5% 10% 5% 10%
         border-radius: 20px
         display: flex
         flex-direction: column
@@ -83,16 +90,16 @@
         transition: all .2s
         &:hover
             background-color: lighten($color-bg, 5%)
-        @include respond(phone)
-            transform: scale(.625)
-            margin-bottom: -8.5rem
+        @include respond(tab-port)
+            transform: scale(.825)
+            margin-bottom: -4rem
         
     &__kilo
         background-color: $color-bg-alt
         position: sticky
         max-height: 19rem
         margin: 1rem 1rem
-        padding: 3rem 2rem 2rem
+        padding: 10% 12.75% 10% 12.75%
         border-radius: 20px
         display: flex
         flex-direction: column
@@ -100,15 +107,16 @@
         align-items: center
         text-align: center
         transition: all .2s
+        @include respond(tab-land)
         &:hover
             background-color: lighten($color-bg, 5%)
 
     &__centi
         background-color: $color-bg-alt
         position: sticky
-        max-height: 8rem
+        min-height: 8rem
         margin: 1rem 1rem
-        padding: 3rem 2rem 2rem
+        padding: 17%
         border-radius: 20px
         display: flex
         flex-direction: column
@@ -116,6 +124,8 @@
         align-items: center
         text-align: center    
         transition: all .2s
+        @include respond(phone)
+            padding: 17%
         &:hover
             background-color: lighten($color-bg, 5%)
 
@@ -124,7 +134,7 @@
         position: sticky
         max-height: 19rem
         margin: 1rem 1rem
-        padding: 3rem 2rem 2rem
+        padding: 10% 12.75% 10% 12.75%
         border-radius: 20px
         display: flex
         flex-direction: column
