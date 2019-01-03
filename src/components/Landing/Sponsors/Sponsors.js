@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, {Component} from 'react';
-import AmazonGiga from 'assets/sponsors/Amazon-GIGA/Amazon-GIGA.svg';
+import AmazonGiga from 'assets/sponsors/Amazon-GIGA/Amazon-GIGA.png';
 import UCSCGradDivGiga from 'assets/sponsors/UCSC Grad Division - GIGA/GRADDIVLOGO.png'
 import BSOEKilo from 'assets/sponsors/BSOE - KILO/baskin-logo-stacked-wht.png';
 import LookerKilo from 'assets/sponsors/Looker - KILO/Web_Looker_Logo_Charcoal (1).png';
@@ -22,25 +22,30 @@ import CPSRCPartner from 'assets/sponsors/CPSRC - PARTNER/CPSRCLogo_v2-CircularL
 import OmniscienceCenti from 'assets/sponsors/Omniscience - CENTI/Omniscience Invert Vertical w-Website.jpg'
 import HederaKilo from 'assets/sponsors/Hedera - KILO/Hedera-alternate-logo2.png'
 import JumpstartPartner from 'assets/sponsors/Jumpstart - PARTNER/jumpstart logo.png'
+import SellHoundPartner from 'assets/sponsors/SellHound - PARTNER/Final Logo.png'
+import SCNTPartner from 'assets/sponsors/SCNT - PARTNER/SCNT MeetUp logo lowRes.png'
+import GCPKilo from 'assets/sponsors/GCP - KILO/GCP logo, transparent.png'
+import MicrosoftKilo from 'assets/sponsors/Microsoft - KILO/logo.png'
+
 class Sponsors extends Component {
   render() {
     return (
      <div className="sponsors__container"> 
       <h2 className="sponsors__title">Thank You to Our Wonderful Sponsors</h2>
       <div className="sponsors__logos gigas">
-        <a href="https://graddiv.ucsc.edu" target = "_blank">
-        <div className="sponsors__giga">
-          <img src={UCSCGradDivGiga} alt="UCSC Graduate Division" height="200px" width="500px"/>
-        </div>
-        </a>
         <a href="https://aws.amazon.com/education/awseducate/" target = "_blank">
         <div className="sponsors__giga">
-            <img src={AmazonGiga} alt="Amazon" height="200px" width="500px"/>
+            <img src={AmazonGiga} alt="Amazon" height="150px" width="375px"/>
         </div>
         </a>
         <a href="https://citris-uc.org/campus/uc-santa-cruz/" target = "_blank">
         <div className="sponsors__giga">
-          <img src={CITRISGiga} alt="CITRIS" height="200px" width="500px"/>
+          <img src={CITRISGiga} alt="CITRIS" height="150px" width="375px"/>
+        </div>
+        </a>
+        <a href="https://graddiv.ucsc.edu" target = "_blank">
+        <div className="sponsors__giga">
+          <img src={UCSCGradDivGiga} alt="UCSC Graduate Division" height="150px" width="375"/>
         </div>
         </a>
       </div>          
@@ -80,21 +85,36 @@ class Sponsors extends Component {
           <img src={HederaKilo}  alt="Hedera" height="100px" width="225px"/>
         </div>
         </a>
+        <a href="https://cloud.google.com/edu/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__kilo">
+          <img src={GCPKilo}  alt="Google Cloud Platform" height="100px" width="225px"/>
+        </div>
+        </a>
+        <a href="https://www.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__kilo">
+          <img src={MicrosoftKilo}  alt="Microsoft" height="100px" width="225px"/>
+        </div>
+        </a>
       </div>
       <div className="sponsors__logos centis">
         <a href="https://choosesantacruz.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__centi">
-          <img src={ChooseSCCenti}  alt="Choose Santa Cruz" height="80px" width="80px"/>
+          <img src={ChooseSCCenti}  alt="Choose Santa Cruz" height="90px" width="90px"/>
         </div>
         </a>
         <a href="https://www.omni.sc/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__centi">
-          <img src={OmniscienceCenti}  alt="Omniscience" height="80px" width="80px"/>
+          <img src={OmniscienceCenti}  alt="Omniscience" height="90px" width="90px"/>
         </div>
         </a>
       </div>
       <h2 className="sponsors__title">and Our Great Partners</h2>
       <div className="sponsors__logos partners">
+        <a>
+        <div className="sponsors__partner" id="EMSSlugs">
+          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
+        </div>
+        </a>
         <a href="https://mlh.io/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={MLHPartner}  alt="Major League Hacking" width="225px" height="110px"/>
@@ -125,9 +145,6 @@ class Sponsors extends Component {
           <img src={CrowdForgePartner}  alt="CrowdForge" width="225px" height="110px"/>
         </div>
         </a>
-        <div className="sponsors__partner">
-          <img src={EMSSlugsPartner}  alt="EMS Slugs" width="225px" height="110px"/>
-        </div>
         <a href="https://cps.soe.ucsc.edu/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={CPSRCPartner}  alt="CPSRC" width="225px" height="110px"/>
@@ -136,6 +153,16 @@ class Sponsors extends Component {
         <a href="https://jumpstart.me/r/Cruzhacks" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={JumpstartPartner}  alt="Jumpstart" width="225px" height="110px"/>
+        </div>
+        </a>
+        <a href="https://www.sellhound.com/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={SellHoundPartner}  alt="SellHound" width="225px" height="110px"/>
+        </div>
+        </a>
+        <a href="https://www.meetup.com/santacruznewtech/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={SCNTPartner}  alt="Santa Cruz New Tech Meetup" width="225px" height="110px"/>
         </div>
         </a>
       </div>
