@@ -22,7 +22,7 @@ class Layout extends Component {
   render() {
     return (
       <HttpsRedirect>
-      <GlobalStyle />
+        <GlobalStyle />
         <div className="layout">
           <Router>
             <Switch>
