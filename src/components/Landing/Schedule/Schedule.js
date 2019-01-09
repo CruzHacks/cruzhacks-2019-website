@@ -59,9 +59,9 @@ class Schedule extends Component {
             <div className="schedule__column__content">
               <span className="schedule__item">Code Freeze</span>
               <span className="schedule__item--right">10:00 AM</span>
-              <span className="schedule__item">Judgine</span>
+              <span className="schedule__item">Judging</span>
               <span className="schedule__item--right">11:30 AM</span>
-              <span className="schedule__item">Winners Announced & Closing Ceremony</span>
+              <span className="schedule__item">Winners & Closing Ceremony</span>
               <span className="schedule__item--right">1:30 PM</span>
               <span className="schedule__item">Hackathon Ends!</span>
               <span className="schedule__item--right">3:00 PM</span>
