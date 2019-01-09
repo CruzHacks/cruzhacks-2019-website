@@ -35,7 +35,7 @@ class Schedule extends Component {
             <img src={SatPlus} className="column-plus" alt=""/>
             <h3 className="schedule__column__title">
               SAT
-              <span className="schedule__column__date">JAN 18</span>
+              <span className="schedule__column__date">JAN 19</span>
             </h3>
             <img src={SatLine} alt=""/>
             <div className="schedule__column__content large">
@@ -53,7 +53,7 @@ class Schedule extends Component {
             <img src={SunPlus} className="column-plus" alt=""/>
             <h3 className="schedule__column__title">
               SUN
-              <span className="schedule__column__date">JAN 18</span>
+              <span className="schedule__column__date">JAN 20</span>
             </h3>
             <img src={SunLine} alt=""/>
             <div className="schedule__column__content">
