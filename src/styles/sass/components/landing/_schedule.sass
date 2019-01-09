@@ -12,6 +12,15 @@
     text-transform: uppercase
     margin-bottom: 3rem
 
+.schedule__grid
+    display: grid
+    margin-top: 8rem
+    grid-template-columns: repeat(3, 1fr)
+    justify-items: center
+    @include respond(tab-port)
+        grid-template-columns: 1fr
+        grid-row-gap: 6rem
+    
 .column-plus
     position: absolute
     top: -30px
@@ -19,6 +28,7 @@
 
 .schedule__column
     position: relative
+    max-width: 220px
 
 .schedule__column__title
     font-size: 4rem
@@ -29,3 +39,21 @@
     font-size: 2.5rem
     font-weight: light
     margin-left: 1rem
+
+.schedule__column__content
+    padding-top: 2rem
+    font-size: 2rem
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-row-gap: 2rem
+    align-items: center
+    &.large
+        .schedule__item, .schedule__item--right
+            font-size: 3rem
+
+
+.schedule__item, .schedule__item--right
+    font-size: 2.5rem
+
+.schedule__item--right
+    margin-left: auto

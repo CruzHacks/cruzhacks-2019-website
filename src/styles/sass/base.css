@@ -747,13 +747,24 @@ body, html {
   text-transform: uppercase;
   margin-bottom: 3rem; }
 
+.schedule__grid {
+  display: grid;
+  margin-top: 8rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; }
+  @media (max-width: 56.25em) {
+    .schedule__grid {
+      grid-template-columns: 1fr;
+      grid-row-gap: 6rem; } }
+
 .column-plus {
   position: absolute;
   top: -30px;
   left: -20px; }
 
 .schedule__column {
-  position: relative; }
+  position: relative;
+  max-width: 220px; }
 
 .schedule__column__title {
   font-size: 4rem;
@@ -764,6 +775,22 @@ body, html {
   font-size: 2.5rem;
   font-weight: light;
   margin-left: 1rem; }
+
+.schedule__column__content {
+  padding-top: 2rem;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2rem;
+  align-items: center; }
+  .schedule__column__content.large .schedule__item, .schedule__column__content.large .schedule__item--right {
+    font-size: 3rem; }
+
+.schedule__item, .schedule__item--right {
+  font-size: 2.5rem; }
+
+.schedule__item--right {
+  margin-left: auto; }
 
 .application {
   text-align: center;
