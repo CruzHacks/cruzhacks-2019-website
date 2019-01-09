@@ -167,7 +167,7 @@ class Sponsors extends Component {
           <img src={SCNTPartner}  alt="Santa Cruz New Tech Meetup" width="225px" height="110px"/>
         </div>
         </a>
-        <a href="https://earthhacks.vcu.edu//" target="_blank" rel="noopener noreferrer">
+        <a href="https://earthhacks.vcu.edu/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={EarthHacksPartner}  alt="Earth Hacks" width="225px" height="110px"/>
         </div>
