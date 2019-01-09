@@ -109,7 +109,7 @@ class JudgeForm extends Component {
               </div>
               <div className="form__group">
                 <input className="form__group__input" id="dietary_rest" name="dietary_rest" type="text" onChange={this.handleOnChange} value={this.state.dietary_rest} maxLength="50" required/>
-                <label className={this.state.dietary_rest ? "form__group__label" : "inactive form__group__label"} htmlFor="dietary_rest">Please list any dietary restrictions you have.</label>
+                <label className={this.state.dietary_rest ? "form__group__label" : "inactive form__group__label"} htmlFor="dietary_rest">Please list any dietary restrictions.</label>
               </div>
               <Availability handler={this.grabState} />
               <TShirtSelect handler={this.grabState} />
