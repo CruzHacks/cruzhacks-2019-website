@@ -94,7 +94,7 @@ class MentorForm extends Component {
                 <label className={this.state.email ? "form__group__label" : "inactive form__group__label"} htmlFor="email">Email*</label>
               </div>
               <div className="form__group">
-                <input className="form__group__input" id="company" name="company" type="tel" onChange={this.handleOnChange} value={this.state.company} required/>
+                <input className="form__group__input" id="company" name="company" type="tel" onChange={this.handleOnChange} value={this.state.company} maxLength="100" required/>
                 <label className={this.state.company ? "form__group__label" : "inactive form__group__label"} htmlFor="company">What company do you work for?*</label>
               </div>
               <div className="form__group">
