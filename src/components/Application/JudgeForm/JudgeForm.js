@@ -38,7 +38,7 @@ class JudgeForm extends Component {
     this.setState(state)
   }
 
-  verifyRegistration = (e) => {
+  verifyRegistration = (event) => {
     this.setState({status: 1}, function() { // display loader
       axios.get(process.env.REACT_APP_IS_REGISTERED_ENDPOINT.concat(this.state.email))
         .then((response) => {

@@ -39,21 +39,7 @@ class VolunteerForm extends Component {
     this.setState(state)
   }
   
-  verifyRegistration = event => {
-    this.setState({status: 1}, function() { // display loader
-      axios.get(process.env.REACT_APP_IS_REGISTERED_ENDPOINT.concat(this.state.email))
-        .then((response) => {
-          if (!response.data) { // if not registered
-            this.handleSubmit();
-          }
-          else {
-            this.setState({status: 4})
-          }
-        })  
-      }) 
-  }
-
-  verifyRegistration = (e) => {
+  verifyRegistration = (event) => {
     this.setState({status: 1}, function() { // display loader
       axios.get(process.env.REACT_APP_IS_REGISTERED_ENDPOINT.concat(this.state.email))
         .then((response) => {
