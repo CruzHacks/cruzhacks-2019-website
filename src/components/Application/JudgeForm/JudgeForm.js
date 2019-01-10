@@ -118,7 +118,7 @@ class JudgeForm extends Component {
                 <label className={this.state.linkedin ? "form__group__label" : "inactive form__group__label"} htmlFor="linkedin">LinkedIn URL</label>
               </div>
               <div className="form__group">
-                <textarea rows="5" cols="50" className="form__group__textarea" id="short_answer1" name="short_answer1" type="text" onChange={this.handleOnChange} value={this.state.short_answer1} required/>
+                <textarea rows="5" cols="50" className="form__group__textarea" id="short_answer1" name="short_answer1" type="text" onChange={this.handleOnChange} value={this.state.short_answer1} maxLength="500" required/>
                 <label className={this.state.short_answer1 ? "form__group__label" : "inactive form__group__label"} htmlFor="short_answer1">Why do you want to be a judge CruzHacks 2019? </label>
                 <span className="form__group__charcount">Character count: {this.state.short_answer1.length}</span>
               </div>

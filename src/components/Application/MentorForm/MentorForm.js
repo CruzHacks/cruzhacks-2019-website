@@ -121,7 +121,7 @@ class MentorForm extends Component {
                 <label className={this.state.dietary_rest ? "form__group__label" : "inactive form__group__label"} htmlFor="dietary_rest">Please list any dietary restrictions.</label>
               </div>
               <div className="form__group">
-                <textarea rows="5" cols="50" className="form__group__textarea" id="short_answer" name="short_answer" type="text" onChange={this.handleOnChange} value={this.state.short_answer} maxLength="50" required/>
+                <textarea rows="5" cols="50" className="form__group__textarea" id="short_answer" name="short_answer" type="text" onChange={this.handleOnChange} value={this.state.short_answer} maxLength="500" required/>
                 <label className={this.state.short_answer ? "form__group__label" : "inactive form__group__label"} htmlFor="short_answer">Why do you want to mentor CruzHacks 2019?* (Max 500 chars)</label>
                 <span className="form__group__charcount">Character count: {this.state.short_answer.length}</span>
               </div>
