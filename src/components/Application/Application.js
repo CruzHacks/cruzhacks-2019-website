@@ -6,7 +6,6 @@ import AppSelect from './AppSelect';
 import HackerForm from './HackerForm';
 import MentorForm from './MentorForm';
 import JudgeForm from './JudgeForm';
-import VolunteerForm from './VolunteerForm';
 
 class Application extends Component {
   constructor(props) {
@@ -30,7 +29,6 @@ class Application extends Component {
     switch (application) {
       case 2: return <MentorForm />
       case 3: return <JudgeForm />
-      case 4: return <VolunteerForm />
       default: return null
     }
   }
@@ -43,8 +41,7 @@ class Application extends Component {
         <div className="application__select">
           <span className="application__select__title">Choose an Application Type</span>
           <AppSelect name="Mentor" class={this.state.application === 2 ? 'selected' : ''} data="2" handler={this.toggleApplication}/>
-          <AppSelect name="Judge" class={this.state.application === 3 ? 'selected' : ''} data="3" handler={this.toggleApplication}/>
-          <AppSelect name="Volunteer" class={this.state.application === 4 ? 'selected' : ''} data="4" handler={this.toggleApplication}/>
+          <AppSelect name="Judge" class={this.state.application === 3 ? 'selected' : ''} data="3" handler={this.toggleApplication}/>         
         </div>
         {this.renderForm(this.state.application)}
       </div>
