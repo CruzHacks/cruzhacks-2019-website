@@ -8,12 +8,14 @@ import Sponsors from './Sponsors';
 import FAQ from './FAQ';
 import Team from './Team';
 import Footer from './Footer';
+import Schedule from './Schedule';
 
 class Landing extends Component {
   render() {
     return (
       <div className="landing">
         <Hero />
+        <Schedule />
         <Mission />
         <CTA />
         <Highlights />
