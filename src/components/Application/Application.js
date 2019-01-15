@@ -37,9 +37,9 @@ class Application extends Component {
     return (
       <div className="application">
         <NavLink to="/"><img src={logo} alt="logo" className="application__logo"/></NavLink>
-        <h1 className="application__title">CruzHacks 2019<br/>Applications</h1>
+        <h1 className="application__title">CruzHacks 2019<br/>Sign Up</h1>
         <div className="application__select">
-          <span className="application__select__title">Choose an Application Type</span>
+          <span className="application__select__title">Choose a Category</span>
           <AppSelect name="Mentor" class={this.state.application === 2 ? 'selected' : ''} data="2" handler={this.toggleApplication}/>
           <AppSelect name="Judge" class={this.state.application === 3 ? 'selected' : ''} data="3" handler={this.toggleApplication}/>         
         </div>
