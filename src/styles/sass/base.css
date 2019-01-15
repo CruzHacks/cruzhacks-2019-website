@@ -525,13 +525,8 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
-  justify-content: center; }
-  @media (max-width: 75em) {
-    .sponsors__logos.centis {
-      padding-bottom: 4rem; } }
-  @media (max-width: 37.5em) {
-    .sponsors__logos.centis {
-      padding-bottom: 4rem; } }
+  justify-content: center;
+  padding-bottom: 4rem; }
 
 .sponsors__logos.partners {
   padding: 0;
