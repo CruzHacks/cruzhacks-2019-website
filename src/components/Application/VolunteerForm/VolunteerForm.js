@@ -38,6 +38,20 @@ class VolunteerForm extends Component {
   grabState = (state) => {
     this.setState(state)
   }
+  
+  verifyRegistration = (event) => {
+    this.setState({status: 1}, function() { // display loader
+      axios.get(process.env.REACT_APP_IS_REGISTERED_ENDPOINT.concat(this.state.email))
+        .then((response) => {
+          if (!response.data) { // if not registered
+            this.handleSubmit();
+          }
+          else {
+            this.setState({status: 4})
+          }
+        })  
+      }) 
+  }
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -65,13 +79,14 @@ class VolunteerForm extends Component {
         });
       })
     }
-  }
+  } 
 
   render() {
     switch (this.state.status) {
       case 1: return <Loader />
       case 2: return <Success text="Thanks for applying! We've received your application and will get back to you as soon as we can."/>
       case 3: return <Error text="Oops! There was an error submitting your application. If you think this was a mistake please get in touch with us at contact@cruzhacks.com!"/>
+      case 4: return <Success text="You've already registered! We'll be in touch."/>
       default: {
         return (
           <div className="form-container">
@@ -79,17 +94,17 @@ class VolunteerForm extends Component {
             <p className="form-container__text text-center">
               <span>Note: Only UCSC Students can Volunteer at CruzHacks; volunteers are also welcome to come to the event as hackers!</span>
             </p>
-            <form className="form" onSubmit={this.handleSubmit}>
+            <form className="form" onSubmit={this.verifyRegistration}>
               <div className="form__group">
-                <input className="form__group__input" id="first_name" name="first_name" type="text" onChange={this.handleOnChange} value={this.state.first_name} required/>
+                <input className="form__group__input" id="first_name" name="first_name" type="text" onChange={this.handleOnChange} value={this.state.first_name} maxLength="30" required/>
                 <label className={this.state.first_name ? "form__group__label" : "inactive form__group__label"} htmlFor="first_name">Firstname</label>
               </div>
               <div className="form__group">
-                <input className="form__group__input" id="last_name" name="last_name" type="text" onChange={this.handleOnChange} value={this.state.last_name} required/>
+                <input className="form__group__input" id="last_name" name="last_name" type="text" onChange={this.handleOnChange} value={this.state.last_name} maxLength="30" required/>
                 <label className={this.state.last_name ? "form__group__label" : "inactive form__group__label"} htmlFor="last_name">Lastname</label>
               </div>
               <div className="form__group">
-                <input className="form__group__input" id="email" name="email" type="email" onChange={this.handleOnChange} value={this.state.email} required/>
+                <input className="form__group__input" id="email" name="email" type="email" onChange={this.handleOnChange} value={this.state.email} maxLength="50" required/>
                 <label className={this.state.email ? "form__group__label" : "inactive form__group__label"} htmlFor="email">UCSC Email</label>
               </div>
               <div className="form__group">

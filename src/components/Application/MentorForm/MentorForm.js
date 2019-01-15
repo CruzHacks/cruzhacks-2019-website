@@ -38,6 +38,20 @@ class MentorForm extends Component {
     this.setState(state)
   }
 
+  verifyRegistration = (event) => {
+    this.setState({status: 1}, function() { // display loader
+      axios.get(process.env.REACT_APP_IS_REGISTERED_ENDPOINT.concat(this.state.email))
+        .then((response) => {
+          if (!response.data) { // if not registered
+            this.handleSubmit();
+          }
+          else {
+            this.setState({status: 4})
+          }
+        })  
+      }) 
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.state.shirt_size === '') {
@@ -65,13 +79,14 @@ class MentorForm extends Component {
         });
       })
     }
-  }
+  }  
 
   render() {
     switch (this.state.status) {
       case 1: return <Loader />
       case 2: return <Success text="Thanks for applying! We've received your application and will get back to you as soon as we can."/>
       case 3: return <Error text="Oops! There was an error submitting your application. If you think this was a mistake please get in touch with us at contact@cruzhacks.com!"/>
+      case 4: return <Success text="You've already registered! We'll be in touch."/>
       default: {
         return (
           <div className="form-container">
@@ -80,7 +95,7 @@ class MentorForm extends Component {
               <span>Mentors are the backbone of our hackathon. They operate our event’s Q/A forums and roam the event helping hackers with technical problems. Plan to commit at least 2 hours, between January 18th @ 7pm - January 20th @ 11am. </span>
               <span>For such an important role, we’ll have separate lounging space plus tons of delicious food for all mentors. Check-in at the <a className="form-container__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a> & help hackers until submissions close 11AM Sunday! </span>
             </p>
-            <form className="form" onSubmit={this.handleSubmit}>
+            <form className="form" onSubmit={this.verifyRegistration}>
               <div className="form__group">
                 <input className="form__group__input" id="first_name" name="first_name" type="text" onChange={this.handleOnChange} value={this.state.first_name} maxLength="30" required/>
                 <label className={this.state.first_name ? "form__group__label" : "inactive form__group__label"} htmlFor="first_name">Firstname*</label>
@@ -94,7 +109,7 @@ class MentorForm extends Component {
                 <label className={this.state.email ? "form__group__label" : "inactive form__group__label"} htmlFor="email">Email*</label>
               </div>
               <div className="form__group">
-                <input className="form__group__input" id="company" name="company" type="tel" onChange={this.handleOnChange} value={this.state.company} required/>
+                <input className="form__group__input" id="company" name="company" type="text" onChange={this.handleOnChange} value={this.state.company} maxLength="50" required/>
                 <label className={this.state.company ? "form__group__label" : "inactive form__group__label"} htmlFor="company">What company do you work for?*</label>
               </div>
               <div className="form__group">
@@ -103,7 +118,7 @@ class MentorForm extends Component {
               </div>
               <div className="form__group">
                 <input className="form__group__input" id="dietary_rest" name="dietary_rest" type="text" onChange={this.handleOnChange} value={this.state.dietary_rest} maxLength="50"/>
-                <label className={this.state.dietary_rest ? "form__group__label" : "inactive form__group__label"} htmlFor="dietary_rest">Please list any dietary restrictions</label>
+                <label className={this.state.dietary_rest ? "form__group__label" : "inactive form__group__label"} htmlFor="dietary_rest">Please list any dietary restrictions.</label>
               </div>
               <div className="form__group">
                 <textarea rows="5" cols="50" className="form__group__textarea" id="short_answer" name="short_answer" type="text" onChange={this.handleOnChange} value={this.state.short_answer} maxLength="500" required/>
