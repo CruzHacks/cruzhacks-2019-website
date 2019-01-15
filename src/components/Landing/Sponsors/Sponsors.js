@@ -122,7 +122,7 @@ class Sponsors extends Component {
           <img src={MLHPartner}  alt="Major League Hacking" width="225px" height="110px"/>
         </div>
         </a>
-        <a href="https://challengerocket.com/" target="_blank" rel="noopener noreferrer">
+        <a href="http://bit.ly/2VHqCIe" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={ChallengeRocketPartner}  alt="Challenge Rocket" width="225px" height="110px"/>  
         </div>
