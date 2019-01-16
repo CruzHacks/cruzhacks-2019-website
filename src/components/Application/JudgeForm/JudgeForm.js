@@ -95,7 +95,7 @@ class JudgeForm extends Component {
                 <label className={this.state.email ? "form__group__label" : "inactive form__group__label"} htmlFor="email">Email*</label>
               </div>
               <div className="form__group">
-                <input className="form__group__input" id="company" name="company" type="text" onChange={this.handleOnChange} maxlength="50" value={this.state.company} required/>
+                <input className="form__group__input" id="company" name="company" type="text" onChange={this.handleOnChange} maxLength="50" value={this.state.company} required/>
                 <label className={this.state.company ? "form__group__label" : "inactive form__group__label"} htmlFor="company">What company do you work for?*</label>
               </div>
               <div className="form__group">
