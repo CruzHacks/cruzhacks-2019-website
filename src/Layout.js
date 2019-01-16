@@ -36,7 +36,7 @@ class Layout extends Component {
                   reload();
                   return <Landing/>
                 }
-                }/>
+              }/>
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>

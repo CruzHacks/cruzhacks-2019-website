@@ -77,7 +77,7 @@ class MentorForm extends Component {
           <div className="form-container">
             <h2 className="form-container__title">Mentor Application</h2>
             <p className="form-container__text">
-              <span>Mentors are the backbone of our hackathon. They operate our event’s Q/A forums and roam the event helping hackers with technical problems. Plan to commit at least 2 hours, between January 18th @ 7pm - January 20th @ 11am. </span>
+              <span>Mentors are the backbone of our hackathon. They operate our event’s Q/A forums and roam the event helping hackers with technical problems. Plan to commit at least 2 hours, between January 18 @ 9 pm - January 20th @ 10 pm. </span>
               <span>For such an important role, we’ll have separate lounging space plus tons of delicious food for all mentors. Check-in at the <a className="form-container__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a> & help hackers until submissions close 11AM Sunday! </span>
             </p>
             <form className="form" onSubmit={this.handleSubmit}>
