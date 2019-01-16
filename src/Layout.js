@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const reload = () => {
+  window.location = "/slack.html"
+}
+
 class Layout extends Component {
   render() {
     return (
@@ -28,6 +32,11 @@ class Layout extends Component {
             <Switch>
               <Route path="/patch" exact component={Patch}/>
               <Route path="/applications" exact component={Application}/>
+              <Route path="/slack" exact render={() => {
+                  reload();
+                  return <Landing/>
+                }
+                }/>
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>
