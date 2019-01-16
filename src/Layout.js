@@ -31,7 +31,7 @@ class Layout extends Component {
           <Router>
             <Switch>
               <Route path="/patch" exact component={Patch}/>
-              <Route path="/applications" exact component={Application}/>
+              <Route path="/apply" exact component={Application}/>
               <Route path="/slack" exact render={() => {
                   reload();
                   return <Landing/>
