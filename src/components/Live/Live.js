@@ -19,6 +19,7 @@ class Live extends Component {
                 <a href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
             </div>
             <Announcements />
+            
         </div>
     );
   }

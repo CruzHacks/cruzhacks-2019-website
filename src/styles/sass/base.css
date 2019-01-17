@@ -1094,7 +1094,8 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem; }
+  margin-top: 8rem;
+  position: relative; }
 
 .live-hero__logo {
   height: 15rem; }
@@ -1107,10 +1108,67 @@ body, html {
 .live-hero__social {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 50rem; }
   .live-hero__social img {
     height: 6rem;
     margin: 1rem;
     transition: transform .2s; }
     .live-hero__social img:hover {
       transform: scale(1.2); }
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #312D38;
+  padding: 1rem 2rem;
+  max-height: 1160px;
+  margin: auto;
+  margin-top: 5rem;
+  height: 116rem;
+  width: 35rem;
+  transform: rotate(-90deg);
+  position: absolute;
+  border-radius: 6px;
+  top: -75px; }
+  .announcements::-webkit-scrollbar {
+    display: none; }
+
+.announcement {
+  display: flex;
+  position: relative;
+  transform: rotate(90deg);
+  padding: 2.5rem;
+  background: #1C1921;
+  color: white;
+  margin: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 30rem;
+  min-height: 30rem;
+  border-radius: 3rem; }
+
+.announcement__text {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.announcement__title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem; }
+
+.announcement__time, .announcement__day {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  color: white;
+  font-size: 2.5rem; }
+
+.announcement__day {
+  left: 2.5rem; }
