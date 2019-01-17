@@ -34,7 +34,8 @@ html {
       font-size: 37.5%; } }
 
 body, html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .hidden {
   visibility: hidden; }
@@ -129,11 +130,8 @@ body, html {
   .hero__button-container {
     margin: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center; }
-    @media (max-width: 56.25em) {
-      .hero__button-container {
-        grid-template-columns: 1fr; } }
   .hero__button {
     text-decoration: none;
     font-size: 2.75rem;
