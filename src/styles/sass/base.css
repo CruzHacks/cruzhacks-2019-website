@@ -1178,7 +1178,7 @@ a {
 
 .announcements__title {
   position: relative;
-  top: -385px;
+  top: -430px;
   font-size: 5rem;
   color: #EBA471;
   font-family: "Space Mono", monospace; }
@@ -1192,7 +1192,7 @@ a {
   border-radius: 100px;
   flex-wrap: wrap;
   overflow: hidden;
-  margin-bottom: 50rem; }
+  margin-bottom: 55rem; }
 
 .link__item {
   flex: 1;
