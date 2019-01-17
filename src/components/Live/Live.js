@@ -13,8 +13,8 @@ class Live extends Component {
   render() {
     return (
         <div className="live-hero">
-            <img class="live-hero__logo" src={logo} alt="logo"/>
-            <h1 class="live-hero__title">CruzHacks 2019</h1>
+            <img className="live-hero__logo" src={logo} alt="logo"/>
+            <h1 className="live-hero__title">CruzHacks 2019</h1>
             <div className="live-hero__social">
                 <a href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>
                 <a href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>

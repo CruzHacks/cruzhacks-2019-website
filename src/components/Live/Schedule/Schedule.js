@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ScheduleItem from './ScheduleItem/ScheduleItem';
 
 class Schedule extends Component {
   render() {
@@ -23,17 +24,28 @@ class Schedule extends Component {
                     <span>12am</span>
                 </div>
                 <div className="schedule-column general">
-                    <div className="schedule-item">
-                        <span className="time">5:00 – 6:30</span>
-                    </div>
-                    <div className="schedule-item" style={{"marginTop": "5rem", "paddingTop": "15rem"}}></div>
-                    <div className="schedule-item" style={{"marginTop": "5rem", "paddingTop": "10rem"}}></div>
+                    <ScheduleItem 
+                        start="5:00"
+                        end="6:30"
+                        pm
+                        length="1.5"
+                        day="Fri"
+                        title="Hacker Check In" 
+                    />  
+                    <ScheduleItem 
+                        start="7:00"
+                        end="7:30"
+                        pm
+                        length=".5"
+                        day="Fri"
+                        title="Opening Ceremony" 
+                    />  
                 </div>
                 <div className="schedule-column general">
-                    <div className="schedule-item" style={{"marginTop": "35rem", "paddingTop": "15rem"}}></div>
+                    
                 </div>
                 <div className="schedule-column general">
-                    <div className="schedule-item" style={{"marginTop": "5rem", "paddingTop": "25rem"}}></div>
+                    
                 </div>
             </div>
         </div>

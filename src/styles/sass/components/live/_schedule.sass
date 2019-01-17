@@ -40,20 +40,25 @@ span.time-day
     flex-direction: column
     align-items: center
     align-self: stretch
+    position: relative
 
 .schedule-item
-    min-width: 25rem
-    max-width: 25rem
-    min-height: 100px
+    min-width: 30rem
+    max-width: 30rem
+    min-height: 75px
     background-color: $color-bg
-    position: relative
+    position: absolute
     text-align: left
     span.time
-        position: relative
+        position: absolute
         top: 10px
         left: 10px
-        font-size: 2.5rem
+        font-size: 2rem
     span.title
+        position: absolute
+        text-align: center
+        width: 100%
         top: 50%
         left: 50%
+        font-size: 3rem
         transform: translate(-50%, -50%)
