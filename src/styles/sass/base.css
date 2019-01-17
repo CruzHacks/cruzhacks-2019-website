@@ -1086,3 +1086,31 @@ body, html {
       .avail__col__option.active {
         background: white;
         color: #312D38; }
+
+.live-hero {
+  max-width: 1160px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem; }
+
+.live-hero__logo {
+  height: 15rem; }
+
+.live-hero__title {
+  color: white;
+  font-size: 8rem;
+  margin: 1rem 0; }
+
+.live-hero__social {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .live-hero__social img {
+    height: 6rem;
+    margin: 1rem;
+    transition: transform .2s; }
+    .live-hero__social img:hover {
+      transform: scale(1.2); }
