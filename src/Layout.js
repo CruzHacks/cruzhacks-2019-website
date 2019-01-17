@@ -5,10 +5,12 @@ import HttpsRedirect from 'react-https-redirect';
 
 import Landing from 'components/Landing';
 import Patch from 'components/Patch';
-import Application from 'components/Application';
+import Live from 'components/Live';
 
 import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
+
+const protecedURI = "/nHoy8MbfnnaeN";
 
 const GlobalStyle = createGlobalStyle`
   #mlh-trust-badge {
@@ -17,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `
+
+const reload = () => {
+  window.location = "/slack.html"
+}
 
 class Layout extends Component {
   render() {
@@ -27,7 +33,12 @@ class Layout extends Component {
           <Router>
             <Switch>
               <Route path="/patch" exact component={Patch}/>
-              <Route path="/applications" exact component={Application}/>
+              <Route path={protecedURI} exact component={Live}/>
+              <Route path="/slack" exact render={() => {
+                  reload();
+                  return <Landing/>
+                }
+              }/>
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>

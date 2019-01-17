@@ -34,7 +34,12 @@ html {
       font-size: 37.5%; } }
 
 body, html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
 
 .hidden {
   visibility: hidden; }
@@ -129,11 +134,8 @@ body, html {
   .hero__button-container {
     margin: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center; }
-    @media (max-width: 56.25em) {
-      .hero__button-container {
-        grid-template-columns: 1fr; } }
   .hero__button {
     text-decoration: none;
     font-size: 2.75rem;
@@ -1088,3 +1090,176 @@ body, html {
       .avail__col__option.active {
         background: white;
         color: #312D38; }
+
+.live-hero {
+  max-width: 1160px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  position: relative; }
+
+.live-hero__logo {
+  height: 15rem; }
+
+.live-hero__title {
+  color: white;
+  font-size: 8rem;
+  margin: 1rem 0; }
+
+.live-hero__social {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .live-hero__social img {
+    height: 6rem;
+    margin: 1rem;
+    transition: transform .2s; }
+    .live-hero__social img:hover {
+      transform: scale(1.2); }
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #312D38;
+  padding: 1rem 2rem;
+  max-height: 1160px;
+  margin: auto;
+  margin-top: 5rem;
+  height: 116rem;
+  width: 35rem;
+  transform: rotate(-90deg);
+  position: absolute;
+  border-radius: 6px;
+  top: 150px; }
+  .announcements::-webkit-scrollbar {
+    display: none; }
+
+.announcement {
+  display: flex;
+  position: relative;
+  transform: rotate(90deg);
+  padding: 2.5rem;
+  background: #1C1921;
+  color: white;
+  margin: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 30rem;
+  min-height: 30rem;
+  border-radius: 3rem; }
+
+.announcement__text {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.announcement__title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem; }
+
+.announcement__time, .announcement__day {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  color: white;
+  font-size: 2.5rem; }
+
+.announcement__day {
+  left: 2.5rem; }
+
+.announcements__title {
+  position: relative;
+  top: -430px;
+  font-size: 5rem;
+  color: #EBA471;
+  font-family: "Space Mono", monospace; }
+
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 2rem;
+  border-radius: 100px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 55rem; }
+
+.link__item {
+  flex: 1;
+  display: block;
+  padding: 5rem 2rem;
+  color: white;
+  font-size: 3rem;
+  background-color: #312D38;
+  transition: background-color .2s; }
+  .link__item:hover {
+    background-color: #564f62; }
+
+.live-schedule {
+  max-width: 1160px;
+  min-width: 1160px;
+  margin: auto;
+  text-align: center; }
+
+.live-schedule__title {
+  font-family: "Space Mono", monospace;
+  color: #EBA471;
+  font-size: 5rem; }
+
+.schedule-container {
+  text-align: right;
+  border-radius: 2rem;
+  background-color: #312D38;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem 1fr;
+  place-items: center; }
+  .schedule-container span {
+    font-size: 3rem;
+    font-family: "Space Mono", monospace;
+    color: #EBA471; }
+
+.time-column {
+  display: grid;
+  align-self: stretch;
+  grid-template-rows: repeat(auto-fit, 10rem);
+  height: 300rem; }
+
+span.time-day {
+  font-size: 6rem; }
+
+.schedule-column {
+  display: flex;
+  padding-top: 10rem;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch; }
+
+.schedule-item {
+  min-width: 25rem;
+  max-width: 25rem;
+  min-height: 100px;
+  background-color: #1C1921;
+  position: relative;
+  text-align: left; }
+  .schedule-item span.time {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 2.5rem; }
+  .schedule-item span.title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
