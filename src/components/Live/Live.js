@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import logo from 'assets/logo.svg';
-import background from 'assets/live-hero.svg';
 import instagram from 'assets/social/instagram.svg';
 import facebook from 'assets/social/facebook.svg';
 import twitter from 'assets/social/twitter.svg';
