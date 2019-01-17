@@ -37,6 +37,10 @@ body, html {
   overflow-x: hidden;
   scroll-behavior: smooth; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 .hidden {
   visibility: hidden; }
 
@@ -1108,8 +1112,7 @@ body, html {
 .live-hero__social {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 50rem; }
+  align-items: center; }
   .live-hero__social img {
     height: 6rem;
     margin: 1rem;
@@ -1135,7 +1138,7 @@ body, html {
   transform: rotate(-90deg);
   position: absolute;
   border-radius: 6px;
-  top: -75px; }
+  top: 150px; }
   .announcements::-webkit-scrollbar {
     display: none; }
 
@@ -1172,3 +1175,32 @@ body, html {
 
 .announcement__day {
   left: 2.5rem; }
+
+.announcements__title {
+  position: relative;
+  top: -385px;
+  font-size: 5rem;
+  color: #EBA471;
+  font-family: "Space Mono", monospace; }
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 100px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 50rem; }
+
+.link__item {
+  flex: 1;
+  display: block;
+  padding: 5rem 2rem;
+  color: white;
+  font-size: 3rem;
+  background-color: #312D38;
+  transition: background-color .2s; }
+  .link__item:hover {
+    background-color: #564f62; }

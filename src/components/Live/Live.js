@@ -6,6 +6,7 @@ import facebook from 'assets/social/facebook.svg';
 import twitter from 'assets/social/twitter.svg';
 
 import Announcements from './Announcements';
+import Links from './Links';
 
 class Live extends Component {
   render() {
@@ -18,8 +19,9 @@ class Live extends Component {
                 <a href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>
                 <a href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
             </div>
+            <Links />
+            <span className="announcements__title">Announcements</span>
             <Announcements />
-            
         </div>
     );
   }
