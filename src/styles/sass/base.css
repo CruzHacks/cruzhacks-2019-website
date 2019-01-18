@@ -1138,7 +1138,7 @@ a {
   transform: rotate(-90deg);
   position: absolute;
   border-radius: 6px;
-  top: 150px; }
+  top: 110px; }
   .announcements::-webkit-scrollbar {
     display: none; }
 
@@ -1196,7 +1196,7 @@ a {
 .link__item {
   flex: 1;
   display: block;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   color: white;
   font-size: 3rem;
   background-color: #312D38;
@@ -1235,7 +1235,7 @@ a {
   display: grid;
   align-self: stretch;
   grid-template-rows: repeat(auto-fit, 10rem);
-  height: 300rem; }
+  height: 350rem; }
 
 span.time-day {
   font-size: 6rem; }
