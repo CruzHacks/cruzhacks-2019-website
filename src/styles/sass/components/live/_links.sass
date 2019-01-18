@@ -1,20 +1,24 @@
 .links-container
-    display: grid
-    grid-template-columns: repeat(6, 1fr)
-    margin-top: 2rem
+    display: flex
+    flex-wrap: wrap    
     border-radius: 100px
-    width: 100%
     text-align: center
     overflow: hidden
-    margin-bottom: 55rem
+    margin-bottom: 5rem
+    margin-top: 2rem
+    width: 100%
+    @include respond(tab-port)
+        border-radius: 3rem
     
 .link__item
     flex: 1
     display: block
     padding: 3rem 2rem
     color: white
-    font-size: 3rem
+    min-width: 10rem
+    font-size: 2.75rem
     background-color: $color-bg-alt
     transition: background-color .2s
+    border: 1px solid $color-bg
     &:hover
         background-color: lighten($color-bg-alt, 15%)

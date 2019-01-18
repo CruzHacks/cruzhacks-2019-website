@@ -7,14 +7,20 @@
     align-items: center
     margin-top:  8rem
     position: relative
+    @include respond(tab-port)
+        margin-top: 3rem
 
 .live-hero__logo
     height: 15rem
+    @include respond(tab-port)
+        height: 10rem
 
 .live-hero__title
     color: white
     font-size: 8rem
     margin: 1rem 0
+    @include respond(tab-port)
+        font-size: 6rem
 
 .live-hero__social
     display: flex
@@ -24,6 +30,8 @@
         height: 6rem
         margin: 1rem
         transition: transform .2s
+        @include respond(tab-port)
+            height: 4rem
         &:hover
             transform: scale(1.2)
 

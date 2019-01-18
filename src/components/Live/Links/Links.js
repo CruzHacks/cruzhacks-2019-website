@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const links = {
   "slack": "https://join.slack.com/t/cruzhacks-attendees/shared_invite/enQtNTIwODg0MDM2ODM4LTI2OWE4ZTJmMTA0ZmFkMDc5YzY0YjM2OWUyZjFkOWZiMmZlODNkOWZjNTE5YTNkMWM4NWRkNmI4YTMwMDYyMjQ",
@@ -19,6 +20,7 @@ class Links extends Component {
           <a href={links['map']} target="_blank" className="link__item">Map</a>
           <a href={links['MLH']} target="_blank" className="link__item">MLH</a>
           <a href={links['crowdforge']} target="_blank" className="link__item">Crowd Forge</a>
+          <Link to="/#FAQ" className="link__item">FAQ</Link>
         </div>
     );
   }

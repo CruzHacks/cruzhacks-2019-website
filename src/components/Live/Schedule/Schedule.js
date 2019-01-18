@@ -45,6 +45,25 @@ class Schedule extends Component {
                     <span>9pm</span>
                     <span>10pm</span>
                     <span>11pm</span>
+                    <span className="time-day">SUN</span>
+                    <span>12am</span>
+                    <span>1am</span>
+                    <span>2am</span>
+                    <span>3am</span>
+                    <span>4am</span>
+                    <span>5am</span>
+                    <span>6am</span>
+                    <span>7am</span>
+                    <span>8am</span>
+                    <span>9am</span>
+                    <span>10am</span>
+                    <span>11am</span>
+                    <span>12pm</span>
+                    <span>1pm</span>
+                    <span>2pm</span>
+                    <span>3pm</span>
+                    <span>4pm</span>
+                    <span>5pm</span>                    
                 </div>
                 <div className="schedule-column general">
                     <ScheduleItem 

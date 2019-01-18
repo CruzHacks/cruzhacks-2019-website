@@ -39,6 +39,10 @@ class Layout extends Component {
                   return <Landing/>
                 }
               }/>
+              <Route path="/#FAQ" exact render={() => {
+                  
+                }
+              }/>
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>

@@ -46,7 +46,7 @@ class FAQ extends Component {
     )
 
     return (
-      <div className="faq-container">
+      <div id="FAQ" className="faq-container">
         <h2 className="faq-container__title">Frequently Asked Questions</h2>
         <div className="faq-grid">
           <div className="faq-container__column">
