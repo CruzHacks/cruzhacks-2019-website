@@ -28,6 +28,7 @@ import GCPKilo from 'assets/sponsors/GCP - KILO/GCP logo, transparent.png'
 import MicrosoftKilo from 'assets/sponsors/Microsoft - KILO/logo.png'
 import iDTechPartner from 'assets/sponsors/iD Tech - PARTNER/iD-Tech-Company-Logo-Tagline.png'
 import EarthHacksPartner from 'assets/sponsors/Earth Hacks - PARTNER/EarthHacks_logoTransparentLines.png'
+import InboardPartner from 'assets/sponsors/Inboard - PARTNER/1.png'
 
 class Sponsors extends Component {
   render() {
@@ -175,6 +176,11 @@ class Sponsors extends Component {
         <a href="https://www.idtech.com/" target="_blank" rel="noopener noreferrer">
         <div className="sponsors__partner">
           <img src={iDTechPartner}  alt="iD Tech" width="225px" height="110px"/>
+        </div>
+        </a>
+        <a href="https://www.inboardtechnology.com/" target="_blank" rel="noopener noreferrer">
+        <div className="sponsors__partner">
+          <img src={InboardPartner}  alt="Inboard" width="225px" height="110px"/>
         </div>
         </a>
       </div>
