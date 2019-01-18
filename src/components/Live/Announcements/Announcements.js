@@ -9,12 +9,12 @@ class Announcements extends Component {
           <div className="announcements">
             <span className="announcements__title">Announcements</span>
             <HorziontalScroll className="announcements-container">
-                <Announcement title="Dinner is now being Served!" day="Fri" time="10:43pm" />
-                <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
-                <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
-                <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
-                <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
-                <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
+              <Announcement title="Dinner is now being Served!" day="Fri" time="10:43pm" />
+              <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
+              <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
+              <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
+              <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
+              <Announcement title="Dinner is Served!" day="Fri" time="10:43pm" />
             </HorziontalScroll>
           </div>
     );

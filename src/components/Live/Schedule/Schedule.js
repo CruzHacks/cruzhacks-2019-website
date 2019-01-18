@@ -8,9 +8,9 @@ class Schedule extends Component {
             <span className="live-schedule__title">Schedule</span>
             <div className="schedule-container">
                 <span></span>
-                <span>General</span>
-                <span>Workshops</span>
-                <span>Activities</span>
+                <span className="large">General</span>
+                <span className="large">Workshops</span>
+                <span className="large">Activities</span>
                 <div className="time-column">
                     <span className="time-day">FRI</span>
                     <span>5pm</span>

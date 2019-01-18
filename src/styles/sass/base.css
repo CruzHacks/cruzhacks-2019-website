@@ -1237,6 +1237,8 @@ a {
     font-size: 3rem;
     font-family: "Space Mono", monospace;
     color: #EBA471; }
+    .schedule-container span.large {
+      font-size: 5rem; }
 
 .time-column {
   display: grid;
