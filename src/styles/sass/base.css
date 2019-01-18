@@ -735,7 +735,8 @@ a {
   margin: auto;
   color: white;
   font-size: 3rem;
-  padding: 8rem 4rem; }
+  padding: 8rem 4rem;
+  width: 100%; }
 
 .schedule__title {
   text-align: center;
@@ -1093,6 +1094,7 @@ a {
 
 .live-hero {
   max-width: 1160px;
+  overflow: hidden;
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
@@ -1216,6 +1218,9 @@ a {
   min-width: 1160px;
   margin: auto;
   text-align: center; }
+  @media (max-width: 75em) {
+    .live-schedule {
+      display: none; } }
 
 .live-schedule__title {
   font-family: "Space Mono", monospace;
