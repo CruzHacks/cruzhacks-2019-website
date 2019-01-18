@@ -6,6 +6,7 @@ import HttpsRedirect from 'react-https-redirect';
 import Landing from 'components/Landing';
 import Patch from 'components/Patch';
 import Live from 'components/Live';
+import Login from 'components/Login';
 
 import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
@@ -34,6 +35,7 @@ class Layout extends Component {
             <Switch>
               <Route path="/patch" exact component={Patch}/>
               <Route path={protecedURI} exact component={Live}/>
+              <Route path="/login" exact component={Login}/>
               <Route path="/slack" exact render={() => {
                   reload();
                   return <Landing/>

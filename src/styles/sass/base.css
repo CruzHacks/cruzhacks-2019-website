@@ -1282,3 +1282,15 @@ span.time-day {
     left: 50%;
     font-size: 3rem;
     transform: translate(-50%, -50%); }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10rem; }
+  .login h1 {
+    font-family: "Space Mono", monospace;
+    color: #EBA471;
+    font-size: 5rem; }
