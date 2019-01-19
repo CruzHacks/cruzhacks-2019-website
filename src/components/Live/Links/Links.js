@@ -5,7 +5,7 @@ const links = {
   "slack": "https://join.slack.com/t/cruzhacks-attendees/shared_invite/enQtNTIwODg0MDM2ODM4LTI2OWE4ZTJmMTA0ZmFkMDc5YzY0YjM2OWUyZjFkOWZiMmZlODNkOWZjNTE5YTNkMWM4NWRkNmI4YTMwMDYyMjQ",
   "devpost": "https://cruzhacks-2019.devpost.com/?fbclid=IwAR1uOzD2w4OH3pOZRoCUQQc6-SM8t4Xu5cp7R7a7Dm3cySlFrT55uNM6D1A",
   "hackpack": "https://github.com/CruzHacks/Cruzhacks-Hacker-Packs?fbclid=IwAR345etFOxS-Mn2T1Qx4bjeYoGpkJWThUZ-hQHpwH9KQIoKE_C04TMYnhT0",
-  "map": "#",
+  "map": "https://lh5.googleusercontent.com/EMCUpsPn_joa7ihcOw4FtckwiPr_2WF3pwhVwYeSIBjxWJmobqrFJhxDDtf4rmXrC4rXft693u4jC73k8lji=w2880-h1534-rw",
   "MLH": "http://hackp.ac/mlh",
   "crowdforge": "https://crowdforge.io/hackathons/cruzhacks"
 }
