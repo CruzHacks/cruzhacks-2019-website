@@ -246,14 +246,6 @@ class Schedule extends Component {
                         title="Web Dev Workshop" 
                     />  
                     <ScheduleItem 
-                        start="3:00"
-                        end="3:30"
-                        length=".5"
-                        pm
-                        day="Sat"
-                        title="Security Workshop" 
-                    />
-                    <ScheduleItem 
                         start="3:30"
                         end="4:30"
                         length="1"
@@ -292,6 +284,15 @@ class Schedule extends Component {
                         pm
                         day="Sat"
                         title="ReactJS + VueJS (A)" 
+                    />
+                    
+                    <ScheduleItem 
+                        start="10:30"
+                        end="11:30"
+                        length="1"
+                        pm
+                        day="Sat"
+                        title="Intro to Machine Learning with Python" 
                     />       
                     <ScheduleItem 
                         start="1:00"
@@ -346,7 +347,7 @@ class Schedule extends Component {
                         length="1"
                         pm
                         day="Sat"
-                        title="Protecting Cyber-Physical Systems" 
+                        title="Cyber Security" 
                     />
                     <ScheduleItem 
                         start="5:00"
@@ -354,7 +355,7 @@ class Schedule extends Component {
                         length="1"
                         pm
                         day="Sat"
-                        title="GCP with Ian (C)" 
+                        title="GCP with Justin (C)" 
                     /> 
                     <ScheduleItem 
                         start="9:00"

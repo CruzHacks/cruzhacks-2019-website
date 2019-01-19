@@ -1,6 +1,5 @@
 .live-hero
     max-width: 1160px
-    overflow: hidden
     margin: 3rem auto
     display: flex
     flex-direction: column
@@ -10,6 +9,19 @@
     position: relative
     @include respond(tab-port)
         margin-top: 3rem
+
+.live-hero__left, .live-hero__right,
+    position: fixed
+    top: 50px
+    height: 1200px
+    z-index: -2
+
+.live-hero__right
+    right: 0px
+    transform: scale(-1)
+
+.live-hero__left
+    left: 0px
 
 .live-hero__logo
     height: 15rem
