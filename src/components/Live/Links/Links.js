@@ -21,7 +21,7 @@ class Links extends Component {
           <NavLink to="/map" target="_blank" className="link__item">Map</NavLink>
           <a href={links['MLH']} target="_blank" className="link__item">MLH</a>
           <a href={links['crowdforge']} target="_blank" className="link__item">Crowd Forge</a>
-          <Link to="/#FAQ" className="link__item">FAQ</Link>
+          <Link to="/home#FAQ" className="link__item">FAQ</Link>
         </div>
     );
   }
