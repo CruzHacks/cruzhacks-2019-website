@@ -183,14 +183,6 @@ class Schedule extends Component {
                         title="Last Remarks" 
                     />                                  
                     <ScheduleItem 
-                        start="3:30"
-                        end="4:30"
-                        length="1"
-                        pm
-                        day="Sat"
-                        title="Building a Web App" 
-                    /> 
-                    <ScheduleItem 
                         start="10:00"
                         end="11:00"
                         length="1"
@@ -344,7 +336,7 @@ class Schedule extends Component {
                     <ScheduleItem 
                         start="3:00"
                         end="3:30"
-                        length="1"
+                        length=".5"
                         pm
                         day="Sat"
                         title="Cyber Security" 

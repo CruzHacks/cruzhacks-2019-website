@@ -9,7 +9,6 @@ class Announcements extends Component {
           <div className="announcements">
             <span className="announcements__title">Announcements</span>
             <HorziontalScroll className="announcements-container">
-            
             <Announcement title="Vegan and gluten free food has arrived at the registration desk!" day="Sat" time="2:00pm" />
               <Announcement title="ShotClass (http://shotclass.co) will be taking professional headshots near the Yerba Mate canopy!" day="Sat" time="12:56pm" />
               <Announcement title="Lunch is being served!" day="Sat" time="1:00pm" />
