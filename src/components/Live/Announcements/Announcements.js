@@ -9,7 +9,7 @@ class Announcements extends Component {
           <div className="announcements">
             <span className="announcements__title">Announcements</span>
             <HorziontalScroll className="announcements-container">
-              <Announcement title="" day="" time="" />
+              <Announcement title="Overflow Room Is Open for Hackers!" day="" time="" />
               <Announcement title="" day="" time="" />
               <Announcement title="" day="" time="" />
               <Announcement title="" day="" time="" />
