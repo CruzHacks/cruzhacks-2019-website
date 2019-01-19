@@ -77,8 +77,8 @@ class Schedule extends Component {
                         title="Hacker Check In" 
                     />  
                     <ScheduleItem 
-                        start="7:00"
-                        end="8:00"
+                        start="8:00"
+                        end="9:00"
                         pm
                         length="1"
                         day="Fri"
@@ -185,16 +185,16 @@ class Schedule extends Component {
                 </div>
                 <div className="schedule-column workshops">
                     <ScheduleItem 
-                        start="8:30"
-                        end="9:00"
+                        start="9:30"
+                        end="10:00"
                         pm
                         length=".5"
                         day="Fri"
                         title="ChangeMaker" 
                     />  
                     <ScheduleItem 
-                        start="9:30"
-                        end="10:30"
+                        start="10:00"
+                        end="11:00"
                         pm
                         length="1"
                         day="Fri"
@@ -296,8 +296,8 @@ class Schedule extends Component {
                 </div>
                 <div className="schedule-column activities">
                     <ScheduleItem 
-                        start="8:00"
-                        end="8:30"
+                        start="9:00"
+                        end="9:30"
                         pm
                         length=".5"
                         day="Fri"
