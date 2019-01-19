@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import ScheduleItem from './ScheduleItem/ScheduleItem';
+import Bar from '../Bar';
 
 class Schedule extends Component {
   render() {
     return (      
-        <div className="live-schedule">
+        <div className="live-schedule" style={{"position": "relative"}}>
+            <Bar />
             <span className="live-schedule__title">Schedule</span>
             <div className="schedule-container">
                 <span></span>
