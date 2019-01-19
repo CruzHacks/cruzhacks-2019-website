@@ -100,8 +100,7 @@ a {
   z-index: 3;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  display: none; }
+  transform: translateX(-50%); }
 
 .hero {
   min-height: 100vh;

@@ -13,7 +13,6 @@ class Bar extends Component {
         let pm = false
         console.log(now.getTime())
         if (parseInt(start.split(":")[0]) >= 12) {
-            start %= 12
             pm = true
         }
         super(props)
@@ -32,15 +31,14 @@ class Bar extends Component {
 
 
     getTop(day, start, pm) {
-        return 0
         let offset = 90
         if (day === "Fri") {
             offset += (parseInt(start.split(":")[0]) - 5) * 90
         } else if (day === "Sat") {            
             offset = 800 + Math.abs(parseInt(start.split(":")[0]) + parseInt(start.split(":")[1]) / 50 ) * 90
-            if (pm) {
-                offset = offset + 1100
-            }
+            // if (pm) {
+            //     offset = offset + 1100
+            // }
         } else if (day === "Sun") {
             if (parseInt(start.split(":")[0]) === 12) {
                 offset = 3070
