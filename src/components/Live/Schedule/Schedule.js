@@ -183,16 +183,16 @@ class Schedule extends Component {
                 </div>
                 <div className="schedule-column workshops">
                     <ScheduleItem 
-                        start="8:00"
-                        end="8:30"
+                        start="8:30"
+                        end="9:00"
                         pm
                         length=".5"
                         day="Fri"
                         title="ChangeMaker" 
                     />  
                     <ScheduleItem 
-                        start="9:00"
-                        end="10:00"
+                        start="9:30"
+                        end="10:30"
                         pm
                         length="1"
                         day="Fri"
@@ -200,9 +200,9 @@ class Schedule extends Component {
                     />   
                     <ScheduleItem 
                         start="10:30"
-                        end="11:00"
+                        end="11:30"
                         pm
-                        length=".5"
+                        length="1"
                         day="Fri"
                         title="Intro to Python" 
                     />           
@@ -243,6 +243,14 @@ class Schedule extends Component {
                         day="Sat"
                         title="Alfred Young" 
                     />
+                    <ScheduleItem 
+                        start="11:00"
+                        end="12:00"
+                        pm
+                        length="1"
+                        day="Fri"
+                        title="GCP with Blake" 
+                    /> 
                     <ScheduleItem 
                         start="5:00"
                         end="6:00"
@@ -295,9 +303,9 @@ class Schedule extends Component {
                     />     
                     <ScheduleItem 
                         start="10:00"
-                        end="10:30"
+                        end="11:00"
                         pm
-                        length=".5"
+                        length="1"
                         day="Fri"
                         title="HashGraph" 
                     />     
