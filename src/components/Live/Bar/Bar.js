@@ -10,15 +10,16 @@ class Bar extends Component {
         const now = new Date();
         const day = days[now.getDay()]
         let start = (now.getHours() > 12 ? now.getHours() - 12: now.getHours()) + ":" + (now.getMinutes() / 50)
+        // let start = "1:15"
         let pm = false
         console.log(now.getTime())
-        if (parseInt(start.split(":")[0]) >= 12) {
+        if (now.getHours() > 12) {
             pm = true
         }
         super(props)
         this.state = {
             'top': {
-                'top': this.getTop(day, start, pm) + 200
+                'top': this.getTop(day, start, pm) + 170
             },
             'days': {
                 5: 'Fri',
@@ -36,9 +37,9 @@ class Bar extends Component {
             offset += (parseInt(start.split(":")[0]) - 5) * 90
         } else if (day === "Sat") {            
             offset = 800 + Math.abs(parseInt(start.split(":")[0]) + parseInt(start.split(":")[1]) / 50 ) * 90
-            // if (pm) {
-            //     offset = offset + 1100
-            // }
+            if (pm) {
+                offset = offset + 1060
+            }
         } else if (day === "Sun") {
             if (parseInt(start.split(":")[0]) === 12) {
                 offset = 3070
