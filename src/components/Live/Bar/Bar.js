@@ -32,6 +32,7 @@ class Bar extends Component {
 
 
     getTop(day, start, pm) {
+        return 0
         let offset = 90
         if (day === "Fri") {
             offset += (parseInt(start.split(":")[0]) - 5) * 90
