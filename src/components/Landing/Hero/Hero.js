@@ -71,7 +71,10 @@ class Hero extends Component {
         <img className="hero__logo" src={logo} alt="logo"/>
         <h1 className="hero__title">CruzHacks 2019</h1>
         <span className="hero__text">Create something that makes a difference.</span>
-        <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>        
+        <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
+        <div className="hero__button-container">
+          <NavLink to="/" className="hero__button hero__button__cta" rel="noopener noreferrer">Live APP</NavLink>
+        </div>
         <div className="hero__stats">
           <span id="hackers" className="hero__stats__item">500+ hackers</span>
           <span id="projects" className="hero__stats__item">100+ projects</span>

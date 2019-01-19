@@ -34,7 +34,6 @@ class Layout extends Component {
           <Router>
             <Switch>
               <Route path="/patch" exact component={Patch}/>
-              <Route path={protecedURI} exact component={Live}/>
               <Route path="/login" exact component={Login}/>
               <Route path="/slack" exact render={() => {
                   reload();
@@ -45,7 +44,8 @@ class Layout extends Component {
                   
                 }
               }/>
-              <Route path="/" component={Landing}/>
+              <Route path="/home" component={Landing}/>
+              <Route path="/" component={Live}/>
             </Switch>
           </Router>
         </div>
