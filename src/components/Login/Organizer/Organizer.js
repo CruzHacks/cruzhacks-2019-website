@@ -17,6 +17,10 @@ class Organizer extends Component {
       console.log(newState)
     })
   }
+  /* 
+  `https://cruzhacks2019-registration-stg.herokuapp.com/announcements` POST/DELETE, takes uid, token, title, post_date, and message (optional) as parameters
+
+  */
 
   handleSubmit = (event) => {
     event.preventDefault();
