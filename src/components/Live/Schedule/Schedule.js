@@ -215,14 +215,14 @@ class Schedule extends Component {
                     />
                     <ScheduleItem 
                         start="11:00"
-                        end="11:30"
+                        end="12:00"
                         length="1"
                         day="Sat"
                         title="Alexa Workshop (A)" 
                     />  
                     <ScheduleItem 
                         start="12:00"
-                        end="12:30"
+                        end="1:00"
                         length="1"
                         day="Sat"
                         title="Web Dev Workshop" 
@@ -311,7 +311,7 @@ class Schedule extends Component {
                     />     
                     <ScheduleItem 
                         start="1:00"
-                        end="2:30"                        
+                        end="2:00"                        
                         length="1.5"
                         day="Sat"
                         title="Board Games - Telestrations (room C)" 
@@ -325,7 +325,7 @@ class Schedule extends Component {
                     />  
                     <ScheduleItem 
                         start="12:00"
-                        end="12:30"
+                        end="1:00"
                         length="1"
                         day="Sat"
                         title="Arts Division" 

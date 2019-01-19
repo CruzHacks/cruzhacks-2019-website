@@ -36,9 +36,9 @@ class ScheduleItem extends Component {
 
     getTime = (start, end) => {
         if (start && end)
-            return this.props.start + (this.props.pm ? "pm" : "am") + " – " + this.props.end + (this.props.pm ? "pm" : "am")
+            return this.props.start + " – " + this.props.end
         else if (start)
-            return this.props.start + (this.props.pm ? "pm" : "am")
+            return this.props.start
     }
 
     render() {
