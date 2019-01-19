@@ -19,7 +19,7 @@ class Bar extends Component {
         super(props)
         this.state = {
             'top': {
-                'top': this.getTop(day, start, pm) + 150
+                'top': this.getTop(day, start, pm) + 160
             },
             'days': {
                 5: 'Fri',

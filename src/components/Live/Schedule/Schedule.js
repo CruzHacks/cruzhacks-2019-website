@@ -251,7 +251,7 @@ class Schedule extends Component {
                         pm
                         length="1"
                         day="Fri"
-                        title="GCP with Blake" 
+                        title="GCP with Ian" 
                     /> 
                     <ScheduleItem 
                         start="5:00"
@@ -338,7 +338,7 @@ class Schedule extends Component {
                         length="1"
                         pm
                         day="Sat"
-                        title="GCP with Justin (C)" 
+                        title="GCP with Ian (C)" 
                     /> 
                     <ScheduleItem 
                         start="9:00"
