@@ -6,20 +6,30 @@ class ScheduleItem extends Component {
         const height = parseFloat(this.props.length) * 100        
         this.state = {
             height: height,
-            top: this.getTop(this.props.day, this.props.start),
+            top: this.getTop(this.props.day, this.props.start, this.props.pm),
             time: this.getTime(this.props.start, this.props.end)
         }
         console.log(this.state.top)
     }
 
-    getTop(day, start) {
+    getTop(day, start, pm) {
         let offset = 90
         if (day === "Fri") {
             offset += (parseInt(start.split(":")[0]) - 5) * 90
-        } else if (day === "Sat") {
-            offset = 800 + Math.abs(parseInt(start.split(":")[0]) - 12) * 90
+        } else if (day === "Sat") {            
+            offset = 800 + Math.abs(parseInt(start.split(":")[0]) + parseInt(start.split(":")[1]) / 50 ) * 90
+            if (pm) {
+                offset = offset + 1100
+            }
         } else if (day === "Sun") {
-            offset = 1440
+            if (parseInt(start.split(":")[0]) === 12) {
+                offset = 3070
+            } else {
+                offset = 3070 + Math.abs(parseInt(start.split(":")[0]) + parseInt(start.split(":")[1]) / 50 ) * 90                
+            }
+            if (pm) {
+                offset = offset + 1100
+            }
         }
         return offset
     }
