@@ -10,7 +10,7 @@ class Bar extends Component {
         const now = new Date();
         const day = days[now.getDay()]
         let start = (now.getHours() > 12 ? now.getHours() - 12: now.getHours()) + ":" + (now.getMinutes() / 50)
-        let pm = true
+        let pm = falsegit
         console.log(now.getTime())
         if (parseInt(start.split(":")[0]) >= 12) {
             start %= 12
