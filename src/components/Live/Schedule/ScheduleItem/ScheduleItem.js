@@ -9,7 +9,6 @@ class ScheduleItem extends Component {
             top: this.getTop(this.props.day, this.props.start, this.props.pm),
             time: this.getTime(this.props.start, this.props.end)
         }
-        console.log(this.state.top)
     }
 
     getTop(day, start, pm) {
