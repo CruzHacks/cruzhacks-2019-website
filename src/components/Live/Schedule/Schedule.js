@@ -196,7 +196,7 @@ class Schedule extends Component {
                         length="1"
                         pm
                         day="Sat"
-                        title="3D Printing (A)" 
+                        title="3D Printing" 
                     />  
                 </div>
                 <div className="schedule-column workshops">
@@ -251,7 +251,7 @@ class Schedule extends Component {
                         length="1"
                         pm
                         day="Sat"
-                        title="Alfred Young" 
+                        title="Web Apps with React" 
                     />
                     <ScheduleItem 
                         start="11:00"
@@ -262,8 +262,8 @@ class Schedule extends Component {
                         title="GCP with Ian" 
                     /> 
                     <ScheduleItem 
-                        start="5:00"
-                        end="6:00"
+                        start="4:30"
+                        end="5:30"
                         length="1"
                         pm
                         day="Sat"
@@ -278,7 +278,7 @@ class Schedule extends Component {
                         title="Docker (A)" 
                     />
                     <ScheduleItem 
-                        start="9:30"
+                        start="9:00"
                         end="10:00"
                         length="1"
                         pm
