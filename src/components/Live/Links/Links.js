@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const links = {
@@ -17,7 +18,7 @@ class Links extends Component {
           <a href={links['slack']} target="_blank" className="link__item">Slack</a>
           <a href={links['devpost']} target="_blank" className="link__item">DevPost</a>
           <a href={links['hackpack']} target="_blank" className="link__item">Hack Pack</a>
-          <a href={links['map']} target="_blank" className="link__item">Map</a>
+          <NavLink to="/map" target="_blank" className="link__item">Map</NavLink>
           <a href={links['MLH']} target="_blank" className="link__item">MLH</a>
           <a href={links['crowdforge']} target="_blank" className="link__item">Crowd Forge</a>
           <Link to="/#FAQ" className="link__item">FAQ</Link>

@@ -25,6 +25,10 @@ const reload = () => {
   window.location = "/slack.html"
 }
 
+const reloadMap = () => {
+  window.location = "/map.png"
+}
+
 class Layout extends Component {
   render() {
     return (
@@ -35,6 +39,11 @@ class Layout extends Component {
             <Switch>
               <Route path="/patch" exact component={Patch}/>
               <Route path="/login" exact component={Login}/>
+              <Route path="/map" exact render={() => {
+                  reloadMap();
+                  return <Landing/>
+                }
+              }/>
               <Route path="/slack" exact render={() => {
                   reload();
                   return <Landing/>

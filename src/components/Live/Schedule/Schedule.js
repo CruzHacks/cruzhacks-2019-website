@@ -181,7 +181,23 @@ class Schedule extends Component {
                         length="1"
                         day="Sun"
                         title="Last Remarks" 
-                    />
+                    />                                  
+                    <ScheduleItem 
+                        start="3:30"
+                        end="4:30"
+                        length="1"
+                        pm
+                        day="Sat"
+                        title="Building a Web App" 
+                    /> 
+                    <ScheduleItem 
+                        start="10:00"
+                        end="11:00"
+                        length="1"
+                        pm
+                        day="Sat"
+                        title="3D Printing (A)" 
+                    />  
                 </div>
                 <div className="schedule-column workshops">
                     <ScheduleItem 
@@ -193,12 +209,12 @@ class Schedule extends Component {
                         title="ChangeMaker" 
                     />  
                     <ScheduleItem 
-                        start="10:00"
-                        end="11:00"
+                        start="9:30"
+                        end="10:30"
                         pm
                         length="1"
                         day="Fri"
-                        title="NodeJS w Azure " 
+                        title="NodeJS & Azure " 
                     />   
                     <ScheduleItem 
                         start="10:30"
@@ -270,21 +286,13 @@ class Schedule extends Component {
                         title="Docker (A)" 
                     />
                     <ScheduleItem 
-                        start="9:00"
+                        start="9:30"
                         end="10:00"
                         length="1"
                         pm
                         day="Sat"
                         title="ReactJS + VueJS (A)" 
-                    />
-                    <ScheduleItem 
-                        start="10:00"
-                        end="11:00"
-                        length="1"
-                        pm
-                        day="Sat"
-                        title="3D Printing (A)" 
-                    />                       
+                    />       
                     <ScheduleItem 
                         start="1:00"
                         end="2:00"
@@ -320,7 +328,7 @@ class Schedule extends Component {
                     />
                     <ScheduleItem 
                         start="11:00"
-                        end="11:30"
+                        end="12:00"
                         length="1"
                         day="Sat"
                         title="Git Workshop (C)" 
@@ -330,7 +338,15 @@ class Schedule extends Component {
                         end="1:00"
                         length="1"
                         day="Sat"
-                        title="Arts Division" 
+                        title="Entrepreneurship in the Arts" 
+                    />                     
+                    <ScheduleItem 
+                        start="3:00"
+                        end="3:30"
+                        length="1"
+                        pm
+                        day="Sat"
+                        title="Protecting Cyber-Physical Systems" 
                     />
                     <ScheduleItem 
                         start="5:00"
