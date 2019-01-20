@@ -98,8 +98,8 @@ class Schedule extends Component {
                         title="Hacking Begins!" 
                     />   
                     <ScheduleItem 
-                        start="8:30"
-                        end="9:30"
+                        start="8:00"
+                        end="9:00"
                         length="1"
                         day="Sat"
                         title="Breakfast Served" 
@@ -128,9 +128,9 @@ class Schedule extends Component {
                         title="Secret Snack" 
                     /> 
                     <ScheduleItem 
-                        start="8:00"
+                        start="8:30"
                         end="9:30"
-                        length="1.5"
+                        length="1"
                         day="Sun"
                         title="Breakfast" 
                     /> 
@@ -142,7 +142,7 @@ class Schedule extends Component {
                         title="CODE FREEZE!" 
                     />
                     <ScheduleItem 
-                        start="11:45"
+                        start="11:30"
                         end="1:00"
                         length="1.5"
                         day="Sun"
