@@ -143,8 +143,9 @@ a {
     grid-column-end: 3; }
   .hero__button-container {
     margin: 2rem;
+    margin-top: 0;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center; }
   .hero__button {
     text-decoration: none;
@@ -164,6 +165,10 @@ a {
       background-color: #8568eb !important;
       font-weight: 600 !important;
       text-transform: uppercase !important; }
+      .hero__button__cta.orange {
+        background-color: #AE9200  !important; }
+        .hero__button__cta.orange:hover {
+          background-color: #c8a700 !important; }
       .hero__button__cta:hover {
         background-color: #977ef1 !important; }
     .hero__button__tiny {
@@ -1119,7 +1124,8 @@ a {
   position: fixed;
   top: 50px;
   height: 1200px;
-  z-index: -2; }
+  z-index: -2;
+  opacity: .3; }
 
 .live-hero__right {
   right: 0px;
@@ -1145,7 +1151,9 @@ a {
 .live-hero__social {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 1rem;
+  transform: scale(0.8); }
   .live-hero__social img {
     height: 6rem;
     margin: 1rem;
@@ -1154,7 +1162,7 @@ a {
       .live-hero__social img {
         height: 4rem; } }
     .live-hero__social img:hover {
-      transform: scale(1.2); }
+      transform: scale(1.1); }
 
 .box {
   height: 30rem;

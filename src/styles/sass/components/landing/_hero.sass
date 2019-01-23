@@ -36,8 +36,9 @@
 
   &__button-container
     margin: 2rem
+    margin-top: 0
     display: grid
-    grid-template-columns: 1fr     
+    grid-template-columns: 1fr 1fr     
     align-items: center
   &__button
     text-decoration: none
@@ -57,6 +58,10 @@
       background-color: #8568eb !important
       font-weight: 600 !important
       text-transform: uppercase !important
+      &.orange
+        background-color: #AE9200  !important
+        &:hover
+          background-color: lighten(#AE9200, 5%) !important
       &:hover
         background-color: #977ef1 !important
     &__tiny

@@ -53,8 +53,8 @@ class Layout extends Component {
                   
                 }
               }/>
-              <Route path="/home" component={Landing}/>
-              <Route path="/" component={Live}/>
+              <Route path="/live" exact component={Live}/>
+              <Route path="/" component={Landing}/>
             </Switch>
           </Router>
         </div>
