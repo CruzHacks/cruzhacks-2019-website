@@ -83,6 +83,7 @@ class Patch extends Component {
       case 1: return <Success text="Thanks for uploading your resume!" />
       case 2: return <Error text="Looks like we already have your resume! You can safely ignore this message."/>
       case 3: return <Loader />
+      default: return <h1>Error</h1>
     }
   }
 

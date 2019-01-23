@@ -14,17 +14,17 @@ class ScheduleItem extends Component {
     getTop(day, start, pm) {
         let offset = 90
         if (day === "Fri") {
-            offset += (parseInt(start.split(":")[0]) - 5) * 90
+            offset += (parseInt(start.split(":")[0], 10) - 5) * 90
         } else if (day === "Sat") {            
-            offset = 800 + Math.abs(parseInt(start.split(":")[0]) + parseInt(start.split(":")[1]) / 50 ) * 90
+            offset = 800 + Math.abs(parseInt(start.split(":")[0], 10) + parseInt(start.split(":")[1], 10) / 50 ) * 90
             if (pm) {
                 offset = offset + 1100
             }
         } else if (day === "Sun") {
-            if (parseInt(start.split(":")[0]) === 12) {
+            if (parseInt(start.split(":")[0], 10) === 12) {
                 offset = 3070
             } else {
-                offset = 3070 + Math.abs(parseInt(start.split(":")[0]) + parseInt(start.split(":")[1]) / 50 ) * 90                
+                offset = 3070 + Math.abs(parseInt(start.split(":")[0], 10) + parseInt(start.split(":")[1], 10) / 50 ) * 90                
             }
             if (pm) {
                 offset = offset + 1100

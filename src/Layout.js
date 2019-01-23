@@ -11,8 +11,6 @@ import Login from 'components/Login';
 import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
 
-const protecedURI = "/nHoy8MbfnnaeN";
-
 const GlobalStyle = createGlobalStyle`
   #mlh-trust-badge {
     @media(max-width: 600px) {

@@ -22,9 +22,9 @@ class Live extends Component {
             <h1 className="live-hero__title">CruzHacks 2019 [LIVE]</h1>
             <NavLink to="/home" className="hero__button hero__button__cta" rel="noopener noreferrer">Home Page</NavLink>
             <div className="live-hero__social">
-                <a href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>
-                <a href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>
-                <a href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
+                <a href="https://www.instagram.com/cruzhacks/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt=""/></a>
+                <a href="https://facebook.com/CruzHacks/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt=""/></a>
+                <a href="https://twitter.com/CruzHacks" target="_blank" rel="noopener noreferrer"><img src={twitter} alt=""/></a>
             </div>
             <Links />
             <Announcements />

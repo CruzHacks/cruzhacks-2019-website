@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 import logo from 'assets/logo.svg';
-import hero from 'assets/hero.svg';
 
 import heroLive from 'assets/hero-live.svg';
 import instagram from 'assets/social/instagram.svg';
@@ -80,9 +78,9 @@ class Hero extends Component {
         <span className="hero__text">Create something that makes a difference.</span>
         <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>        
         <div className="live-hero__social">
-          <a href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>
-          <a href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>
-          <a href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
+          <a rel="noopener noreferrer" href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>
+          <a rel="noopener noreferrer" href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>
+          <a rel="noopener noreferrer" href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
         </div>
         <div className="hero__button-container">
           <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
