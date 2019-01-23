@@ -85,7 +85,6 @@ class Hero extends Component {
           <a href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
         </div>
         <div className="hero__button-container">
-          <NavLink to="/" className="hero__button hero__button__cta" rel="noopener noreferrer">Live APP</NavLink>
           <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
         </div>
         <div className="hero__stats">

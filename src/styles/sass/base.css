@@ -145,7 +145,7 @@ a {
     margin: 2rem;
     margin-top: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center; }
   .hero__button {
     text-decoration: none;
