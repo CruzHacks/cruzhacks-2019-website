@@ -52,7 +52,7 @@ class Hero extends Component {
     let begin = start
 
     let step = 2250 / Math.abs(end - start);
-    
+
     function run() {
       begin++
       el.innerHTML = `${begin} ${id}`
@@ -63,7 +63,7 @@ class Hero extends Component {
           el.innerHTML = `${plus} ${id}`
         }
       }
-    }    
+    }
     let timer = setInterval(run, step);
     run()
   }
@@ -76,7 +76,7 @@ class Hero extends Component {
         <img className="hero__logo" src={logo} alt="logo"/>
         <h1 className="hero__title">CruzHacks 2019</h1>
         <span className="hero__text">Create something that makes a difference.</span>
-        <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>        
+        <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
         <div className="live-hero__social">
           <a rel="noopener noreferrer" href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>
           <a rel="noopener noreferrer" href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>
@@ -84,6 +84,7 @@ class Hero extends Component {
         </div>
         <div className="hero__button-container">
           <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
+          <a href="https://flic.kr/s/aHskMHm9Z8" className="hero__button hero__button__cta" target="_blank" rel="noopener noreferrer">Event Photos</a>
         </div>
         <div className="hero__stats">
           <span id="hackers" className="hero__stats__item">500+ hackers</span>
