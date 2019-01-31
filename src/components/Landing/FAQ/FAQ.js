@@ -12,7 +12,7 @@ class FAQ extends Component {
       <span>
         As a Major League Hacking member event, we follow
         <a className="question__link" style={linkStyles} href="https://mlh.io/code-of-conduct" target="_blank" rel="noopener noreferrer">Major League Hacking’s Code of Conduct</a>
-        which ensures all attendees to CruzHacks are respectful regardless of who you are and where you come from. Additionally, to be considered for an award, you must only submit a project that your team wrote and worked on during the hackathon & agree to our 2018 Participation Agreement
+        which ensures all attendees to CruzHacks are respectful regardless of who you are and where you come from. Additionally, to be considered for an award, you must only submit a project that you or your team worked on during the hackathon & agree to our Participation Agreement.
       </span>
     )
 
@@ -35,13 +35,13 @@ class FAQ extends Component {
     const applyMentorsJudges = (
       <span>
         We would love to have you as a mentor or judge.
-        <NavLink className="question__link" style={linkStyles} to="/apply">Mentor and Judge applications can be found here!</NavLink>
+        Judge applications open next season!
       </span>
     )
     const applyVolunteers = (
       <span>
-        If you're interested in helping out this year's hackathon,
-        <NavLink className="question__link" style={linkStyles} to="/apply">volunteer applications can be found here!</NavLink>
+        If you're interested in helping out next year's hackathon,
+        fill out a volunteer application when the season arrives!
       </span>
     )
 
@@ -73,12 +73,12 @@ class FAQ extends Component {
           </div>
           <div className="faq-container__column">
             <Question
-              title="How can I keep up to date on CruzHacks 2019 news?"
+              title="How can I keep up to date on CruzHacks news?"
               answer={news}
             />
             <Question
               title="Is this completely free?"
-              answer="Yes! This event is completely free for everyone! We will not be charging an admission fee for this event. We will cover all costs (including all meals) for the entire duration of the event. Note: CruzHacks 2018 does not cover any travel​ ​costs"
+              answer="Yes! This event is completely free for everyone! We will not be charging an admission fee for this event. We will cover all costs (including all meals) for the entire duration of the event."
             />
             <Question
               title="What are the rules?"
