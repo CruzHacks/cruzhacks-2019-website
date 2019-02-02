@@ -18,6 +18,7 @@ class CTA extends Component {
 
   componentDidMount() {
     document.onscroll = () => {
+      console.log(this.state.position)
       if (window.scrollY >= this.state.position) {
         this.setState({concept: true})
         if (isMobile) {

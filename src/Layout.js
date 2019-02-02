@@ -7,6 +7,7 @@ import Landing from 'components/Landing';
 import Patch from 'components/Patch';
 import Live from 'components/Live';
 import Login from 'components/Login';
+import PostLanding from 'components/PostLanding';
 
 import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
@@ -52,6 +53,7 @@ class Layout extends Component {
                 }
               }/>
               <Route path="/live" exact component={Live}/>
+              <Route path="/thankyou" exact render={(props) => <PostLanding {...props} sponsor/>}/>
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>
