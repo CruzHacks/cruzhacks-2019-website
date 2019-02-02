@@ -71,7 +71,6 @@ class Hero extends Component {
   render() {
     return (
       <div className="hero">
-        <img className="hero__bg" src={hero} alt=""/>
         <img className="hero__logo" src={logo} alt="logo"/>
         <h1 className="hero__title">CruzHacks 2019</h1>
         <span className="hero__text">Create something that makes a difference.</span>
@@ -91,7 +90,7 @@ class Hero extends Component {
           <span id="hours" className="hero__stats__item">36 Hours</span>
         </div>
         <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span>
-        {/* <img src={hero} alt="" className="hero__bg"/> */}
+        <img src={hero} alt="" className="hero__bg"/>
       </div>
     );
   }
