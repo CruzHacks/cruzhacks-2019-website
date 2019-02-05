@@ -87,16 +87,14 @@ class Hero extends Component {
         </div>
         <div className="hero__button-container">
           <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
-          <a href="https://flic.kr/s/aHskMHm9Z8" className="hero__button hero__button__cta" target="_blank" rel="noopener noreferrer">Event Photos</a>
+          <a href="https://photos.app.goo.gl/T6dhFZbTbKU1oFcH9" className="hero__button hero__button__cta" target="_blank" rel="noopener noreferrer">Event Photos</a>
         </div>
         <div className="hero__stats">
           <span id="hackers" className="hero__stats__item">500+ hackers</span>
           <span id="projects" className="hero__stats__item">100+ projects</span>
           <span id="hours" className="hero__stats__item">36 Hours</span>
         </div>
-        <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span></div>}
-        </div>
-        {/* <img src={hero} alt="" className="hero__bg"/> */}
+        <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span>
       </div>
     );
   }
