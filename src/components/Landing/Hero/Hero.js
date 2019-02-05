@@ -18,9 +18,11 @@ class Hero extends Component {
   }
 
   componentDidMount() {
-    this.animateCount(0, 36, "hours");
-    this.animateCount(0, 100, "projects");
-    this.animateCount(0, 500, "hackers");
+    if (!this.props.minimal) {
+      this.animateCount(0, 36, "hours");
+      this.animateCount(0, 100, "projects");
+      this.animateCount(0, 500, "hackers");
+    }
   }
 
   getEmail = (event) => {
@@ -73,10 +75,11 @@ class Hero extends Component {
       <div className="hero">
         <img className="live-hero__left" src={heroLive} alt=""/>
         <img className="live-hero__right" src={heroLive} alt=""/>
+        <div className="hero__background">
         <img className="hero__logo" src={logo} alt="logo"/>
         <h1 className="hero__title">CruzHacks 2019</h1>
         <span className="hero__text">Create something that makes a difference.</span>
-        <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
+        {!this.props.minimal && <div><span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
         <div className="live-hero__social">
           <a rel="noopener noreferrer" href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>
           <a rel="noopener noreferrer" href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>

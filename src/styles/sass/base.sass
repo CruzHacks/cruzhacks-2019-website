@@ -133,6 +133,16 @@ a
   left: 50%
   transform: translateX(-50%)
 
+.appear
+  opacity: 1 !important
+  transform: translateY(0) !important
+  img
+    opacity: 1 !important
+    transform: translateY(0) !important
+  &.bigstat__stat
+    color: #FCF9FF !important
+    transform: scale(1) !important
+
 
 @import "components/landing/hero"
 @import "components/landing/mission"
@@ -148,4 +158,9 @@ a
 @import "components/application/forms"
 @import "components/live/live"
 @import "components/login/login"
-
+@import "components/postevent/colstats"
+@import "components/postevent/collage"
+@import "components/postevent/displaytext"
+@import "components/postevent/bigstat"
+@import "components/postevent/colbuttons"
+@import "components/postevent/landing"

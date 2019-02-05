@@ -1,0 +1,62 @@
+.bigstat
+    position: relative
+    width: 640px
+    height: 640px
+    margin: auto auto 10em auto
+    @include respond(tab-port)
+        margin-bottom: 4em
+        width: initial
+        height: 720px;
+        margin: auto auto 10em auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &__container
+        width: 640px
+        height: 640px
+        position: absolute
+        background: #4d3a6b
+        border-radius: 320px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25)
+        z-index: 1
+        @include respond(tab-port)
+            width: initial
+            height: initial
+            background: none
+            box-shadow: unset
+    &__intro, &__outro
+        font-weight: normal
+        font-size: 30px
+        width: 302px
+        text-align: center
+        color: rgba(252, 249, 255, 0.7)
+        opacity: 0
+    &__intro
+        transition: opacity 0.4s ease
+    &__outro
+        transition: opacity 0.4s ease 2s
+    &__bg
+        background: linear-gradient(0deg, #2e2a33 0, #4d3a6b 50%, #2e2a33 100%)
+        position: absolute
+        width: 740px;
+        left: -50px;
+        height: 730px
+        @include respond(tab-port)
+            width: 106%
+            left: unset
+    &__stat
+        font-weight: bold
+        font-size: 16em
+        margin: 30px 0
+        text-align: center
+        color: #6e5d96
+        padding: 10px 30px
+        border-radius: 6px
+        background: #6e5d96
+        transform: scale(0.95)
+        transition: color 0.4s ease 1.37s, transform 0.6s ease 1.5s
