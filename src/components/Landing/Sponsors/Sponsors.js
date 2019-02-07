@@ -29,6 +29,7 @@ import MicrosoftKilo from 'assets/sponsors/Microsoft - KILO/logo.png'
 import iDTechPartner from 'assets/sponsors/iD Tech - PARTNER/iD-Tech-Company-Logo-Tagline.png'
 import EarthHacksPartner from 'assets/sponsors/Earth Hacks - PARTNER/EarthHacks_logoTransparentLines.png'
 import InboardPartner from 'assets/sponsors/Inboard - PARTNER/1.png'
+import ITSKilo from 'assets/sponsors/ITS - KILO/ITS-Logo2017.png'
 
 class Sponsors extends Component {
   render() {
@@ -58,6 +59,12 @@ class Sponsors extends Component {
           <img src={BSOEKilo} alt="Baskin School of Engineering" height="100px" width="225px"/>
         </div>
         </a>
+        <a href="https://its.ucsc.edu/" target = "_blank">
+        <div className="sponsors__kilo">
+          <img src={ITSKilo} alt="UCSC Information Technology Services" height="100px" width="225px"/>
+        </div>
+        </a>
+        
         <a href="http://arts.ucsc.edu" target = "_blank">
         <div className="sponsors__kilo">
           <img src={UCSCArtsKilo} alt="UCSC Arts" height="100px" width="225px"/>

@@ -219,6 +219,8 @@ a {
     top: calc(100vh - 60px);
     margin: 0 auto;
     cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
     width: 175px;
     height: 55px; }
     .hero__tiny:after {
