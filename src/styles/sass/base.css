@@ -185,6 +185,10 @@ a {
         background-color: #AE9200  !important; }
         .hero__button__cta.orange:hover {
           background-color: #c8a700 !important; }
+      .hero__button__cta.green {
+        background-color: #00ae34  !important; }
+        .hero__button__cta.green:hover {
+          background-color: #00c83c !important; }
       .hero__button__cta:hover {
         background-color: #977ef1 !important; }
     .hero__button__tiny {
