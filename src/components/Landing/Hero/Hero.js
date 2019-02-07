@@ -85,17 +85,6 @@ class Hero extends Component {
             <a rel="noopener noreferrer" href="https://facebook.com/CruzHacks/" target="_blank"><img src={facebook} alt=""/></a>
             <a rel="noopener noreferrer" href="https://twitter.com/CruzHacks" target="_blank"><img src={twitter} alt=""/></a>
           </div>
-          <div className="hero__button-container">
-            <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
-            <a href="https://photos.app.goo.gl/T6dhFZbTbKU1oFcH9" className="hero__button hero__button__cta" target="_blank" rel="noopener noreferrer">Event Photos</a>
-          </div>
-          <div className="hero__stats">
-            <span id="hackers" className="hero__stats__item">500+ hackers</span>
-            <span id="projects" className="hero__stats__item">100+ projects</span>
-            <span id="hours" className="hero__stats__item">36 Hours</span>
-          </div>
-          <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span>
-        </div>
         <div className="hero__button-container">
           <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
           <a href="mailto:sponsor@cruzhacks.com" className="hero__button hero__button__cta green" target="_blank">Sponsorship Inquiries</a>
@@ -106,10 +95,8 @@ class Hero extends Component {
           <span id="projects" className="hero__stats__item">100+ projects</span>
           <span id="hours" className="hero__stats__item">36 Hours</span>
         </div>
-        <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span></div>}
-        </div>
-        {/* <img src={hero} alt="" className="hero__bg"/> */}
-      </div>
+        <span className="hero__tiny" onClick={this.scrollToContent}>Learn More!</span>
+        </div></div>
     );
   }
 }
