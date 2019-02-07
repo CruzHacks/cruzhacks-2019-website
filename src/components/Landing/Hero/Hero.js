@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+import Icon from 'components/Icon'
 import logo from 'assets/logo.svg';
-
 import heroLive from 'assets/hero-live.svg';
 import instagram from 'assets/social/instagram.svg';
 import facebook from 'assets/social/facebook.svg';
@@ -76,9 +76,15 @@ class Hero extends Component {
         <img className="live-hero__left" src={heroLive} alt=""/>
         <img className="live-hero__right" src={heroLive} alt=""/>
         <div className="hero__background">
-        <img className="hero__logo" src={logo} alt="logo"/>
+        <img className="hero__logo" src={logo} alt="CruzHacks Logo"/>
+        {this.props.sponsorLogo &&
+          <div className="hero__logo--sponsor">
+            <Icon className="hero__logo--collab" icon={`plus`} color={`b8adc3`} />
+            <img className="hero__logo" src={this.props.sponsorLogo} alt={this.props.sponsorLogoAlt} />
+          </div>
+        }
         <h1 className="hero__title">CruzHacks 2019</h1>
-        <span className="hero__text">Create something that makes a difference.</span>
+        {this.props.sponsorLogo ? <span className="hero__text">{this.props.sponsorName} sponsorship fulfillment review<br/>Prepared by the CruzHacks team</span> : <span className="hero__text">Create something that makes a difference.</span>}
         {!this.props.minimal && <div><span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
         <div className="live-hero__social">
           <a rel="noopener noreferrer" href="https://www.instagram.com/cruzhacks/" target="_blank"><img src={instagram} alt=""/></a>

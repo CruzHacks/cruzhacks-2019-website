@@ -143,6 +143,17 @@ a
     color: #FCF9FF !important
     transform: scale(1) !important
 
+.twocol
+  display: grid
+  grid-template-columns: .5fr .5fr
+  align-items: center
+  margin-bottom: 10em
+  grid-gap: 20px
+  div
+    margin: 0
+  @include respond(tab-port)
+      margin-bottom: 4em
+
 
 @import "components/landing/hero"
 @import "components/landing/mission"
@@ -163,4 +174,6 @@ a
 @import "components/postevent/displaytext"
 @import "components/postevent/bigstat"
 @import "components/postevent/colbuttons"
+@import "components/postevent/winnerhighlight"
+@import "components/postevent/projecthighlight"
 @import "components/postevent/landing"
