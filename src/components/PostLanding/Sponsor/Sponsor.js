@@ -8,6 +8,7 @@ import BigStat from "components/PostLanding/components/BigStat"
 import ColumnButtons from "components/PostLanding/components/ColumnButtons"
 import WinnerHighlight from "components/PostLanding/components/WinnerHighlight"
 import ProjectHighlight from "components/PostLanding/components/ProjectHighlight"
+import ShareButton from "components/PostLanding/components/ShareButton"
 import AmazonLogo from "assets/sponsors/Amazon-GIGA/amazon.svg"
 
 class Sponsor extends Component {
@@ -58,6 +59,7 @@ class Sponsor extends Component {
             },
           ]}/>
           <DisplayText />
+          <ShareButton />
         </div>
       </div>
     );

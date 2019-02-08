@@ -122,7 +122,10 @@ a {
     margin: 0; }
   @media (max-width: 56.25em) {
     .twocol {
-      margin-bottom: 4em; } }
+      margin-bottom: 4em;
+      grid-template-columns: 1fr;
+      grid-template-rows: .5fr .5fr;
+      justify-items: center; } }
 
 .hero {
   min-height: 100vh;
@@ -1616,7 +1619,8 @@ span.time-day {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 12px;
+    flex-wrap: wrap;
+    margin: 12px;
     position: relative;
     top: -70px; }
     .winnerhighlight__team__member__photo {
@@ -1658,6 +1662,32 @@ span.time-day {
     width: 100%;
     border-radius: 8px 8px 0 0; }
 
+.sharebutton {
+  margin: 0 8px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: #56505f;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease .27s, transform 0.2s ease, background 0.5s ease; }
+  .sharebutton:hover {
+    transform: translateY(-2px) !important;
+    background: #534d5d; }
+  .sharebutton__container {
+    margin: auto auto 10em auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    @media (max-width: 56.25em) {
+      .sharebutton__container {
+        margin-bottom: 4em; } }
+
 .postlanding .hero {
   min-height: 70vh; }
   @media (max-width: 56.25em) {
@@ -1681,10 +1711,10 @@ span.time-day {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 32px;
   width: 640px;
-  margin: 0 auto;
+  margin: 0 auto 10em auto;
   padding: 50px; }
   @media (max-width: 56.25em) {
     .postlanding__container {
       width: 90%;
       padding: 10% 3%;
-      margin: 1% auto; } }
+      margin: 1% auto 5% auto; } }
