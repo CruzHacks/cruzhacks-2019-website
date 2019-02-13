@@ -10,30 +10,32 @@
   &__logo
     height: 12rem
     @include respond(tab-port)
-      height: 10rem
+      height: 11rem
   &__title
     font-size: 9.5rem
     color: white
     margin: 2rem auto 0rem auto
     line-height: 1.2
     @include respond(tab-port)
-      font-size: 5rem
+      font-size: 7.25rem
+    @include respond(phone)
+      font-size: 5.25rem
   &__text
     color: $color-text-alt
     font-size: 3rem
     font-weight: 500
     @include respond(tab-port)
-      font-size: 2rem
+      font-size: 2.5rem
     &__alt
       color: $color-text-alt
       font-size: 2.2rem
       margin-top: 1rem
       display: block
       @include respond(tab-port)
-        font-size: 1.5rem
+        font-size: 1.7rem
   &__background
     background: #1d1922
-    border-radius: 50px
+    border-radius: 280px
     width: 820px
     padding: 30px 0
 
@@ -48,6 +50,8 @@
     justify-content: center
     align-items: center
     flex-wrap: wrap
+    @include respond(phone)
+      flex-direction: column
   &__button
     text-decoration: none
     font-size: 2.75rem
@@ -128,7 +132,7 @@
     min-height: 110vh
     max-height: 120vh
     z-index: -1
-    @include respond(tab-port)
+    @include respond(phone)
         filter: blur(3px)
         transform: rotate(90deg) translate(-38px, -388px) scale(1.6)
         transform-origin: top
@@ -250,9 +254,12 @@
   justify-content: center
   align-items: center
   @include respond(tab-port)
-    font-size: 3.5rem
+    font-size: 3.75rem
   @include respond(phone)
-    font-size: 2.5rem
+    font-size: 3.25rem
+    padding: 2rem
+  @include respond(phone-narrow)
+    font-size: 2.35rem
 
 #hackers, #projects, #hours
   margin-left: 3rem
