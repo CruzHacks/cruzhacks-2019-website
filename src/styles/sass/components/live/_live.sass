@@ -41,14 +41,18 @@
     display: flex
     justify-content: center
     align-items: center
-    margin-top: 1rem
+    margin: 1rem 2rem 0 2rem
     transform: scale(0.8)
+    @include respond(phone)
     img
         height: 6rem
         margin: 1rem
         transition: transform .2s
-        @include respond(tab-port)
-            height: 4rem
+        @include respond(mission)
+            height: 5rem
+            margin: 0rem 2rem 1rem 2rem
+        @include respond(phone)
+            height: 4rem          
         &:hover
             transform: scale(1.1)
 
