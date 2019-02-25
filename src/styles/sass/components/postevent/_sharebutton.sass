@@ -14,6 +14,8 @@
     &:hover
         transform: translateY(-2px) !important
         background: #534d5d
+    @include respond(tab-port)
+        margin: 12px
     &__container
         margin: auto auto 10em auto
         display: flex
@@ -22,3 +24,5 @@
         text-align: center
         @include respond(tab-port)
             margin-bottom: 4em
+            display: flex;
+            flex-wrap: wrap;

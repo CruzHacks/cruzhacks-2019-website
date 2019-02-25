@@ -12,6 +12,8 @@
         display: flex
         align-items: center
         justify-content: center
+        @include respond(tab-port)
+            display: grid
         &__member
             padding: 10px 16px 22px 16px;
             background: #56505f
