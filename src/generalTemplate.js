@@ -55,7 +55,7 @@ const sponsorTemplate = [
 			},
 			project: {
         name: 'Iris',
-        description: 'We had the idea to use machine learning in order to solve a common problem for people diagnosed with Alzheimer’s: helping them to remember things.',
+        description: 'An AI powered virtual assistant that uses facial recognition to help Alzheimer\'s patients combat memory loss.',
         link: 'https://devpost.com/software/iris-io',
         photo: {
           url: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/000/745/753/datas/medium.jpg',
@@ -74,28 +74,18 @@ const sponsorTemplate = [
 				},
 				info: [{
           name: 'Torin Foss',
-          email: 'tfoss@csumb.edu',
-          linkedin: 'https://www.linkedin.com/in/trfoss',
           photo: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/747/339/datas/profile.JPG',
         }, {
           name: 'Esteban Vasquez',
-          email: 'eamaru.i@gmail.com',
-          linkedin: 'https://www.linkedin.com/in/vasquezesteban/',
           photo: 'https://avatars3.githubusercontent.com/u/46833726?v=4?height=180&width=180',
         }, {
           name: 'Stewart Dulaney',
-          email: 'stewart.dulaney@gmail.com',
-          linkedin: 'https://www.linkedin.com/in/stewartdulaney',
           photo: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/429/527/datas/profile.jpg',
         }, {
           name: 'Andrew Zhu',
-          email: 'me@andrew-zhu.com',
-          linkedin: 'https://www.linkedin.com/in/angzhu/',
           photo: 'https://media.licdn.com/dms/image/C4E03AQFAcM1XrF72Vg/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=IgDe_1f0odC9mtOTCeVwlAyLDR15pQQBkCz7wvZnxd0',
         }, {
           name: 'Tejas Shah',
-          email: 'tejashah88@gmail.com',
-          linkedin: 'https://www.linkedin.com/in/t-shah/',
           photo: 'https://media.licdn.com/dms/image/C5603AQH5dX8BQXzDCA/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=Rb9a33a04S9qjVIapyJ5Jw0Wn0CGhcJL7P_BJZbpl94',
         }]
 			}
@@ -115,7 +105,7 @@ const sponsorTemplate = [
 			stats: [
 				{stat: `28%`, describer: `Female/Non-binary`},
 				{stat: `47%`, describer: `First time hackers`},
-				{stat: 43, describer: `Visiting University Students`},
+				{stat: 44, describer: `Universities Represented`},
 			]
 		}
 	},
