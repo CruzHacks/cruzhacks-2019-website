@@ -1,6 +1,6 @@
 import React from "react";
 
-const SponsorPage = props => [
+const sponsorTemplate = props => [
 	{
 		name: `Hero`,
 		props: {
@@ -153,4 +153,4 @@ const SponsorPage = props => [
 	}
 ];
 
-export default SponsorPage
+export default sponsorTemplate
