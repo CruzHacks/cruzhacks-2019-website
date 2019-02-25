@@ -19,6 +19,7 @@ import MLHLogo from "assets/thankyou/mlh.png"
 import OmniscienceLogo from "assets/thankyou/omniscience.png"
 import PlantronicsLogo from "assets/thankyou/plantronics.jpg"
 import ProductOpsLogo from "assets/thankyou/productops.png"
+import SCNTLogo from "assets/thankyou/scnt.png"
 import SCTBLogo from "assets/thankyou/sctb.png"
 import SellhoundLogo from "assets/thankyou/sellhound.png"
 import SSVLogo from "assets/thankyou/ssv.png"
@@ -464,6 +465,10 @@ let sponsors = [{
 		winners: 11,
 		link: `https://cruzhacks-2019.devpost.com/submissions/search?utf8=%E2%9C%93&prize_filter%5Bprizes%5D%5B%5D=27127`
 	} 
+},
+{
+	name: `Santa Cruz New Tech Meetup`,
+	logo: SCNTLogo
 }
 
 ]

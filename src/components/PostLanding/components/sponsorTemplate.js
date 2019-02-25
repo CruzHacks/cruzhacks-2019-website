@@ -47,7 +47,7 @@ const sponsorTemplate = props => [
         intro: `The ${props.prize.category} sponsor prize category accumulated...`,
         stat: props.prize.winners,
         outro: [
-          `complete hackathon projects! View all of the projects `, <a href={props.prize.link} target="_blank">here</a>, `!`
+          `complete hackathon projects! View your sponsor projects `, <a href={props.prize.link} target="_blank">here</a>, `!`
         ]
       }
     }
