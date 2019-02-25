@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import OnVisible, { setDefaultProps } from 'react-on-visible';
+import DisplayText from '../DisplayText'
 
 setDefaultProps({
     visibleClassName: 'appear',
@@ -10,13 +11,16 @@ setDefaultProps({
 class ProjectHighlight extends Component {
   render() {
     return (
-      <OnVisible wrappingElement="a"  className="projecthighlight" href={this.props.project.link} target="_blank">
-          <img className="projecthighlight__image" src={this.props.project.photo.url} alt={this.props.project.photo.alt} />
-          <div className="projecthighlight__body">
-            <div className="projecthighlight__body__name">{this.props.project.name}</div>
-            <div className="projecthighlight__body__description">{this.props.project.description}</div>
-          </div>
-      </OnVisible>
+      <div className="twocol">
+        <DisplayText left header={this.props.intro.header} paragraph={this.props.intro.paragraph} />
+        <OnVisible wrappingElement="a"  className="projecthighlight" href={this.props.project.link} target="_blank">
+            <img className="projecthighlight__image" src={this.props.project.photo.url} alt={this.props.project.photo.alt} />
+            <div className="projecthighlight__body">
+              <div className="projecthighlight__body__name">{this.props.project.name}</div>
+              <div className="projecthighlight__body__description">{this.props.project.description}</div>
+            </div>
+        </OnVisible>
+      </div>
     )
   }
 

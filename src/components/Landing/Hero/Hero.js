@@ -77,9 +77,9 @@ class Hero extends Component {
         <img className="live-hero__right" src={heroLive} alt=""/>
         <div className="hero__background">
           <img className="hero__logo" src={logo} alt="logo"/>
-          <div className="hero__logo--collab">
+          {this.props.minimal && <div className="hero__logo--collab">
             <Icon icon={`plus`} />
-          </div>
+          </div>}
           <img className="hero__logo--sponsor" src={this.props.sponsorLogo} />
           <h1 className="hero__title">CruzHacks 2019</h1>
           {this.props.sponsorLogo ? <span className="hero__text">{this.props.sponsorName} sponsorship fulfillment review<br/>Prepared by the CruzHacks team</span> : <span className="hero__text">Create something that makes a difference.</span>}

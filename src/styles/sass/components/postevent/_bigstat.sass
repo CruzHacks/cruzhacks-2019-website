@@ -3,6 +3,11 @@
     width: 640px
     height: 640px
     margin: auto auto 10em auto
+    a
+        text-decoration: underline
+        transition: color 0.2s ease
+        &:hover
+            color: rgba(252, 249, 255, 0.9)
     @include respond(tab-port)
         margin-bottom: 4em
         width: initial

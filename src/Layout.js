@@ -9,6 +9,9 @@ import Live from 'components/Live';
 import Login from 'components/Login';
 import PostLanding from 'components/PostLanding';
 
+import sponsorData from 'sponsorData'
+import config from 'components/PostLanding/components/config'
+
 import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
 
@@ -53,7 +56,7 @@ class Layout extends Component {
                 }
               }/>
               <Route path="/live" exact component={Live}/>
-              <Route path="/thankyou" exact render={(props) => <PostLanding {...props} sponsor/>}/>
+              {sponsorData.map(el => <Route path={`/${el.name}`} exact render={() => <PostLanding data={config(el).filter(e => e)} sponsor/>}/> )}
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>

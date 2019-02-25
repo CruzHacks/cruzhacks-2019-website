@@ -5,7 +5,10 @@ import General from './General'
 
 class PostLanding extends Component {
   render() {
-    return this.props.sponsor ? <Sponsor /> : <General />
+    return this.props.sponsor ? <Sponsor data={this.props.data} /> : <General />
+  }
+  static defaultProps = {
+    
   }
 }
 

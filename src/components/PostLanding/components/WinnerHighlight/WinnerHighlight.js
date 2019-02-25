@@ -13,16 +13,17 @@ class WinnerHighlight extends Component {
   render() {
     return (
       <div className="winnerhighlight">
-        <img className="winnerhighlight__photo" src={this.props.winners.photo.url} alt={this.props.winners.photo.alt} />
+        <OnVisible wrappingElement="img" className="winnerhighlight__photo" src={this.props.winners.photo.url} alt={this.props.winners.photo.alt} />
           <div className="winnerhighlight__team">
           {this.props.winners.info.map(winner => (
-            <div className="winnerhighlight__team__member">
+            <OnVisible className="winnerhighlight__team__member">
               <img className="winnerhighlight__team__member__photo" src={winner.photo}/>
               <div className="winnerhighlight__team__member__name">{winner.name}</div>
               <div className="winnerhighlight__team__member__contact">
-                <a href={winner.linkedin} target="_blank"><Icon icon={`linkedin`} size={`16`} color={`bdbcc3`} alt={`LinkedIn icon`} /></a>
+                { winner.linkedin && <a href={winner.linkedin} target="_blank"><Icon icon={`linkedin`} size={`16`} color={`bdbcc3`} alt={`LinkedIn icon`} /></a>}
+                { winner.email && <a href={`mailto:${winner.email}`} target="_blank"><Icon icon={`mail`} size={`16`} color={`bdbcc3`} alt={`Email icon`} /></a>}
               </div>
-            </div>
+            </OnVisible>
           ))}
           </div>
       </div>

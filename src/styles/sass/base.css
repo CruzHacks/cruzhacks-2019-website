@@ -127,6 +127,22 @@ a {
       grid-template-rows: .5fr .5fr;
       justify-items: center; } }
 
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 11px;
+  font-size: 2.1em;
+  width: 95px;
+  border-radius: 8px;
+  top: 95px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .2s ease, transform .2s ease; }
+  .tooltip.invisible {
+    transform: translateY(-3px);
+    opacity: 0; }
+
 .hero {
   min-height: 100vh;
   position: relative;
@@ -172,6 +188,7 @@ a {
         .hero__text__alt {
           font-size: 1.5rem; } }
   .hero__background {
+    z-index: -1;
     background: #1d1922;
     box-shadow: 0 0 130px 80px #1d1922;
     border-radius: 50px;
@@ -1493,6 +1510,11 @@ span.time-day {
   width: 640px;
   height: 640px;
   margin: auto auto 10em auto; }
+  .bigstat a {
+    text-decoration: underline;
+    transition: color 0.2s ease; }
+    .bigstat a:hover {
+      color: rgba(252, 249, 255, 0.9); }
   @media (max-width: 56.25em) {
     .bigstat {
       margin-bottom: 4em;
@@ -1606,13 +1628,17 @@ span.time-day {
   margin: 0 auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.45); }
+  box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.4s ease .27s, transform 0.6s ease; }
 
 .winnerhighlight__team {
   display: flex;
   align-items: center;
   justify-content: center; }
   .winnerhighlight__team__member {
+    padding: 10px 16px;
     background: #56505f;
     border-radius: 8px;
     box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.45);
@@ -1622,7 +1648,14 @@ span.time-day {
     flex-wrap: wrap;
     margin: 12px;
     position: relative;
-    top: -70px; }
+    top: -70px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease .27s, transform 0.6s ease .4s; }
+    .winnerhighlight__team__member:nth-child(2) {
+      transition: opacity 0.4s ease .37s, transform 0.6s ease .5s; }
+    .winnerhighlight__team__member:nth-child(3) {
+      transition: opacity 0.4s ease .47s, transform 0.6s ease .6s; }
     .winnerhighlight__team__member__photo {
       width: 100px;
       border-radius: 100px;
@@ -1631,7 +1664,8 @@ span.time-day {
       margin: 0 0 3px;
       font-size: 3.2em;
       color: #fcfaff;
-      font-weight: 500; }
+      font-weight: 500;
+      text-align: center; }
     .winnerhighlight__team__member__contact {
       display: flex; }
       .winnerhighlight__team__member__contact a {
@@ -1660,7 +1694,8 @@ span.time-day {
       color: #ccc8ce; }
   .projecthighlight__image {
     width: 100%;
-    border-radius: 8px 8px 0 0; }
+    border-radius: 8px 8px 0 0;
+    background-color: white; }
 
 .sharebutton {
   margin: 0 8px;
