@@ -88,7 +88,7 @@ const sponsorTemplate = props => [
 			stats: [
 				{stat: `30%`, describer: `Female/Non-binary`},
 				{stat: `47%`, describer: `First time hackers`},
-				{stat: 43, describer: `Visiting University Students`},
+				{stat: 44, describer: `Universities Represented`},
 			]
 		}
 	},
