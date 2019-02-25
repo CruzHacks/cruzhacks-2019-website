@@ -1,4 +1,8 @@
 @mixin respond($breakpoint)
+  @if $breakpoint == phone-narrow
+      @media (max-width: 25em)
+        @content
+
   @if $breakpoint == phone
     @media (max-width: 37.5em)
       @content
