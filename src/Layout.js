@@ -58,8 +58,8 @@ class Layout extends Component {
                 }
               }/>
               <Route path="/live" exact component={Live}/>
-              {console.log(process.env.SECRET_TOKEN)}
-              {sponsorData.map(el => <Route path={`/${uuidv5(el.name, String(process.env.SECRET_TOKEN || ''))}/${el.name}`} exact render={() => <PostLanding data={sponsorTemplate(el).filter(e => e)} sponsor/>}/> )}
+              {console.log(process.env, process)}
+              {sponsorData.map(el => <Route path={`/${el.name}`} exact render={() => <PostLanding data={sponsorTemplate(el).filter(e => e)} sponsor/>}/> )}
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>
