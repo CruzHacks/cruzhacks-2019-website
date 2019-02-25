@@ -147,6 +147,35 @@ a
     color: #FCF9FF !important
     transform: scale(1) !important
 
+.twocol
+  display: grid
+  grid-template-columns: .5fr .5fr
+  align-items: center
+  margin-bottom: 10em
+  grid-gap: 20px
+  div
+    margin: 0
+  @include respond(tab-port)
+      margin-bottom: 4em
+      grid-template-columns: 1fr
+      grid-template-rows: .5fr .5fr
+      justify-items: center
+
+.tooltip
+  position: absolute;
+  background: rgba(0,0,0,.3);
+  color: white;
+  padding: 11px;
+  font-size: 2.1em;
+  width: 95px;
+  border-radius: 8px;
+  top: 95px;
+  opacity: 1
+  transform: translateY(0)
+  transition: opacity .2s ease, transform .2s ease
+  &.invisible
+    transform: translateY(-3px)
+    opacity: 0
 
 @import "components/landing/hero"
 @import "components/landing/mission"
@@ -167,4 +196,7 @@ a
 @import "components/postevent/displaytext"
 @import "components/postevent/bigstat"
 @import "components/postevent/colbuttons"
+@import "components/postevent/winnerhighlight"
+@import "components/postevent/projecthighlight"
+@import "components/postevent/sharebutton"
 @import "components/postevent/landing"

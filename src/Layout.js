@@ -9,8 +9,14 @@ import Live from 'components/Live';
 import Login from 'components/Login';
 import PostLanding from 'components/PostLanding';
 
+import sponsorData from 'sponsorData'
+import sponsorTemplate from 'components/PostLanding/components/sponsorTemplate'
+
 import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
+
+const config = require('./config');
+const uuidv5 = require('uuid/v5');
 
 const GlobalStyle = createGlobalStyle`
   #mlh-trust-badge {
@@ -53,7 +59,7 @@ class Layout extends Component {
                 }
               }/>
               <Route path="/live" exact component={Live}/>
-              <Route path="/thankyou" exact render={(props) => <PostLanding {...props} sponsor/>}/>
+              {sponsorData.map(el => <Route path={`/${uuidv5(el.name, config.SECRET_TOKEN)}/${el.name}`} exact render={() => <PostLanding data={sponsorTemplate(el).filter(e => e)} sponsor/>}/> )}
               <Route path="/" component={Landing}/>
             </Switch>
           </Router>

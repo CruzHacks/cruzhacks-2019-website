@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { darken } from 'polished'
 import OnVisible, { setDefaultProps } from 'react-on-visible';
 
+import Icon from 'components/Icon'
+
 setDefaultProps({
     visibleClassName: 'appear',
     bounce: true,
@@ -14,7 +16,7 @@ class ColumnButtons extends Component {
       <div className="colbuttons">
         {this.props.buttons.map(button => (
           <OnVisible wrappingElement="a" className="colbuttons__button" href={button.link} target="_blank">
-            <img className="colbuttons__icon" src={`https://icongr.am/feather/${button.icon}.svg?size=60&color=${button.color}`} alt={button.alt} />
+            <Icon icon={button.icon} size={60} color={button.color} alt={button.alt}/>
             <div className="colbuttons__text" style={{'color': darken(0.2, `#${button.color}`)}}>{button.text}</div>
           </OnVisible>
         ))}

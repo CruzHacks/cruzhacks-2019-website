@@ -1,0 +1,25 @@
+.projecthighlight
+    width: 310px
+    display: flex
+    flex-direction: column
+    opacity: 0
+    transform: translateY(15px)
+    transition: opacity 0.4s ease .27s, transform 0.2s ease, background 0.5s ease
+    &:hover
+        transform: translateY(-2px) !important
+        background: #534d5d
+    &__body
+        background: #56505f
+        padding: 20px
+        border-radius: 0 0 8px 8px
+        &__name
+            font-size: 4em
+            font-weight: 500
+            color: #fcfaff
+        &__description
+            font-size: 2.5em
+            color: #ccc8ce
+    &__image
+        width: 100%
+        border-radius: 8px 8px 0 0
+        background-color: white
