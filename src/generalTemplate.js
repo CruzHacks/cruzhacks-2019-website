@@ -28,7 +28,7 @@ const sponsorTemplate = [
     name: `DisplayText`,
     props: {
       header: `Hackers from across the country!`,
-      paragraph: `Of the roughly 600 attendees who participated, 62% were UCSC students while the rest hailed from outside the university. The event not only garnered interest within the local community, but also established its credibility outside the circles of Santa Cruz. Hackers from other UC schools, high schoolers, and college students from all around the U.S. (including one team from the University of Waterloo in Canada!) came out to participate!`
+      paragraph: `Of the roughly 600 attendees who participated, 81% were UCSC students while the rest hailed from outside the university. The event not only garnered interest within the local community, but also established its credibility outside the circles of Santa Cruz. Hackers from other UC schools, high schoolers, and college students from all around the U.S. (including one team from the University of Waterloo in Canada!) came out to participate!`
     }
   },
   {
@@ -113,7 +113,7 @@ const sponsorTemplate = [
 		name: `ColumnStats`,
 		props: {
 			stats: [
-				{stat: `30%`, describer: `Female/Non-binary`},
+				{stat: `28%`, describer: `Female/Non-binary`},
 				{stat: `47%`, describer: `First time hackers`},
 				{stat: 43, describer: `Visiting University Students`},
 			]
