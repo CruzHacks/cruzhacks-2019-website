@@ -10,7 +10,7 @@ setDefaultProps({
 
 const Completionist = () => <span>Giving Day is over. Thank you donors!</span>
  
-const renderer = ({ hours, day, completed }) => {
+const renderer = ({ hours, completed }) => {
   if (completed) {
     // Render a completed state
     return <Completionist />;
@@ -39,7 +39,7 @@ class DonationCTA extends Component {
       {
         type: `givingday`,
         link: `http://c-fund.us/jy8`,
-        name: <Countdown date={'Thu Feb 28 2019 00:00:00 GMT-0800'} renderer={renderer} daysInHours={true}></Countdown>,
+        name: <Countdown date={'Thu Feb 28 2019 00:00:00'} renderer={renderer} daysInHours={false}></Countdown>,
         className: "donationcta__givingday"
       },
       {
