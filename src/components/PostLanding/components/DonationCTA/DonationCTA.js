@@ -10,12 +10,13 @@ setDefaultProps({
 
 const Completionist = () => <span>Giving Day is over. Thank you donors!</span>
  
-const renderer = ({ hours, completed }) => {
+const renderer = ({ hours, days, completed }) => {
   if (completed) {
     // Render a completed state
     return <Completionist />;
   } else {
     // Render a countdown
+    hours = hours + (days*24)
     if (hours==1) {
       return <span>{hours} Giving Day hour left!</span>
     }
