@@ -1,41 +1,36 @@
 .donationcta
     @mixin button
         font-weight: 400
-        font-size: 2.25rem
-        padding: 1.5rem 3.3rem
+        font-size: 2.4rem
+        padding: 2rem 2.5rem
         background-color: #56505f
         border-radius: 5rem
-        margin: 2.25rem 2rem
+        margin: 2.25rem
         color: white
         opacity: 0
-        transition: transform 0.2s ease, background 0.5s ease
-        align-items: center
-        justify-content: center
         text-align: center
         text-transform: uppercase
         font-weight: bold
-    &__givingday
-        @include button
-        transform: translateY(5px)
-        border: 2px solid #3ddb47
-        box-shadow: 0px 0px 10px #3ddb47
+        transform: translateY(15px)
+        transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
         &:hover
             transform: translateY(-2px) !important
-            background: #534d5d
+    &__givingday
+        @include button
+        background: linear-gradient(248deg, #02c30e, #56e8ab)
+        &:hover
+            filter: hue-rotate(10deg)
     &__sponsorship
         @include button
-        transform: translateY(5px)
-        border: 2px solid purple;
-        box-shadow: 0px 0px 10px purple
+        background: linear-gradient(248deg, #6702c3, #5675e8)
         &:hover
-            transform: translateY(2px) !important
-            background: #534d5d
+            filter: hue-rotate(10deg)
     &__container
         display: flex
-        flex-direction: column
-        height: 75px
+        justify-content: center
         margin-top: -7rem
         padding-bottom: 5rem
         @include respond(tab-port)
+            flex-direction: column
             margin-top: 2rem
    
