@@ -10,14 +10,8 @@ class DisplayText extends Component {
     )
   }
   static defaultProps = {
-    header: `Vivamus eleifend sem quis varius suscipit`,
-    paragraph: `Nulla non mi eu urna eleifend ornare nec sed augue. Vivamus eleifend
-    sem quis varius suscipit. Nam tellus nunc, volutpat non imperdiet
-    in, condimentum ac enim. Curabitur tellus ligula, pulvinar sed
-    tortor et, maximus gravida neque. Fusce ac porttitor lorem, eget
-    vestibulum ligula. Cras tempus sapien diam. Mauris porttitor
-    vehicula nibh sed tempor. Vestibulum eget magna eros. In hac
-    habitasse platea dictumst. Vivamus quis tempus metus.`
+    header: ``,
+    paragraph: ``
   }
 }
 
