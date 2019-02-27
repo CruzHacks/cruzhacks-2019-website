@@ -56,9 +56,6 @@
                 color: rgba(252, 249, 255, 0.7)
                 &:before
                     content: "– "
-                @include respond(tab-port)
-                    line-height: 32px
-                    font-size: 20px
         &__image
             overflow: hidden
             width: 100%
@@ -67,8 +64,11 @@
             justify-content: center
             img
                 max-height: 220px
+                @include respond(tab-port)
+                    max-height: initial
+                    max-width: 320px
         @include respond(tab-port)
-            width: 321px
-            height: 210px
+            width: 320px
+            height: 300px
             margin: 25px 0
 

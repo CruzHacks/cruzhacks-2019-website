@@ -23,6 +23,7 @@
 
 html {
   font-family: 'AC', sans-serif;
+  -webkit-font-smoothing: antialiased;
   background-color: #1C1921;
   font-size: 45%;
   overflow-x: hidden; }
@@ -1668,10 +1669,6 @@ span.time-day {
         color: rgba(252, 249, 255, 0.7); }
         .mediabuttons__media__body__source:before {
           content: "– "; }
-        @media (max-width: 56.25em) {
-          .mediabuttons__media__body__source {
-            line-height: 32px;
-            font-size: 20px; } }
     .mediabuttons__media__image {
       overflow: hidden;
       width: 100%;
@@ -1680,10 +1677,14 @@ span.time-day {
       justify-content: center; }
       .mediabuttons__media__image img {
         max-height: 220px; }
+        @media (max-width: 56.25em) {
+          .mediabuttons__media__image img {
+            max-height: initial;
+            max-width: 320px; } }
     @media (max-width: 56.25em) {
       .mediabuttons__media {
-        width: 321px;
-        height: 210px;
+        width: 320px;
+        height: 300px;
         margin: 25px 0; } }
 
 .colbuttons {
