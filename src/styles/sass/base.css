@@ -1460,7 +1460,7 @@ span.time-day {
       color: #FCF9FF; }
       @media (max-width: 56.25em) {
         .colstats__metric__stat {
-          font-size: 87px; } }
+          font-size: 70px; } }
     .colstats__metric__describer {
       font-weight: bold;
       line-height: 27px;
@@ -1668,8 +1668,11 @@ span.time-day {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 56.25em) {
+    .winnerhighlight__team {
+      display: grid; } }
   .winnerhighlight__team__member {
-    padding: 10px 16px;
+    padding: 10px 16px 22px 16px;
     background: #56505f;
     border-radius: 8px;
     box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.45);
@@ -1700,7 +1703,7 @@ span.time-day {
     .winnerhighlight__team__member__contact {
       display: flex; }
       .winnerhighlight__team__member__contact a {
-        margin: 0 4px 12px 4px; }
+        margin: 0 4px 0 4px; }
 
 .projecthighlight {
   width: 310px;
@@ -1744,6 +1747,9 @@ span.time-day {
   .sharebutton:hover {
     transform: translateY(-2px) !important;
     background: #534d5d; }
+  @media (max-width: 56.25em) {
+    .sharebutton {
+      margin: 12px; } }
   .sharebutton__container {
     margin: auto auto 10em auto;
     display: flex;
@@ -1752,19 +1758,24 @@ span.time-day {
     text-align: center; }
     @media (max-width: 56.25em) {
       .sharebutton__container {
-        margin-bottom: 4em; } }
+        margin-bottom: 4em;
+        display: flex;
+        flex-wrap: wrap; } }
 
 .postlanding .hero {
   min-height: 70vh; }
   @media (max-width: 56.25em) {
+    .postlanding .hero {
+      min-height: 40vh; } }
+  @media (max-width: 56.25em) {
     .postlanding .hero__logo {
-      height: 12rem; } }
+      height: 9rem; } }
   @media (max-width: 56.25em) {
     .postlanding .hero__title {
-      font-size: 9.5rem; } }
+      font-size: 7.25rem; } }
   @media (max-width: 56.25em) {
     .postlanding .hero__text {
-      font-size: 3rem; } }
+      font-size: 2.5rem; } }
   .postlanding .hero__background {
     position: absolute;
     top: 200px; }

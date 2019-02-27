@@ -1,15 +1,17 @@
 .postlanding
     .hero
         min-height: 70vh
+        @include respond(tab-port)
+            min-height: 40vh
         &__logo
             @include respond(tab-port)
-                height: 12rem
+                height: 9rem
         &__title
             @include respond(tab-port)
-                font-size: 9.5rem
+                font-size: 7.25rem
         &__text
             @include respond(tab-port)
-                font-size: 3rem
+                font-size: 2.5rem
         &__background
             position: absolute
             top: 200px

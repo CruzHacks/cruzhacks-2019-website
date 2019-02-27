@@ -77,12 +77,12 @@ class Hero extends Component {
         <img className="live-hero__right" src={heroLive} alt=""/>
         <div className="hero__background">
           <img className="hero__logo" src={logo} alt="logo"/>
-          {this.props.minimal && <div className="hero__logo--collab">
+          {this.props.sponsorLogo && <div className="hero__logo--collab">
             <Icon icon={`plus`} />
           </div>}
-          <img className="hero__logo--sponsor" src={this.props.sponsorLogo} />
+          {this.props.sponsorLogo && <img className="hero__logo--sponsor" src={this.props.sponsorLogo} />}
           <h1 className="hero__title">CruzHacks 2019</h1>
-          {this.props.sponsorLogo ? <span className="hero__text">{this.props.sponsorName} sponsorship fulfillment review<br/>Prepared by the CruzHacks team</span> : <span className="hero__text">Create something that makes a difference.</span>}
+          {this.props.sponsorName ? <span className="hero__text">{this.props.sponsorName} sponsorship fulfillment review<br/>Prepared by the CruzHacks team</span> : <span className="hero__text">Create something that makes a difference.</span>}
           {!this.props.minimal &&  <div>
             <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
             <div className="live-hero__social">

@@ -31,7 +31,7 @@ const sponsorTemplate = props => [
     name: `DisplayText`,
     props: {
       header: `Participating hackers brought nationwide exposure to your company!`,
-      paragraph: `Of the roughly 600 attendees who participated, 62% were UCSC students while the rest hailed from outside the university. This shows that not only did the event garner interest within the local community, but also that in its sixth year, CruzHacks established its credibility outside the circles of Santa Cruz. Hackers from other UC schools, high schoolers, and college students from all around the U.S. (including one team from the University of Waterloo in Canada!) came out to interact with your company and development technologies!`
+      paragraph: `Of the roughly 600 attendees who participated, 81% were UCSC students while the rest hailed from outside the university. This shows that not only did the event garner interest within the local community, but also that in its sixth year, CruzHacks established its credibility outside the circles of Santa Cruz. Hackers from other UC schools, high schoolers, and college students from all around the U.S. (including one team from the University of Waterloo in Canada!) came out to interact with your company and development technologies!`
     }
   },
   {
@@ -47,7 +47,7 @@ const sponsorTemplate = props => [
         intro: `The ${props.prize.category} sponsor prize category accumulated...`,
         stat: props.prize.winners,
         outro: [
-          `complete hackathon projects! View all of the projects `, <a href={props.prize.link} target="_blank">here</a>, `!`
+          `complete hackathon projects! View your sponsor projects `, <a href={props.prize.link} target="_blank">here</a>, `!`
         ]
       }
     }
@@ -86,9 +86,9 @@ const sponsorTemplate = props => [
 		name: `ColumnStats`,
 		props: {
 			stats: [
-				{stat: `30%`, describer: `Female/Non-binary`},
+				{stat: `28%`, describer: `Female/Non-binary`},
 				{stat: `47%`, describer: `First time hackers`},
-				{stat: 43, describer: `Visiting University Students`},
+				{stat: 44, describer: `Universities Represented`},
 			]
 		}
 	},
