@@ -1883,7 +1883,7 @@ span.time-day {
   padding: 1.5rem 3.3rem;
   background-color: #56505f;
   border-radius: 5rem;
-  margin: 2.25rem 2rem;
+  margin: 5rem 2rem;
   color: white;
   opacity: 0;
   transition: transform 0.2s ease, background 0.5s ease;
@@ -1906,7 +1906,7 @@ span.time-day {
   padding: 1.5rem 3.3rem;
   background-color: #56505f;
   border-radius: 5rem;
-  margin: 2.25rem 2rem;
+  margin: 5rem 2rem;
   color: white;
   opacity: 0;
   transition: transform 0.2s ease, background 0.5s ease;
@@ -1926,4 +1926,7 @@ span.time-day {
   flex-direction: column;
   height: 75px;
   margin-top: -5rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 4rem; }
+  @media (max-width: 56.25em) {
+    .donationcta__container {
+      margin-top: 2rem; } }
