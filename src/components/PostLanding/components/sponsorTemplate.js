@@ -183,7 +183,8 @@ const sponsorTemplate = props => [
 	{
 		name: `ShareButton`,
 		props: {
-			sponsor: props.name
+			sponsor: props.name,
+			anonymized: false
 		}
 	}
 ];

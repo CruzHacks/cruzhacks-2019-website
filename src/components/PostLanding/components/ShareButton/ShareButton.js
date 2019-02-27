@@ -32,12 +32,13 @@ class ShareButton extends Component {
     return (
       <div className="sharebutton__container">
         {this.props.buttons.map(button => 
-          <OnVisible wrappingElement="a" className="sharebutton" href={button.copy ? undefined : button.link} onClick={(e) => { if (button.copy) { button.copy(); this.tooltip(e.target, `Link copied!`, `sharebutton`, button.link)}}} target="_blank"><Icon icon={button.type} alt={`Share on ${button.type}`} /></OnVisible>
+          <OnVisible wrappingElement="a" className="sharebutton" href={button.copy ? undefined : (this.props.anonymized ? button.individual : button.link)} onClick={(e) => { if (button.copy) { button.copy(); this.tooltip(e.target, `Link copied!`, `sharebutton`, (this.props.anonymized ? button.individual : button.link))}}} target="_blank"><Icon icon={button.type} alt={`Share on ${button.type}`} /></OnVisible>
         )}
       </div>
     )
   }
   static defaultProps = {
+    anonymized: true,
     buttons: [
       {
         type: `link`,
@@ -52,7 +53,8 @@ class ShareButton extends Component {
       },
       {
         type: `linkedin`,
-        link: `https://www.linkedin.com/shareArticle/?mini=true&url=${window.location.href}&title=$s%20Sponsors%20CruzHacks%202019&summary=$s%20is%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects`
+        link: `https://www.linkedin.com/shareArticle/?mini=true&url=${window.location.href}&title=$s%20Sponsors%20CruzHacks%202019&summary=$s%20is%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects`,
+        individual: `https://www.linkedin.com/shareArticle/?mini=true&url=${window.location.href}&title=CruzHacks%202019&summary=CruzHacks%202019%20is%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects`
       },
       {
         type: `slack`,
@@ -68,11 +70,13 @@ class ShareButton extends Component {
       },
       {
         type: `facebook`,
-        link: `https://www.facebook.com/dialog/share?app_id=2331092736909025&display=popup&href=${encodeURIComponent(window.location.href)}&hashtag=%23cruzhacks&quote=$s%20is%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects`
+        link: `https://www.facebook.com/dialog/share?app_id=2331092736909025&display=popup&href=${encodeURIComponent(window.location.href)}&hashtag=%23cruzhacks&quote=$s%20is%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects`,
+        individual: `https://www.facebook.com/dialog/share?app_id=2331092736909025&display=popup&href=${encodeURIComponent(window.location.href)}&hashtag=%23cruzhacks&quote=CruzHacks%202019%20is%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects`
       },
       {
         type: `twitter`,
-        link: `https://twitter.com/intent/tweet?text=$s%20am%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects&url=${window.location.href}`
+        link: `https://twitter.com/intent/tweet?text=$s%20is%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects&url=${window.location.href}`,
+        individual: `https://twitter.com/intent/tweet?text=CruzHacks%202019%20is%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects&url=${window.location.href}`
       },
     ],
     sponsor: ``
