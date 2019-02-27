@@ -120,6 +120,41 @@ const sponsorTemplate = props => [
 			]
 		}
 	},
+  {
+    name: `DisplayText`,
+    props: {
+      header: `CruzHacks in the News`
+    }
+  },
+  {
+    name: `MediaButtons`,
+    props: {
+      media: [
+        {
+          name: `CruzHacks 2019 a Success`,
+          source: `ProductOps Blog`,
+          link: `https://blog.productops.com/cruzhacks-2019-a-success/?fbclid=IwAR2M8Kw0pd-M253yO9iDwcfcHy07CaFfEEtqeCiTbYiDOb_TSqQNoffxV78`,
+          image: `https://blog.productops.com/content/images/2019/01/image--2--2.png`,
+          alt: `Three smiling ProductOps representatives posing at their sponsorship table.`,
+        },
+        {
+          name: `CruzHacks Returns`,
+          source: `Santa Cruz Tech Beat`,
+          link: `http://www.cityonahillpress.com/2019/01/25/cruzhacks-returns/`,
+          image: `http://www.cityonahillpress.com/wp-content/uploads/2019/01/WEB-Cruz-Hacks-1.19.19-21.jpg`,
+          alt: `Large group of around one hundred students working on their laptops and projects at CruzHacks 2019`,
+        },
+        {
+          name: `Tech MeetUp presents CruzHacks winners`,
+          source: `Santa Cruz Sentinel`,
+          link: `https://www.santacruzsentinel.com/2019/02/12/tech-meetup-presents-cruzhacks-winners/`,
+          image: `https://www.santacruzsentinel.com/wp-content/uploads/2019/02/IMG_1073.jpg?w=707`,
+          alt: `Four student winners of CruzHacks 2019, of the team "Period Helper", pose with their prizes—Amazon echo dots. From left: Sriya Lingampalli, Leah George, Disha Mevada and Keerthana Routhu.`,
+        }
+      ]
+    }
+  },
+
 	{
 		name: `DisplayText`,
 		props: {

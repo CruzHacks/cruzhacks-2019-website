@@ -1,0 +1,74 @@
+.mediabuttons
+    width: 100vw
+    position: relative
+    left: 50%
+    right: 50%
+    margin-left: -50vw
+    margin-right: -50vw
+    display: flex
+    justify-content: center
+    margin-bottom: 10em
+    @include respond(tab-port)
+        flex-direction: column
+        align-items: center
+        margin-bottom: 4em
+    &__media
+        width: 280px
+        background: #4D4953
+        border-radius: 8px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        overflow: hidden
+        margin: 0 25px
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25)
+        opacity: 0
+        transform: translateY(15px)
+        transition: opacity 0.4s ease .37s, transform 0.2s ease, background 0.5s ease
+        &:hover
+            transform: translateY(-2px) !important
+            background: #534d5d
+
+        &:nth-child(2)
+            transition: opacity 0.4s ease .27s, transform 0.2s ease, background 0.5s ease
+        &:nth-child(3)
+            transition: opacity 0.4s ease .37s, transform 0.2s ease, background 0.5s ease
+        &__body
+            padding: 2em
+            width: 100%
+            height: 110px
+            box-sizing: border-box
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &__name
+                font-weight: bold
+                font-size: 20px
+                text-align: left
+                color: #FCF9FF
+            &__source
+                text-align: right
+                font-weight: bold
+                line-height: 27px
+                font-size: 14px
+                text-transform: uppercase
+                color: rgba(252, 249, 255, 0.7)
+                &:before
+                    content: "– "
+        &__image
+            overflow: hidden
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            img
+                max-height: 220px
+                @include respond(tab-port)
+                    max-height: initial
+                    max-width: 320px
+        @include respond(tab-port)
+            width: 320px
+            height: 300px
+            margin: 25px 0
+
