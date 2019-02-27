@@ -18,9 +18,9 @@ const renderer = ({ hours, days, completed }) => {
     // Render a countdown
     hours += (days*24)
     if (hours==1) {
-      return <span>{hours} Giving Day hour left!</span>
+      return <span>Donate! ({hours} hour left!)</span>
     }
-    return <span>{hours} Giving Day hours left!</span>;
+    return <span>Donate! ({hours} hours left!)</span>;
   }
 };
 
