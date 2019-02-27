@@ -1796,41 +1796,54 @@ span.time-day {
       padding: 10% 3%;
       margin: 1% auto 5% auto; } }
 
-.donationcta {
-  position: relative;
+.donationcta__givingday {
   display: flex;
-  flex-direction: column;
+  font-weight: 400;
+  font-size: 2.25rem;
+  padding: 1.5rem 3.3rem;
+  background-color: #56505f;
+  border-radius: 5rem;
+  margin: 2.25rem 2rem;
+  color: white;
+  opacity: 0;
+  transition: transform 0.2s ease, background 0.5s ease;
   align-items: center;
   justify-content: center;
-  text-align: center; }
-  .donationcta__button-container {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; }
-  .donationcta__button {
-    font-weight: 400;
-    padding: 1.5rem 3.3rem;
-    background-color: #534d5d;
-    border-radius: 5rem;
-    margin: 1rem 1rem;
-    transition: all .2s;
-    color: white; }
-    .donationcta__button:hover {
-      background-color: #5f596b; }
-    .donationcta__button__tiny {
-      font-size: 2em;
-      text-decoration: none;
-      background: #292940;
-      padding: 0.7em 1em 0.7em 0.4em;
-      border-radius: 2em;
-      transition: background 0.5s ease;
-      margin-bottom: 5em; }
-      .donationcta__button__tiny:before {
-        background: #676bff;
-        padding: 4px 7px 4px 8px;
-        border-radius: 24px;
-        margin-right: 8px;
-        font-size: 0.9em;
-        box-shadow: 0 0 4px #676bff; }
-      .donationcta__button__tiny:hover {
-        background: #33334e; }
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: translateY(5px);
+  border: 2px solid #3ddb47;
+  box-shadow: 0px 0px 10px #3ddb47; }
+  .donationcta__givingday:hover {
+    transform: translateY(-2px) !important;
+    background: #534d5d; }
+
+.donationcta__sponsorship {
+  display: flex;
+  font-weight: 400;
+  font-size: 2.25rem;
+  padding: 1.5rem 3.3rem;
+  background-color: #56505f;
+  border-radius: 5rem;
+  margin: 2.25rem 2rem;
+  color: white;
+  opacity: 0;
+  transition: transform 0.2s ease, background 0.5s ease;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: translateY(5px);
+  border: 2px solid purple;
+  box-shadow: 0px 0px 10px purple; }
+  .donationcta__sponsorship:hover {
+    transform: translateY(2px) !important;
+    background: #534d5d; }
+
+.donationcta__container {
+  flex-direction: column;
+  height: 75px;
+  margin-top: -5rem;
+  padding-bottom: 2rem; }
