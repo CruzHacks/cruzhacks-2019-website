@@ -72,7 +72,7 @@ class ShareButton extends Component {
       },
       {
         type: `twitter`,
-        link: `https://twitter.com/intent/tweet?text=$s%20is%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects&url=${window.location.href}`
+        link: `https://twitter.com/intent/tweet?text=$s%20am%20proud%20to%20sponsor%20CruzHacks%202019%20a%20nonprofit%20hackathon%20bringing%20together%20600%20students%20from%2040%20universities%20to%20UC%20Santa%20Cruz%20for%20a%20weekend%20of%20building%20software%20projects&url=${window.location.href}`
       },
     ],
     sponsor: ``
