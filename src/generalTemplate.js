@@ -149,6 +149,19 @@ const sponsorTemplate = [
 		props: {
 			sponsor: `I`
 		}
+	},
+	{
+		name: `DisplayText`,
+		props: {
+			header: `Help fund our future.`,
+			paragraph: `Support budding innovation with your participation in Giving Day. Keep CruzHacks free!`
+		}
+	},
+	{
+		name: `DonationCTA`,
+		props: {
+			sponsor: `I`
+		}
 	}
 ];
 

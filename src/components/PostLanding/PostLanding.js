@@ -9,6 +9,7 @@ import ColumnButtons from "components/PostLanding/components/ColumnButtons"
 import WinnerHighlight from "components/PostLanding/components/WinnerHighlight"
 import ProjectHighlight from "components/PostLanding/components/ProjectHighlight"
 import ShareButton from "components/PostLanding/components/ShareButton"
+import DonationCTA from "components/PostLanding/components/DonationCTA"
 
 class PostLanding extends Component {
   render() {
@@ -21,7 +22,8 @@ class PostLanding extends Component {
       "ColumnButtons": <ColumnButtons {...c.props} />,
       "WinnerHighlight": <WinnerHighlight {...c.props} />,
       "ProjectHighlight": <ProjectHighlight {...c.props} />,
-      "ShareButton": <ShareButton {...c.props} />
+      "ShareButton": <ShareButton {...c.props} />,
+      "DonationCTA" : <DonationCTA {...c.props} />
     })[c.name]
     return (
       <div className="postlanding">

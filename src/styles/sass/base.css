@@ -192,7 +192,7 @@ a {
         .hero__text__alt {
           font-size: 1.8rem; } }
   .hero__background {
-    z-index: -1;
+    z-index: 0;
     background: #1d1922;
     box-shadow: 0 0 130px 80px #1d1922;
     border-radius: 280px;
@@ -1795,3 +1795,42 @@ span.time-day {
       width: 90%;
       padding: 10% 3%;
       margin: 1% auto 5% auto; } }
+
+.donationcta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .donationcta__button-container {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+  .donationcta__button {
+    font-weight: 400;
+    padding: 1.5rem 3.3rem;
+    background-color: #534d5d;
+    border-radius: 5rem;
+    margin: 1rem 1rem;
+    transition: all .2s;
+    color: white; }
+    .donationcta__button:hover {
+      background-color: #5f596b; }
+    .donationcta__button__tiny {
+      font-size: 2em;
+      text-decoration: none;
+      background: #292940;
+      padding: 0.7em 1em 0.7em 0.4em;
+      border-radius: 2em;
+      transition: background 0.5s ease;
+      margin-bottom: 5em; }
+      .donationcta__button__tiny:before {
+        background: #676bff;
+        padding: 4px 7px 4px 8px;
+        border-radius: 24px;
+        margin-right: 8px;
+        font-size: 0.9em;
+        box-shadow: 0 0 4px #676bff; }
+      .donationcta__button__tiny:hover {
+        background: #33334e; }
