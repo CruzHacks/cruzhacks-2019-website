@@ -193,7 +193,7 @@ const sponsorTemplate = [
 		name: `DisplayText`,
 		props: {
 			header: `Help fund our future.`,
-			paragraph: `Support budding innovation with your participation in Giving Day. Keep CruzHacks free!`
+			paragraph: `Support budding innovation with your participation at Giving Day. Keep CruzHacks free!`
 		}
 	},
 	{
