@@ -50,7 +50,6 @@ class DonationCTA extends Component {
         className: "donationcta__sponsorship"
       },
     ],
-    sponsor: ``
   }
 }
 
