@@ -4,7 +4,8 @@ const sponsorTemplate = [
 	{
 		name: `Hero`,
 		props: {
-			minimal: true,
+      minimal: true,
+      campaignButtons: true
 		}
 	},
   {

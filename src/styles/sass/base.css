@@ -1858,10 +1858,13 @@ span.time-day {
       font-size: 2.5rem; } }
   .postlanding .hero__background {
     position: absolute;
-    top: 200px; }
+    top: 120px;
+    z-index: 1; }
     @media (max-width: 56.25em) {
       .postlanding .hero__background {
         top: auto; } }
+  .postlanding .hero .live-hero__left, .postlanding .hero .live-hero__right {
+    z-index: -1; }
 
 .postlanding__container {
   background: #2D2A32;
@@ -1893,6 +1896,11 @@ span.time-day {
   background: linear-gradient(248deg, #02c30e, #56e8ab); }
   .donationcta__givingday:hover {
     transform: translateY(-2px) !important; }
+  @media (max-width: 56.25em) {
+    .donationcta__givingday {
+      margin: 1.5rem .5rem;
+      padding: 1rem;
+      font-size: 2rem; } }
   .donationcta__givingday:hover {
     filter: hue-rotate(10deg); }
 
@@ -1913,15 +1921,15 @@ span.time-day {
   background: linear-gradient(248deg, #6702c3, #5675e8); }
   .donationcta__sponsorship:hover {
     transform: translateY(-2px) !important; }
+  @media (max-width: 56.25em) {
+    .donationcta__sponsorship {
+      margin: 1.5rem .5rem;
+      padding: 1rem;
+      font-size: 2rem; } }
   .donationcta__sponsorship:hover {
     filter: hue-rotate(10deg); }
 
 .donationcta__container {
   display: flex;
   justify-content: center;
-  margin-top: -7rem;
-  padding-bottom: 5rem; }
-  @media (max-width: 56.25em) {
-    .donationcta__container {
-      flex-direction: column;
-      margin-top: 2rem; } }
+  margin-bottom: 2rem; }
