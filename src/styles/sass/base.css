@@ -1894,7 +1894,7 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(248deg, #c97e0e, #f2cd15); }
+  background: linear-gradient(248deg, #c46f00, #fcde00); }
   .actionbutton__orgapp:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
