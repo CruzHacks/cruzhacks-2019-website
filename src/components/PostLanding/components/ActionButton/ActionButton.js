@@ -8,22 +8,22 @@ setDefaultProps({
     percent: 50
 });
 
-const Completionist = () => <span>Giving Day is over. Thank you donors!</span>
-let timedButton = "actionbutton__orgapp"
- 
-const renderer = ({ hours, days, completed }) => {
-  if (completed) {
-    // Render past deadline
-    return <Completionist />
-  } else {
+let orgapp = 'https://airtable.com/shr7xkiUfXyXlTerd'
+let timedClass = "actionbutton__orgapp"
+let deadline = new Date('Friday March 8 2019 11:59:59')
+    let now = Date.now()
+    if (deadline <= now) {
+      timedClass = "actionbutton__orgapp__done"
+    }
+
+const renderer = ({ hours, days }) => {
     // Render before deadline
     hours =+ days * 24;
     if (hours <= 24) {
       return <span>{hours} hours left!</span>
     }
     return <span>Apply to make 2020 <span role="img" aria-labelledby="fire!">🔥🔥</span></span>
-  }
-};
+}
 
 class ActionButton extends Component {
   render() {
@@ -40,14 +40,14 @@ class ActionButton extends Component {
     buttons: [
       {
         type: `application`,
-        link: `https://airtable.com/shr7xkiUfXyXlTerd`,
         name: <Countdown date={'Friday March 8 2019 11:59:59'} renderer={renderer}></Countdown>,
-        className: timedButton
+        link: orgapp,
+        className: timedClass
       },
       {
         type: `sponsorship`,
-        link: `mailto:contact@cruzhacks.com`,
         name: 'Prospective Sponsors',
+        link: `mailto:contact@cruzhacks.com`,
         className: "actionbutton__sponsorship"
       },
     ],

@@ -1904,6 +1904,8 @@ span.time-day {
       font-size: 2rem; } }
   .actionbutton__orgapp:hover {
     filter: hue-rotate(10deg); }
+  .actionbutton__orgapp__done {
+    display: none; }
 
 .actionbutton__sponsorship {
   font-weight: 400;
