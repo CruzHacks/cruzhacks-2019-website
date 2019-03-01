@@ -1857,12 +1857,13 @@ span.time-day {
     .postlanding .hero__text {
       font-size: 2.5rem; } }
   .postlanding .hero__background {
-    position: absolute;
+    position: sticky;
     top: 120px;
     z-index: 1; }
     @media (max-width: 56.25em) {
       .postlanding .hero__background {
-        top: auto; } }
+        top: auto;
+        box-shadow: 0 0 91px 24px #1d1922; } }
   .postlanding .hero .live-hero__left, .postlanding .hero .live-hero__right {
     z-index: -1; }
 
