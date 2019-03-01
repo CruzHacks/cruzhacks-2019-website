@@ -9,25 +9,26 @@ setDefaultProps({
 });
 
 const Completionist = () => <span>Giving Day is over. Thank you donors!</span>
+let timedButton = "actionbutton__orgapp"
  
 const renderer = ({ hours, days, completed }) => {
   if (completed) {
-    // Render a completed state
-    return <Completionist />;
+    // Render past deadline
+    return <Completionist />
   } else {
-    // Render a countdown
-    hours += (days*24)
-    if (hours==1) {
-      return <span>Donate! ({hours} hour left!)</span>
+    // Render before deadline
+    hours =+ days * 24;
+    if (hours <= 24) {
+      return <span>{hours} hours left!</span>
     }
-    return <span>Donate! ({hours} hours left!)</span>;
+    return <span>Apply to make 2020 <span role="img" aria-labelledby="fire!">🔥🔥</span></span>
   }
 };
 
-class DonationCTA extends Component {
+class ActionButton extends Component {
   render() {
     return (
-      <div className="donationcta__container">
+      <div className="actionbutton__container">
         {this.props.buttons.map(button => 
           <OnVisible wrappingElement="a" className={button.className} href={button.link} target="_blank">{button.name}</OnVisible>
         )}
@@ -38,19 +39,19 @@ class DonationCTA extends Component {
   static defaultProps = {
     buttons: [
       {
-        type: `givingday`,
-        link: `http://c-fund.us/jy8`,
-        name: <Countdown date={'Thu Feb 28 2019 00:00:00'} renderer={renderer} daysInHours={false}></Countdown>,
-        className: "donationcta__givingday"
+        type: `application`,
+        link: `https://airtable.com/shr7xkiUfXyXlTerd`,
+        name: <Countdown date={'Friday March 8 2019 11:59:59'} renderer={renderer}></Countdown>,
+        className: timedButton
       },
       {
         type: `sponsorship`,
         link: `mailto:contact@cruzhacks.com`,
         name: 'Prospective Sponsors',
-        className: "donationcta__sponsorship"
+        className: "actionbutton__sponsorship"
       },
     ],
   }
 }
 
-export default DonationCTA;
+export default ActionButton;
