@@ -180,11 +180,9 @@ const sponsorTemplate = [
 	{
 		name: `DisplayText`,
 		props: {
-			header: `Help fund our future`,
-      paragraph: `Each year we strive for funds to ensure the event is free for student attendees, but this requires a considerable amount of donations and sponsorship towards food, venue fees, electricity, internet, merch, and more for the continuous ~40 hours that CruzHacks spans. 
-      UCSC's Giving Day is a one-day giving drive to support student, staff, and faculty initiatives. Please consider donating $5 or more to ensure the event can be put on for future years. If you cannot donate, consider sharing the donation link with a network of friends who might be interested in our cause.
-
-`
+			header: `Help shape our future`,
+      paragraph: `Each year we strive to deliver an exciting, inclusive, and fun event focused on building tech solutions for social good. This requires a considerable amount of wo/manpower and resources towards logistics, food, electricity, internet, merch, and more for the ~40 continuous hours 
+      that CruzHacks spans. Help us put on 2020! `
 		}
 	},
 	{
