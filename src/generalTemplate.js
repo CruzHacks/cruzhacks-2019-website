@@ -188,7 +188,7 @@ const sponsorTemplate = [
 		}
 	},
 	{
-		name: `DonationCTA`,
+		name: `ActionButton`,
   },
 	{
 		name: `DisplayText`,

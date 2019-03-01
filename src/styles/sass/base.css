@@ -1857,12 +1857,13 @@ span.time-day {
     .postlanding .hero__text {
       font-size: 2.5rem; } }
   .postlanding .hero__background {
-    position: absolute;
+    position: sticky;
     top: 120px;
     z-index: 1; }
     @media (max-width: 56.25em) {
       .postlanding .hero__background {
-        top: auto; } }
+        top: auto;
+        box-shadow: 0 0 91px 24px #1d1922; } }
   .postlanding .hero .live-hero__left, .postlanding .hero .live-hero__right {
     z-index: -1; }
 
@@ -1879,7 +1880,7 @@ span.time-day {
       padding: 10% 3%;
       margin: 1% auto 5% auto; } }
 
-.donationcta__givingday {
+.actionbutton__orgapp {
   font-weight: 400;
   font-size: 2.4rem;
   padding: 2rem 2.5rem;
@@ -1893,18 +1894,20 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(248deg, #02c30e, #56e8ab); }
-  .donationcta__givingday:hover {
+  background: linear-gradient(248deg, #c97e0e, #f2cd15); }
+  .actionbutton__orgapp:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
-    .donationcta__givingday {
+    .actionbutton__orgapp {
       margin: 1.5rem .5rem;
       padding: 1rem;
       font-size: 2rem; } }
-  .donationcta__givingday:hover {
+  .actionbutton__orgapp:hover {
     filter: hue-rotate(10deg); }
+  .actionbutton__orgapp__done {
+    display: none; }
 
-.donationcta__sponsorship {
+.actionbutton__sponsorship {
   font-weight: 400;
   font-size: 2.4rem;
   padding: 2rem 2.5rem;
@@ -1919,17 +1922,17 @@ span.time-day {
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
   background: linear-gradient(248deg, #6702c3, #5675e8); }
-  .donationcta__sponsorship:hover {
+  .actionbutton__sponsorship:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
-    .donationcta__sponsorship {
+    .actionbutton__sponsorship {
       margin: 1.5rem .5rem;
       padding: 1rem;
       font-size: 2rem; } }
-  .donationcta__sponsorship:hover {
+  .actionbutton__sponsorship:hover {
     filter: hue-rotate(10deg); }
 
-.donationcta__container {
+.actionbutton__container {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem; }

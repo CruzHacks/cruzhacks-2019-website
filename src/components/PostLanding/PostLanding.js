@@ -9,7 +9,7 @@ import ColumnButtons from "components/PostLanding/components/ColumnButtons"
 import WinnerHighlight from "components/PostLanding/components/WinnerHighlight"
 import ProjectHighlight from "components/PostLanding/components/ProjectHighlight"
 import ShareButton from "components/PostLanding/components/ShareButton"
-import DonationCTA from "components/PostLanding/components/DonationCTA"
+import ActionButton from "components/PostLanding/components/ActionButton"
 import MediaButtons from "components/PostLanding/components/MediaButtons"
 
 class PostLanding extends Component {
@@ -24,7 +24,7 @@ class PostLanding extends Component {
       "WinnerHighlight": <WinnerHighlight {...c.props} />,
       "ProjectHighlight": <ProjectHighlight {...c.props} />,
       "ShareButton": <ShareButton {...c.props} />,
-      "DonationCTA" : <DonationCTA {...c.props} />,
+      "ActionButton" : <ActionButton {...c.props} />,
       "MediaButtons": <MediaButtons {...c.props} />
     })[c.name]
     return (
