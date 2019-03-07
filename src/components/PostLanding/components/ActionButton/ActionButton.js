@@ -20,7 +20,7 @@ const renderer = ({ hours, days }) => {
     // Render before deadline
     hours =+ days * 24;
     if (hours <= 24) {
-      return <span>{hours} hours left!</span>
+      return <span>{hours} hours left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
     }
     return <span>Apply to make 2020 <span role="img" aria-labelledby="fire!">🔥🔥</span></span>
 }
@@ -40,7 +40,7 @@ class ActionButton extends Component {
     buttons: [
       {
         type: `application`,
-        name: <Countdown date={'Friday March 8 2019 11:59:59'} renderer={renderer}></Countdown>,
+        name: <Countdown date={'Friday March 8 2019 23:59:59'} renderer={renderer}></Countdown>,
         link: orgapp,
         className: timedClass
       },
