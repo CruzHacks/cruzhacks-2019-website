@@ -10,15 +10,15 @@ setDefaultProps({
 
 let orgapp = 'https://airtable.com/shr7xkiUfXyXlTerd'
 let timedClass = "actionbutton__orgapp"
-let deadline = new Date('Friday March 8 2019 11:59:59')
-    let now = Date.now()
-    if (deadline <= now) {
-      timedClass = "actionbutton__orgapp__done"
-    }
+let deadline = new Date('Tuesday March 26 2019 23:59:59')
+let now = Date.now()
+  if (deadline <= now) {
+    timedClass = "actionbutton__orgapp__done"
+  }
 
 const renderer = ({ hours, days }) => {
     // Render before deadline
-    hours =+ days * 24;
+    hours += days * 24;
     if (hours <= 24) {
       return <span>{hours} hours left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
     }
@@ -40,7 +40,7 @@ class ActionButton extends Component {
     buttons: [
       {
         type: `application`,
-        name: <Countdown date={'Friday March 8 2019 23:59:59'} renderer={renderer}></Countdown>,
+        name: <Countdown date={'Tuesday March 26 2019 23:59:59'} renderer={renderer}></Countdown>,
         link: orgapp,
         className: timedClass
       },
