@@ -1930,7 +1930,7 @@ span.time-day {
       padding: 1rem;
       font-size: 2rem; } }
   .actionbutton__sponsorship:hover {
-    filter: hue-rotate(15deg); }
+    filter: hue-rotate(25deg); }
 
 .actionbutton__container {
   display: flex;
