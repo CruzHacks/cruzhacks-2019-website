@@ -195,7 +195,7 @@ a {
   .hero__background {
     z-index: -1;
     background: #1d1922;
-    box-shadow: 0 0 130px 80px #1d1922;
+    box-shadow: 0 0 90px 50px #1d1922;
     border-radius: 280px;
     width: 820px;
     padding: 30px 0; }
@@ -1859,7 +1859,8 @@ span.time-day {
   .postlanding .hero__background {
     position: sticky;
     top: 120px;
-    z-index: 1; }
+    z-index: 1;
+    margin-top: 15vh; }
     @media (max-width: 56.25em) {
       .postlanding .hero__background {
         top: auto;
