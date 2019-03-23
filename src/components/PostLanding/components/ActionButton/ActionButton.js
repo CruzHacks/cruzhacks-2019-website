@@ -19,6 +19,9 @@ let now = Date.now()
 const renderer = ({ hours, days }) => {
     // Render before deadline
     hours += days * 24;
+    if (hours == 1) {
+      return <span>{hours} hour left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
+    }
     if (hours <= 24) {
       return <span>{hours} hours left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
     }
@@ -40,13 +43,13 @@ class ActionButton extends Component {
     buttons: [
       {
         type: `application`,
-        name: <Countdown date={'Saturday March 23 2019 23:59:59'} renderer={renderer}></Countdown>,
+        name: <Countdown date={deadline} renderer={renderer}></Countdown>,
         link: orgapp,
         className: timedClass
       },
       {
         type: `sponsorship`,
-        name: 'Prospective Sponsors',
+        name: 'Bring your brand to 2020',
         link: `mailto:contact@cruzhacks.com`,
         className: "actionbutton__sponsorship"
       },

@@ -1,0 +1,316 @@
+.hero
+  min-height: 70vh
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 4rem 1rem
+  @include respond(tab-port)
+    min-height: 40vh
+  &__logo
+    height: 18rem
+    transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
+    filter: saturate(2) drop-shadow(0)
+    &:hover
+      filter: saturate(8) drop-shadow(0 0 .2rem #711F73)
+      transform-origin: bottom center
+      animation: bellshake .5s cubic-bezier(.56,.7,.2,.77)
+    +keyframes(bellshake)
+      0%
+        transform: rotate(0deg)
+      15%
+        transform: rotate(5deg)
+      30%
+        transform: rotate(-5deg)
+      45%
+        transform: rotate(4deg)
+      60%
+        transform: rotate(-4deg)
+      75%
+        transform: rotate(2deg)
+      85%
+        transform: rotate(-2deg)
+      92%
+        transform: rotate(1deg)
+      100%
+        transform: rotate(0)
+    &--collab
+      display: inline-flex
+      justify-content: center
+      width: 70px
+    &--sponsor
+      display: inline-flex
+    @include respond(tab-port)
+      height: 14rem
+  &__title
+    font-size: 9.5rem
+    color: white
+    margin: 2rem auto 0rem auto
+    line-height: 1.2
+    @include respond(tab-port)
+      font-size: 7.25rem
+  &__text
+    color: $color-text-alt
+    font-size: 3rem
+    font-weight: 500
+    @include respond(tab-port)
+      font-size: 2.5rem
+    &__alt
+      color: $color-text-alt
+      font-size: 2.2rem
+      margin-top: 1rem
+      display: block
+      @include respond(tab-port)
+        top: auto
+        box-shadow: 0 0 91px 24px #1d1922
+  &__background
+    position: sticky
+    top: 120px
+    z-index: 1
+    margin-top: 15vh
+    background: #1d1922
+    box-shadow: 0 0 130px 65px #1d1922
+    border-radius: 280px
+    width: 820px
+    padding: 30px 0
+    @include respond(tab-port)
+      width: 100%
+      margin-top: 20vh
+      margin-bottom: 5vh
+
+  .deadline
+    grid-column-start: 1
+    grid-column-end: 3
+
+  &__button-container
+    margin: 2rem
+    margin-top: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    @include respond(phone)
+      flex-direction: column
+  &__button
+    text-decoration: none
+    font-size: 2.75rem
+    font-weight: 400
+    padding: 1.5rem 3.3rem
+    background-color: rgb(41, 43, 63)
+    border-radius: 5rem
+    margin: 1rem 1rem
+    transition: all .2s
+    color: white
+    @include respond(tab-port)
+      font-size: 2.5rem
+    @include respond(phone)
+      font-size: 2rem
+    &:hover
+      background-color: lighten($color-bg, 5%)
+    &.not-allowed
+      cursor: not-allowed
+    &__cta
+      background-color: #8568eb !important
+      font-weight: 600 !important
+      text-transform: uppercase !important
+      &.orange
+        background-color: #AE9200  !important
+        &:hover
+          background-color: lighten(#AE9200, 5%) !important
+      &.green
+        background-color: #00ae34  !important
+        &:hover
+          background-color: lighten(#00ae34, 5%) !important
+      &:hover
+        background-color: #977ef1 !important
+    &__tiny
+      color: white
+      font-size: 2em
+      text-decoration: none
+      background: #292940
+      padding: 0.7em 1em 0.7em 0.4em
+      border-radius: 2em
+      transition: background 0.5s ease
+      margin-bottom: 5em;
+      &:before
+        content: "NEW!"
+        background: #676bff
+        padding: 4px 7px 4px 8px
+        border-radius: 24px
+        margin-right: 8px
+        font-size: 0.9em
+        box-shadow: 0 0 4px #676bff
+      &:hover
+        background: #33334e
+
+  &__tiny
+    font-weight: 500
+    font-size: 2.5em
+    text-transform: uppercase
+    color: #aca5b5
+    position: absolute
+    top: calc(100vh - 60px)
+    margin: 0 auto
+    cursor: pointer
+    left: 50%
+    transform: translateX(-50%)
+    width: 175px
+    height: 55px
+    &:after
+      content: "↓"
+      position: absolute
+      right: 82px
+      top: 26px
+      animation: moving .5s ease alternate infinite
+  &__bg
+    width: 100%
+    position: absolute
+    top: 51%
+    left: 50%
+    transform: translate(-50%, -50%)
+    min-height: 110vh
+    max-height: 120vh
+    z-index: -1
+    @include respond(phone)
+        filter: blur(3px)
+        transform: rotate(90deg) translate(-38px, -388px) scale(1.6)
+        transform-origin: top
+        width: 110%
+        top: 51%
+        left: 46%
+  &__link
+    color: $color-text-alt
+    text-decoration: underline
+    transition: all .2s
+    &:hover
+      color: white
+
+
+.label-hidden
+  position: absolute
+  top: 20px
+  left: 0
+  bottom: 0
+  z-index: 2
+  width: 100%
+  font-weight: 300
+  opacity: 0.0
+  cursor: text
+  transition: 0.2s ease all
+  margin: 0
+  -webkit-user-select: none
+  -moz-user-select: none
+  user-select: none
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 45%
+    height: 2px
+    width: 10px
+    visibility: hidden
+    background-color: white
+    ransition: 0.2s ease all
+
+.hero__button, .hero__button-small
+  text-decoration: none
+  font-weight: 500
+  padding: 1.5rem 3.3rem
+  background-color: #292b3f
+  border-radius: 5rem
+  margin: 1rem 2rem
+  transition: all .2s
+  color: white
+  outline: none
+
+.live-hero__left,.live-hero__right
+   z-index: -1
+
+.hero__button:hover, .hero__button-small:hover
+  background-color: #282430
+  cursor: pointer
+
+.hero__button.not-allowed
+  cursor: not-allowed
+
+.hero__button-small
+  padding: 1rem, 3.1rem
+
+.hero__updates
+  display: flex
+  flex-direction: column
+  color: $color-text-alt
+  position: relative
+  &__title
+    font-size: 4rem
+    margin: 1.5rem auto
+  &__label
+    font-size: 2.5rem
+    position: absolute
+    bottom: 10rem
+    align-self: center
+    transition: all .2s
+  &__input
+    width: 30rem
+    margin: auto
+    margin-top: 1.25rem
+    padding: 2.5rem 0 .5rem 0
+    font-size: 2.5rem
+    border: none
+    outline: none
+    color: white
+    border-bottom: 2px solid $color-text-alt
+    background-color: transparent
+    &:focus
+      border-bottom: 2px solid $color-text-orange
+      + .hero__updates__label
+        transform: translateY(-25px)
+  &__submit
+    font-size: 2rem
+    font-weight: 600
+    border: none
+    align-self: center
+    padding: 1.5rem 3.3rem
+    background-color: #292b3f
+    border-radius: 5rem
+    margin: 1.75rem 2rem
+    transition: all .2s
+    text-transform: uppercase
+    color: white
+    outline: none
+    cursor: pointer
+    &:hover
+      background-color: #282430
+
+@keyframes moving
+  from
+    transform: translateY(0)
+  to
+    transform: translateY(3px)
+
+.hero__stats
+  display: flex
+  padding: 2rem
+  color: white
+  font-size: 4rem
+  justify-content: center
+  align-items: center
+  @include respond(tab-port)
+    font-size: 3.75rem
+  @include respond(phone)
+    font-size: 3.25rem
+    padding: 0
+  @include respond(phone-narrow)
+    font-size: 3rem
+
+#hackers, #projects, #hours
+  margin-left: 3rem
+  margin-right: 3rem
+  padding: 0rem 0rem 10rem 0rem
+  @include respond(phone)
+    margin-left: 2rem
+    margin-right: 2rem
+
+  

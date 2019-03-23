@@ -127,7 +127,16 @@ a
         -o-transform: rotate(360deg)
         transform: rotate(360deg)
 
-
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+    
 .bar
   width: 1000px
   height: 4px
@@ -203,3 +212,4 @@ a
 @import "components/postevent/sharebutton"
 @import "components/postevent/landing"
 @import "components/postevent/actionbutton"
+@import "components/postevent/hero"
