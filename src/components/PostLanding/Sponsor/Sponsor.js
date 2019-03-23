@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Hero from "components/Landing/Hero";
+import Hero from "components/PostLanding/components/Hero";
 import ColumnStats from "components/PostLanding/components/ColumnStats"
 import Collage from "components/PostLanding/components/Collage"
 import DisplayText from "components/PostLanding/components/DisplayText"

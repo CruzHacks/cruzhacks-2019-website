@@ -46,7 +46,7 @@ class ActionButton extends Component {
       },
       {
         type: `sponsorship`,
-        name: 'Prospective Sponsors',
+        name: 'Let us bring your brand to 2020!',
         link: `mailto:contact@cruzhacks.com`,
         className: "actionbutton__sponsorship"
       },
