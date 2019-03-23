@@ -40,7 +40,7 @@ class ActionButton extends Component {
     buttons: [
       {
         type: `application`,
-        name: <Countdown date={'Saturday March 23 2019 23:59:59'} renderer={renderer}></Countdown>,
+        name: <Countdown date={deadline} renderer={renderer}></Countdown>,
         link: orgapp,
         className: timedClass
       },
