@@ -19,6 +19,9 @@ let now = Date.now()
 const renderer = ({ hours, days }) => {
     // Render before deadline
     hours += days * 24;
+    if (hours == 1) {
+      return <span>{hours} hour left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
+    }
     if (hours <= 24) {
       return <span>{hours} hours left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
     }
