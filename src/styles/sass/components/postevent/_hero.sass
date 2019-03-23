@@ -12,11 +12,35 @@
   &__logo
     height: 18rem
     transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-    filter: saturate(2) drop-shadow(0)
+    transform-origin: bottom center
+    animation: colorFlicker .5s linear, bellshake .5s cubic-bezier(.56,.7,.2,.77)
     &:hover
-      filter: saturate(8) drop-shadow(0 0 .2rem #711F73)
-      transform-origin: bottom center
-      animation: bellshake .5s cubic-bezier(.56,.7,.2,.77)
+      animation: colorFlicker .5s infinite linear, bellshake
+    +keyframes(colorFlicker)
+      0%
+        filter: saturate(2) drop-shadow(0 0 .05rem #711F73)
+        opacity: .6
+      10%
+        filter: saturate(4) drop-shadow(0 0 .2rem #711F73)
+        opacity: .8
+      17%
+        filter: saturate(8) drop-shadow(0 0 .35rem #711F73)
+        opacity: 1
+      39%
+        filter: saturate(3) drop-shadow(0 0 .1rem #711F73)
+        opacity: .75
+      50%
+        filter: saturate(8) drop-shadow(0 0 .35rem #711F73)
+        opacity: .8
+      68%
+        filter: saturate(3) drop-shadow(0 0 .1rem #711F73)
+        opacity: .75
+      82%
+        filter: saturate(6) drop-shadow(0 0 .325rem #711F73)
+        opacity: .8
+      100%
+        filter: saturate(3) drop-shadow(0 0 .1rem #711F73)
+        opacity: .75
     +keyframes(bellshake)
       0%
         transform: rotate(0deg)
