@@ -12,9 +12,9 @@
   &__logo
     height: 18rem
     transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-    filter: saturate(2) 
+    filter: saturate(2) drop-shadow(0)
     &:hover
-      filter: saturate(8) 
+      filter: saturate(8) drop-shadow(0 0 .2rem #711F73)
       transform-origin: bottom center
       animation: bellshake .5s cubic-bezier(.56,.7,.2,.77)
     +keyframes(bellshake)
@@ -79,7 +79,6 @@
       width: 100%
       margin-top: 20vh
       margin-bottom: 5vh
-
 
   .deadline
     grid-column-start: 1
