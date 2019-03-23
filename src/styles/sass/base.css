@@ -2058,10 +2058,8 @@ span.time-day {
     @media (max-width: 56.25em) {
       .hero__background {
         width: 100%;
-        margin-bottom: 15vh; } }
-    @media (max-width: 37.5em) {
-      .hero__background {
-        box-shadow: none; } }
+        margin-top: 20vh;
+        margin-bottom: 5vh; } }
   .hero .deadline {
     grid-column-start: 1;
     grid-column-end: 3; }
