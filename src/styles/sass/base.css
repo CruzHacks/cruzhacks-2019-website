@@ -1926,12 +1926,10 @@ span.time-day {
       min-height: 40vh; } }
   .hero__logo {
     height: 18rem;
-    transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-    filter: saturate(2) drop-shadow(0); }
+    transform-origin: bottom center;
+    animation: bellshake 0.5s 0.5s cubic-bezier(0.56, 0.7, 0.2, 0.77); }
     .hero__logo:hover {
-      filter: saturate(8) drop-shadow(0 0 0.2rem #711F73);
-      transform-origin: bottom center;
-      animation: bellshake 0.5s cubic-bezier(0.56, 0.7, 0.2, 0.77); }
+      animation: colorFilter 0.2s cubic-bezier(0.1, 0.6, 0.3, 1) infinite, bellshake 0.5s cubic-bezier(0.56, 0.7, 0.2, 0.77); }
 
 @-webkit-keyframes bellshake {
   0% {
@@ -2012,6 +2010,30 @@ span.time-day {
     transform: rotate(1deg); }
   100% {
     transform: rotate(0); } }
+
+@-webkit-keyframes colorFilter {
+  0% {
+    filter: saturate(2) drop-shadow(0); }
+  100% {
+    filter: saturate(8) drop-shadow(0 0 0.2rem #711F73); } }
+
+@-moz-keyframes colorFilter {
+  0% {
+    filter: saturate(2) drop-shadow(0); }
+  100% {
+    filter: saturate(8) drop-shadow(0 0 0.2rem #711F73); } }
+
+@-ms-keyframes colorFilter {
+  .hero__logo 0% {
+    filter: saturate(2) drop-shadow(0); }
+  .hero__logo 100% {
+    filter: saturate(8) drop-shadow(0 0 0.2rem #711F73); } }
+
+@keyframes colorFilter {
+  0% {
+    filter: saturate(2) drop-shadow(0); }
+  100% {
+    filter: saturate(8) drop-shadow(0 0 0.2rem #711F73); } }
     .hero__logo--collab {
       display: inline-flex;
       justify-content: center;

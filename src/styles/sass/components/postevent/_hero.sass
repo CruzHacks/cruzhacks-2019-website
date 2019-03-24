@@ -11,14 +11,12 @@
     min-height: 40vh
   &__logo
     height: 18rem
-    transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-    filter: saturate(2) drop-shadow(0)
-    &:hover
-      filter: saturate(8) drop-shadow(0 0 .2rem #711F73)
-      transform-origin: bottom center
-      animation: bellshake .5s cubic-bezier(.56,.7,.2,.77)
+    transform-origin: bottom center
+    animation: bellshake .5s .5s cubic-bezier(.56,.7,.2,.77)
+    &:hover                                                                 
+      animation: colorFilter .2s cubic-bezier(.1, .6, .3, 1) infinite, bellshake .5s cubic-bezier(.56,.7,.2,.77)
     +keyframes(bellshake)
-      0%
+      0% 
         transform: rotate(0deg)
       15%
         transform: rotate(5deg)
@@ -36,6 +34,11 @@
         transform: rotate(1deg)
       100%
         transform: rotate(0)
+    +keyframes(colorFilter)
+      0%
+        filter: saturate(2) drop-shadow(0)
+      100%
+        filter: saturate(8) drop-shadow(0 0 .2rem #711F73)
     &--collab
       display: inline-flex
       justify-content: center
