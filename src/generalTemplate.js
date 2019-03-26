@@ -163,8 +163,8 @@ const sponsorTemplate = [
         {
           name: `CruzHacks Returns`,
           source: `Santa Cruz Tech Beat`,
-          link: `http://www.cityonahillpress.com/2019/01/25/cruzhacks-returns/`,
-          image: `http://www.cityonahillpress.com/wp-content/uploads/2019/01/WEB-Cruz-Hacks-1.19.19-21.jpg`,
+          link: `https://www.cityonahillpress.com/2019/01/25/cruzhacks-returns/`,
+          image: `https://www.cityonahillpress.com/wp-content/uploads/2019/01/WEB-Cruz-Hacks-1.19.19-21.jpg`,
           alt: `Large group of around one hundred students working on their laptops and projects at CruzHacks 2019`,
         },
         {
