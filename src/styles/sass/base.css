@@ -2071,10 +2071,11 @@ span.time-day {
     position: sticky;
     top: 120px;
     z-index: 1;
-    margin-top: 15vh;
+    margin-top: 13vh;
+    padding-bottom: 15vh;
     background: #1d1922;
-    box-shadow: 0 0 130px 65px #1d1922;
-    border-radius: 280px;
+    box-shadow: 0 0 45px 40px #1d1922;
+    border-radius: 380px;
     width: 820px;
     padding: 30px 0; }
     @media (max-width: 56.25em) {
