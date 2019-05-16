@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import OnVisible, { setDefaultProps } from 'react-on-visible';
-import Countdown from 'react-countdown-now';
 
 setDefaultProps({
     visibleClassName: 'appear',
@@ -8,25 +7,6 @@ setDefaultProps({
     percent: 50
 });
 
-let orgapp = 'https://airtable.com/shr7xkiUfXyXlTerd'
-let timedClass = "actionbutton__orgapp"
-let deadline = new Date('Saturday March 23 2019 23:59:59')
-let now = Date.now()
-  if (deadline <= now) {
-    timedClass = "actionbutton__orgapp__done"
-  }
-
-const renderer = ({ hours, days }) => {
-    // Render before deadline
-    hours += days * 24;
-    if (hours == 1) {
-      return <span>{hours} hour left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
-    }
-    if (hours <= 24) {
-      return <span>{hours} hours left! <span role="img" aria-labelledby="Help organize 2020.">🔥🔥</span></span>
-    }
-    return <span>Apply to make 2020 <span role="img" aria-labelledby="fire!">🔥🔥</span></span>
-}
 
 class ActionButton extends Component {
   render() {
@@ -42,12 +22,6 @@ class ActionButton extends Component {
   static defaultProps = {
     buttons: [
       {
-        type: `application`,
-        name: <Countdown date={deadline} renderer={renderer}></Countdown>,
-        link: orgapp,
-        className: timedClass
-      },
-      {
         type: `sponsorship`,
         name: 'Bring your brand to 2020',
         link: `mailto:sponsor@cruzhacks.com`,
@@ -57,7 +31,7 @@ class ActionButton extends Component {
         type: `codeOfConduct`,
         name: 'Our Code of Conduct',
         link: `https://static.mlh.io/docs/mlh-code-of-conduct.pdf`,
-        className: "actionbutton__sponsorship"
+        className: "actionbutton__codeOfConduct"
       },
     ],
   }

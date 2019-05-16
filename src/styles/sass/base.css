@@ -1855,13 +1855,15 @@ span.time-day {
       padding: 10% 3%;
       margin: 1% auto 5% auto; } }
 
-.actionbutton__orgapp {
+.actionbutton__codeOfConduct {
   font-weight: 400;
   font-size: 2.4rem;
   padding: 2rem 2.5rem;
   background-color: #56505f;
   border-radius: 5rem;
-  margin: 2.25rem;
+  margin: 2.25rem 2.25rem 0;
+  width: max-content;
+  align-self: center;
   color: white;
   opacity: 0;
   text-align: center;
@@ -1869,18 +1871,16 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(248deg, #c97e0e, #efdf2f); }
-  .actionbutton__orgapp:hover {
+  background: linear-gradient(68deg, #711F73, #5731c6); }
+  .actionbutton__codeOfConduct:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
-    .actionbutton__orgapp {
+    .actionbutton__codeOfConduct {
       margin: 1.5rem .5rem;
       padding: 1rem;
       font-size: 2rem; } }
-  .actionbutton__orgapp:hover {
-    filter: hue-rotate(-35deg); }
-  .actionbutton__orgapp__done {
-    display: none; }
+  .actionbutton__codeOfConduct:hover {
+    filter: hue-rotate(45deg); }
 
 .actionbutton__sponsorship {
   font-weight: 400;
@@ -1888,7 +1888,9 @@ span.time-day {
   padding: 2rem 2.5rem;
   background-color: #56505f;
   border-radius: 5rem;
-  margin: 2.25rem;
+  margin: 2.25rem 2.25rem 0;
+  width: max-content;
+  align-self: center;
   color: white;
   opacity: 0;
   text-align: center;
@@ -1896,7 +1898,7 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(248deg, #711F73, #5675e8); }
+  background: linear-gradient(248deg, #711F73, #5731c6); }
   .actionbutton__sponsorship:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
@@ -1909,7 +1911,9 @@ span.time-day {
 
 .actionbutton__container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   margin-bottom: 2rem; }
 
 .hero {

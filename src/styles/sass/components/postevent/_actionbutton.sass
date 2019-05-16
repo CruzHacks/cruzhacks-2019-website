@@ -5,7 +5,9 @@
         padding: 2rem 2.5rem
         background-color: #56505f
         border-radius: 5rem
-        margin: 2.25rem
+        margin: 2.25rem 2.25rem 0 
+        width: max-content
+        align-self: center
         color: white
         opacity: 0
         text-align: center
@@ -19,21 +21,23 @@
             margin: 1.5rem .5rem
             padding: 1rem
             font-size: 2rem
-    &__orgapp
+    &__codeOfConduct
         @include button
-        background: linear-gradient(248deg, #c97e0e, #efdf2f)
-        &:hover
-            filter: hue-rotate(-35deg)
-        &__done
-            display: none
-    &__sponsorship
-        @include button
-        background: linear-gradient(248deg, #711F73, #5675e8)
+        background: linear-gradient(68deg, #711F73, #5731c6)
         &:hover
             filter: hue-rotate(45deg)
+  
+    &__sponsorship
+        @include button
+        background: linear-gradient(248deg, #711F73, #5731c6)
+        &:hover
+            filter: hue-rotate(45deg)
+    
     &__container
         display: flex
-        justify-content: center
+        flex-direction: column
+        flex-wrap: wrap
+        align-content: center
         margin-bottom: 2rem
-        @include respond(tab-port)
+        
    
