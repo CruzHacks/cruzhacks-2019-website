@@ -182,12 +182,10 @@ const sponsorTemplate = [
 		props: {
 			header: `Help shape our future`,
       paragraph: `Each year we strive to deliver an exciting, inclusive, and fun event focused on building tech solutions for social good. This requires a considerable amount of wo/manpower and resources towards logistics, food, electricity, internet, merch, and more for the ~40 continuous hours 
-      that CruzHacks spans. Help us put on 2020! `
-		}
+      that CruzHacks spans. Help us put on 2020! `,
+      campaignButtons: true
+    }
 	},
-	{
-		name: `ActionButton`,
-  },
 	{
 		name: `DisplayText`,
 		props: {
