@@ -53,6 +53,12 @@ class ActionButton extends Component {
         link: `mailto:sponsor@cruzhacks.com`,
         className: "actionbutton__sponsorship"
       },
+      {
+        type: `codeOfConduct`,
+        name: 'Our Code of Conduct',
+        link: `https://static.mlh.io/docs/mlh-code-of-conduct.pdf`,
+        className: "actionbutton__sponsorship"
+      },
     ],
   }
 }
