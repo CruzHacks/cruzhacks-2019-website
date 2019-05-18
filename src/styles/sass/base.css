@@ -1871,7 +1871,7 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(68deg, #711F73, #5731c6); }
+  background: linear-gradient(68deg, #711F73, #4813a3); }
   .actionbutton__codeOfConduct:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
@@ -1898,7 +1898,7 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(248deg, #711F73, #5731c6); }
+  background: linear-gradient(248deg, #711F73, #4813a3); }
   .actionbutton__sponsorship:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
@@ -2180,7 +2180,7 @@ span.time-day {
     transform: translate(-50%, -50%);
     min-height: 110vh;
     max-height: 120vh;
-    z-index: -1; }
+    z-index: -2; }
     @media (max-width: 37.5em) {
       .hero__bg {
         filter: blur(3px);
