@@ -33,6 +33,12 @@ class ActionButton extends Component {
         link: `https://static.mlh.io/docs/mlh-code-of-conduct.pdf`,
         className: "actionbutton__codeOfConduct"
       },
+      {
+        type: `emailSubscription`,
+        name: 'Subscribe to Mailing List',
+        link: `https://cruzhacks.us17.list-manage.com/subscribe?u=67b8869a6255fa73f75844302&id=8436398b32`,
+        className: "actionbutton__emailSubscription"
+      },
     ],
   }
 }

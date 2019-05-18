@@ -1855,6 +1855,33 @@ span.time-day {
       padding: 10% 3%;
       margin: 1% auto 5% auto; } }
 
+.actionbutton__sponsorship {
+  font-weight: 400;
+  font-size: 2.4rem;
+  padding: 2rem 2.5rem;
+  background-color: #56505f;
+  border-radius: 5rem;
+  margin: 2.25rem 2.25rem 0;
+  width: max-content;
+  align-self: center;
+  color: white;
+  opacity: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
+  background: linear-gradient(248deg, #711F73, #5731c6); }
+  .actionbutton__sponsorship:hover {
+    transform: translateY(-2px) !important; }
+  @media (max-width: 56.25em) {
+    .actionbutton__sponsorship {
+      margin: 1.5rem .5rem;
+      padding: 1rem;
+      font-size: 2rem; } }
+  .actionbutton__sponsorship:hover {
+    filter: hue-rotate(45deg); }
+
 .actionbutton__codeOfConduct {
   font-weight: 400;
   font-size: 2.4rem;
@@ -1882,7 +1909,7 @@ span.time-day {
   .actionbutton__codeOfConduct:hover {
     filter: hue-rotate(45deg); }
 
-.actionbutton__sponsorship {
+.actionbutton__emailSubscription {
   font-weight: 400;
   font-size: 2.4rem;
   padding: 2rem 2.5rem;
@@ -1899,14 +1926,14 @@ span.time-day {
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
   background: linear-gradient(248deg, #711F73, #5731c6); }
-  .actionbutton__sponsorship:hover {
+  .actionbutton__emailSubscription:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
-    .actionbutton__sponsorship {
+    .actionbutton__emailSubscription {
       margin: 1.5rem .5rem;
       padding: 1rem;
       font-size: 2rem; } }
-  .actionbutton__sponsorship:hover {
+  .actionbutton__emailSubscription:hover {
     filter: hue-rotate(45deg); }
 
 .actionbutton__container {
