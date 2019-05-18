@@ -1871,7 +1871,7 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(68deg, #711F73, #4800c6); }
+  background: linear-gradient(68deg, #711F73, #3d027c); }
   .actionbutton__codeOfConduct:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
@@ -1898,7 +1898,7 @@ span.time-day {
   font-weight: bold;
   transform: translateY(15px);
   transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(248deg, #711F73, #4800c6); }
+  background: linear-gradient(248deg, #711F73, #3d027c); }
   .actionbutton__sponsorship:hover {
     transform: translateY(-2px) !important; }
   @media (max-width: 56.25em) {
