@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Icon from 'components/Icon'
 import ActionButton from 'components/PostLanding/components/ActionButton'
+import SubscribeMailingList from 'components/PostLanding/components/SubscribeMailingList'
 import logo from 'assets/logo.svg';
 import heroLive from 'assets/hero-live.svg';
 import instagram from 'assets/social/instagram.svg';
@@ -84,7 +85,8 @@ class Hero extends Component {
           {this.props.sponsorLogo && <img className="hero__logo--sponsor" src={this.props.sponsorLogo} />}
           <h1 className="hero__title">CruzHacks 2019</h1>
           {this.props.sponsorName ? <span className="hero__text">{this.props.sponsorName} sponsorship fulfillment review<br/>Prepared by the CruzHacks team</span> : <span className="hero__text">Create something that makes a difference.</span>}
-          {this.props.campaignButtons && <ActionButton />}
+          {this.props.campaignButtons && <ActionButton /> }
+          {this.props.campaignButtons && <SubscribeMailingList /> }
           {!this.props.minimal &&  <div>
             <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
             <div className="live-hero__social">
