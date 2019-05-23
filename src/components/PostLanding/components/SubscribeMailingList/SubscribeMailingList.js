@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { OauthSender } from 'react-oauth-flow';
 import OnVisible, { setDefaultProps } from "react-on-visible";
 
 setDefaultProps({
@@ -15,27 +14,40 @@ class SubscribeMailingList extends Component {
     this.form = React.createRef();
     this.validateAndSubmit = this.validateAndSubmit.bind(this);
   }
-
-  //
-  // data: { "email_address":validEmail },
-
+  
   validateAndSubmit() {
     if (this.form.current.reportValidity()) {
-      console.error(this.form.current.elements.email.value);
+
+      // user input containing valid email address
       var validEmail = this.form.current.elements.email.value;
 
-      axios.post('https://us17.api.mailchimp.com/3.0/lists/8436398b32/members', 
-      {
+      // data object to be sent in request
+      let data = JSON.stringify({
+        email_address: validEmail,
+        status: 'subscribed'
+      });
+
+      // basic auth username and password
+      var uname = process.env.REACT_APP_MAILCHIMP_USER;
+      var key = process.env.REACT_APP_MAILCHIMP_SECRET;
+
+      axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
         auth: {
-          username: process.env.REACT_APP_MAILCHIMP_USER,
-          password: process.env.REACT_APP_MAILCHIMPSECRET
+          username: uname,
+          password: key
+        },
+        headers: {
+          'Content-Type': 'application/json',
         }
       }).then(response => {
-        console.error("Here's the response : " + response);
-        //this.setState({email: '', subscribe: "You've Been Subscribed!"})
+        console.log("Successfully Added New Member to List");
+        console.log(response);
       }).catch(error => {
-        console.error("An error occurred : " + error);
-        //this.setState({email: '', subscribe: "You've Been Subscribed!"})
+        if (error.response.data.title === "Member Exists") {
+          console.log("Member Already Exists");
+        } else {
+          console.error(error);
+        }
       });
     }
   }
@@ -49,7 +61,6 @@ class SubscribeMailingList extends Component {
             type="email"
             placeholder="valid email"
             required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           />
         </form>
         <button onClick={this.validateAndSubmit}>Subscribe</button>
