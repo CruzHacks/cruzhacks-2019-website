@@ -23,8 +23,6 @@ class SubscribeMailingList extends Component {
     if (this.form.current.reportValidity()) {
       console.error(this.form.current.elements.email.value);
       var validEmail = this.form.current.elements.email.value;
-      var uname = 'sohearn@ucsc.edu';
-      var pass = '54db26bbc8ad29102e807cecfd9ffc2c-us17';
 
       axios.post('https://us17.api.mailchimp.com/3.0/lists/8436398b32/members', 
       {
