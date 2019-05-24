@@ -24,7 +24,7 @@ class SubscribeMailingList extends Component {
       // data object to be sent in request
       let data = JSON.stringify({
         email_address: validEmail,
-        status: 'subscribed'
+        status: 'pending'
       });
 
       // basic auth username and password
@@ -59,7 +59,7 @@ class SubscribeMailingList extends Component {
           <input
             id="email"
             type="email"
-            placeholder="valid email"
+            placeholder="Add your email for updates!"
             required
           />
         </form>
