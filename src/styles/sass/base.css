@@ -1909,33 +1909,6 @@ span.time-day {
   .actionbutton__sponsorship:hover {
     filter: hue-rotate(45deg); }
 
-.actionbutton__codeOfConduct {
-  font-weight: 400;
-  font-size: 2.4rem;
-  padding: 2rem 2.5rem;
-  background-color: #56505f;
-  border-radius: 5rem;
-  margin: 2.25rem 2.25rem 0;
-  width: max-content;
-  align-self: center;
-  color: white;
-  opacity: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  transform: translateY(15px);
-  transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-  background: linear-gradient(68deg, #711F73, #5731c6); }
-  .actionbutton__codeOfConduct:hover {
-    transform: translateY(-2px) !important; }
-  @media (max-width: 56.25em) {
-    .actionbutton__codeOfConduct {
-      margin: 1.5rem .5rem;
-      padding: 1rem;
-      font-size: 2rem; } }
-  .actionbutton__codeOfConduct:hover {
-    filter: hue-rotate(45deg); }
-
 .actionbutton__container {
   display: flex;
   flex-direction: column;
@@ -2351,3 +2324,44 @@ span.time-day {
     #hackers, #projects, #hours {
       margin-left: 2rem;
       margin-right: 2rem; } }
+
+.subscriberinput {
+  align-items: center;
+  font-size: 2.2rem; }
+  .subscriberinput_form {
+    padding-bottom: 1.5rem; }
+  .subscriberinput_inputbox {
+    width: auto;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #711F73; }
+    .subscriberinput_inputbox:placeholder {
+      color: white;
+      transition: opacity 0.4s ease-out; }
+    .subscriberinput_inputbox:focus:placeholder {
+      opacity: 0; }
+  .subscriberinput_submitbutton {
+    padding: 1.25rem 2.75rem;
+    border-radius: 5rem;
+    outline: none;
+    text-transform: uppercase;
+    background: linear-gradient(-22deg, #711F73, #3d027c);
+    border: 0;
+    color: white;
+    transform: translateY(-1px);
+    transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
+    .subscriberinput_submitbutton:hover {
+      transform: translateY(1px) !important;
+      filter: hue-rotate(45deg); }
+    .subscriberinput_submitbutton:before {
+      content: "SUBSCRIBE";
+      font-weight: bold;
+      background: linear-gradient(-22deg, #711F73, #3d027c);
+      padding: .2rem 1rem;
+      border-radius: 24px;
+      transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
+    .subscriberinput_submitbutton:hover:before {
+      filter: hue-rotate(-60deg); }

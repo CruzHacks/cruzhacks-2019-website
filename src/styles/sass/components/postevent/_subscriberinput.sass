@@ -1,0 +1,40 @@
+  .subscriberinput 
+    align-items: center
+    font-size: 2.2rem
+    &_form
+        padding-bottom: 1.5rem
+    &_inputbox
+        width: auto
+        align-items: center
+        text-align: center
+        background: transparent
+        border: 0
+        outline: 0
+        border-bottom: 2px solid #711F73
+        @include placeholder
+            color: white
+            transition: opacity 0.4s ease-out
+        &:focus:placeholder
+            opacity: 0
+    &_submitbutton 
+        padding: 1.25rem 2.75rem
+        border-radius: 5rem
+        outline: none
+        text-transform: uppercase
+        background: linear-gradient(-22deg, #711F73, #3d027c)
+        border: 0
+        color: white
+        transform: translateY(-1px)
+        transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
+        &:hover
+            transform: translateY(1px) !important
+            filter: hue-rotate(45deg)
+        &:before
+            content: "SUBSCRIBE"
+            font-weight: bold
+            background: linear-gradient(-22deg, #711F73, #3d027c)
+            padding: .2rem 1rem
+            border-radius: 24px
+            transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
+        &:hover:before
+            filter: hue-rotate(-60deg)

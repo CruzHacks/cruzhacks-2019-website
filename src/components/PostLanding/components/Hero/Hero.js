@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import Icon from 'components/Icon'
 import ActionButton from 'components/PostLanding/components/ActionButton'
-import SubscribeMailingList from 'components/PostLanding/components/SubscribeMailingList'
+import SubscriberInput from 'components/PostLanding/components/SubscriberInput'
 import logo from 'assets/logo.svg';
 import heroLive from 'assets/hero-live.svg';
 import instagram from 'assets/social/instagram.svg';
@@ -27,6 +27,7 @@ class Hero extends Component {
     }
   }
 
+/* old code
   getEmail = (event) => {
     this.setState({email: event.target.value})
   }
@@ -42,16 +43,9 @@ class Hero extends Component {
         console.log(error)
         this.setState({email: '', subscribe: "You've Been Subscribed!"})
       })
-  }
-
-  scrollToContent = () => {
-    window.scrollTo({
-      top: document.querySelector('.mission').offsetTop,
-      behavior: 'smooth'
-    })
-  }
-
-  animateCount(start, end, id) {
+  } 
+  
+   animateCount(start, end, id) {
     let el = document.getElementById(id)
     let begin = start
 
@@ -70,6 +64,13 @@ class Hero extends Component {
     }
     let timer = setInterval(run, step);
     run()
+  }*/
+
+  scrollToContent = () => {
+    window.scrollTo({
+      top: document.querySelector('.mission').offsetTop,
+      behavior: 'smooth'
+    })
   }
 
   render() {
@@ -86,7 +87,7 @@ class Hero extends Component {
           <h1 className="hero__title">CruzHacks</h1>
           {this.props.sponsorName ? <span className="hero__text">{this.props.sponsorName} sponsorship fulfillment review<br/>Prepared by the CruzHacks team</span> : <span className="hero__text">Create something that makes a difference.</span>}
           {this.props.campaignButtons && <ActionButton /> }
-          {this.props.campaignButtons && <SubscribeMailingList /> }
+          {this.props.campaignButtons && <SubscriberInput /> }
           {!this.props.minimal &&  <div>
             <span className="hero__text__alt">Jan 18-20, 2019 @ <a className="hero__link" href="https://goo.gl/maps/2gdMzVKgkv92" target="_blank" rel="noopener noreferrer">Stevenson Event Center</a></span>
             <div className="live-hero__social">
@@ -96,7 +97,7 @@ class Hero extends Component {
             </div>
           <div className="hero__button-container">
             <a href="https://cruzhacks-2019.devpost.com/submissions" className="hero__button hero__button__cta orange" target="_blank" rel="noopener noreferrer">View Winners</a>
-            <a href="mailto:sponsor@cruzhacks.com" className="hero__button hero__button__cta green" target="_blank">Sponsorship Inquiries</a>
+            <a href="mailto:sponsor@cruzhacks.com" className="hero__button hero__button__cta green" target="_blank" rel="noopener noreferrer">Sponsorship Inquiries</a>
             <a href="https://photos.app.goo.gl/T6dhFZbTbKU1oFcH9" className="hero__button hero__button__cta" target="_blank" rel="noopener noreferrer">Event Photos</a>
           </div>
           <div className="hero__stats">

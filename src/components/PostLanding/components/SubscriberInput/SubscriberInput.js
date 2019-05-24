@@ -8,7 +8,7 @@ setDefaultProps({
   percent: 50
 });
 
-class SubscribeMailingList extends Component {
+class SubscriberInpnut extends Component {
   constructor() {
     super();
     this.form = React.createRef();
@@ -43,30 +43,28 @@ class SubscribeMailingList extends Component {
         console.log("Successfully Added New Member to List");
         console.log(response);
       }).catch(error => {
-        if (error.response.data.title === "Member Exists") {
-          console.log("Member Already Exists");
-        } else {
           console.error(error);
-        }
       });
     }
   }
 
   render() {
     return (
-      <div className="subscribemailinglist__container">
-        <form ref={this.form} onSubmit={e => e.preventDefault()}>
+      <div className="subscriberinput">
+        <form ref={this.form} className="subscriberinput_form" onSubmit={e => e.preventDefault()}>
           <input
+            className="subscriberinput_inputbox"
             id="email"
             type="email"
             placeholder="Add your email for updates!"
+            size="25"
             required
           />
         </form>
-        <button onClick={this.validateAndSubmit}>Subscribe</button>
+        <button className="subscriberinput_submitbutton" onClick={this.validateAndSubmit}></button>
       </div>
     );
   }
 }
 
-export default SubscribeMailingList;
+export default SubscriberInpnut;
