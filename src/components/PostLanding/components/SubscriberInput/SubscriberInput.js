@@ -12,18 +12,19 @@ class SubscriberInpnut extends Component {
   constructor() {
     super();
     this.form = React.createRef();
+    this.state = {email: ''}
     this.validateAndSubmit = this.validateAndSubmit.bind(this);
   }
   
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
   validateAndSubmit() {
     if (this.form.current.reportValidity()) {
-
-      // user input containing valid email address
-      var validEmail = this.form.current.elements.email.value;
-
       // data object to be sent in request
       let data = JSON.stringify({
-        email_address: validEmail,
+        email_address: this.state.email,
         status: 'pending'
       });
 
@@ -54,7 +55,7 @@ class SubscriberInpnut extends Component {
 
   render() {
     return (
-      <div className="subscriberinput">
+      <OnVisible className="subscriberinput">
         <form ref={this.form} className="subscriberinput_form" onSubmit={e => e.preventDefault()}>
           <input
             className="subscriberinput_inputbox"
@@ -62,11 +63,13 @@ class SubscriberInpnut extends Component {
             type="email"
             placeholder="Add your email for updates!"
             size="25"
+            onChange={this.handleChange}
+            value={this.state.email}
             required
           />
         </form>
         <button className="subscriberinput_submitbutton" onClick={this.validateAndSubmit}></button>
-      </div>
+      </OnVisible>
     );
   }
 }
