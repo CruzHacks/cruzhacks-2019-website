@@ -43,7 +43,11 @@ class SubscriberInpnut extends Component {
         console.log("Successfully Added New Member to List");
         console.log(response);
       }).catch(error => {
+        if (error.response.data.title === "Member Exists") {
+          console.log("Member Already Exists");
+        } else {
           console.error(error);
+        }
       });
     }
   }
