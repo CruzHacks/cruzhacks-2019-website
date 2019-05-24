@@ -8,16 +8,16 @@ setDefaultProps({
   percent: 50
 });
 
-class SubscriberInpnut extends Component {
-  constructor() {
-    super();
+class SubscriberInput extends Component {
+  constructor(props) {
+    super(props);
     this.form = React.createRef();
     this.state = {email: ''}
-    this.validateAndSubmit = this.validateAndSubmit.bind(this);
+    this.validateAndSubmit = this.validateAndSubmit.bind(this)
   }
   
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  getEmail = (event) => {
+    this.setState({email: event.target.value});
   }
 
   validateAndSubmit() {
@@ -63,7 +63,7 @@ class SubscriberInpnut extends Component {
             type="email"
             placeholder="Add your email for updates!"
             size="25"
-            onChange={this.handleChange}
+            onChange={this.getEmail}
             value={this.state.email}
             required
           />
@@ -74,4 +74,4 @@ class SubscriberInpnut extends Component {
   }
 }
 
-export default SubscriberInpnut;
+export default SubscriberInput;
