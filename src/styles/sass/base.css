@@ -2337,12 +2337,8 @@ span.time-day {
     background: transparent;
     border: 0;
     outline: 0;
-    border-bottom: 2px solid #711F73; }
-    .subscriberinput_inputbox:placeholder {
-      color: white;
-      transition: opacity 0.4s ease-out; }
-    .subscriberinput_inputbox:focus:placeholder {
-      opacity: 0; }
+    border-bottom: 2px solid #711F73;
+    color: white; }
   .subscriberinput_submitbutton {
     padding: 1.25rem 2.75rem;
     border-radius: 5rem;
