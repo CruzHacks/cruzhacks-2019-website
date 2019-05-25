@@ -2344,7 +2344,8 @@ span.time-day {
     padding-bottom: 1.5rem; }
   .subscriberinput__container {
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    top: -3px; }
     .subscriberinput__container_inputbox {
       box-sizing: border-box;
       padding-bottom: .15vh;
@@ -2416,14 +2417,14 @@ span.time-day {
       opacity: 0; }
     .subscriberinput__container_submitbutton {
       padding: 1.25rem 2.75rem;
-      position: absolute;
+      position: static;
       border-radius: 5rem;
       text-transform: uppercase;
       background: linear-gradient(-22deg, #711F73, #3d027c);
       border: 0;
       display: block;
-      right: 347.5px;
-      top: 26.5px;
+      margin: auto;
+      margin-top: -.25em;
       color: white;
       transform: translateY(-1px);
       transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;

@@ -85,7 +85,7 @@ class SubscriberInput extends Component {
   render() {
     return (
       <OnVisible className="subscriberinput">
-        <form ref={this.form} className="subscriberinput__form" onSubmit={e => e.preventDefault()}>
+        <form ref={this.form} id="emailform" className="subscriberinput__form" onSubmit={e => e.preventDefault()}>
            <div className="subscriberinput__container">
            <ReCaptcha
                 sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
@@ -103,10 +103,14 @@ class SubscriberInput extends Component {
               Drop an email for updates!
             </label>
           </div>
-          <button type="submit" className="subscriberinput__container_submitbutton"
-            onClick={ (e) => { this.validateAndSubmit(e.target); }} target="_blank">
-          </button>
         </form>
+        <button 
+          type="submit" 
+          className="subscriberinput__container_submitbutton"
+          onClick={ (e) => { this.validateAndSubmit(e.target); }}
+          form="emailform"
+        >
+        </button>
       </OnVisible>
     );
   }
