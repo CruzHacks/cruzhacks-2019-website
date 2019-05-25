@@ -13,6 +13,15 @@
         + span
             width: 13em
             transition: width 250ms ease-in-out
+    @mixin input
+        box-sizing: border-box
+        padding-bottom: .15vh
+        align-items: center
+        background: transparent
+        border: 0
+        color: white
+        width: 13em
+        outline: 0
     align-items: center
     font-size: 2.2rem
     &__form
@@ -22,14 +31,7 @@
         margin-top: -.5vh
         display: inline-block
         &_inputbox
-            box-sizing: border-box
-            padding-bottom: .15vh
-            align-items: center
-            background: transparent
-            border: 0
-            color: white
-            width: 13em
-            outline: 0
+            @include input
             &:focus
                 ~ label
                     visibility: hidden
@@ -38,6 +40,9 @@
                 @include span
             &:hover
                 @include span
+        &_inputboxfilled
+            @include input
+            @include span
         &_underline
             display: block
             position: absolute

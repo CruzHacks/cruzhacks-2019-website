@@ -87,7 +87,7 @@ class SubscriberInput extends Component {
         <form ref={this.form} className="subscriberinput__form" onSubmit={e => e.preventDefault()}>
            <div className="subscriberinput__container"> 
             <input
-              className="subscriberinput__container_inputbox"
+              className={this.state.email ? "subscriberinput__container_inputboxfilled" : "subscriberinput__container_inputbox"}
               id="email"
               type="email"
               onChange={this.getEmail}

@@ -2357,6 +2357,18 @@ span.time-day {
       .subscriberinput__container_inputbox:hover + span {
         width: 13em;
         transition: width 250ms ease-in-out; }
+    .subscriberinput__container_inputboxfilled {
+      box-sizing: border-box;
+      padding-bottom: .15vh;
+      align-items: center;
+      background: transparent;
+      border: 0;
+      color: white;
+      width: 13em;
+      outline: 0; }
+      .subscriberinput__container_inputboxfilled + span {
+        width: 13em;
+        transition: width 250ms ease-in-out; }
     .subscriberinput__container_underline {
       display: block;
       position: absolute;
