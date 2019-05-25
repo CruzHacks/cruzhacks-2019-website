@@ -2409,7 +2409,6 @@ span.time-day {
     .subscriberinput__container_submitbutton {
       padding: 1.25rem 2.75rem;
       border-radius: 5rem;
-      outline: none;
       text-transform: uppercase;
       background: linear-gradient(-22deg, #711F73, #3d027c);
       border: 0;
@@ -2420,7 +2419,8 @@ span.time-day {
         transform: translateY(1px) !important;
         filter: hue-rotate(45deg); }
       .subscriberinput__container_submitbutton:active {
-        transform: translateY(-0.15vh) !important; }
+        transform: translateY(-0.15vh) !important;
+        outline: none; }
       .subscriberinput__container_submitbutton:before {
         content: "SUBSCRIBE";
         font-weight: bold;

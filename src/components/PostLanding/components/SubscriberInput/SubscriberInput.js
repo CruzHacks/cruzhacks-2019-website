@@ -98,7 +98,7 @@ class SubscriberInput extends Component {
             </label>
           </div>
         </form>
-        <button className="subscriberinput__container_submitbutton"
+        <button tabindex="0" className="subscriberinput__container_submitbutton"
           onClick={ (e) => { this.validateAndSubmit(e.target); }} target="_blank">
         </button>
       </OnVisible>

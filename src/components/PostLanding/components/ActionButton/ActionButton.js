@@ -13,7 +13,7 @@ class ActionButton extends Component {
     return (
       <div className="actionbutton__container">
         {this.props.buttons.map(button => 
-          <OnVisible wrappingElement="a" className={button.className} href={button.link} target="_blank">{button.name}</OnVisible>
+          <OnVisible wrappingElement="a" className={button.className} href={button.link} tabindex="0" target="_blank">{button.name}</OnVisible>
         )}
       </div>
     )
