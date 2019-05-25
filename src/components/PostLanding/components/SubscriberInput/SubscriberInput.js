@@ -21,7 +21,7 @@ class SubscriberInput extends Component {
     event.preventDefault()
   }
 
-  tooltip(e, message, cl) {
+  tooltip(e, message) {
     console.log(e)
     let el = document.createElement('div');
     // making the text white for testing, still haven't figured out the styling
@@ -29,7 +29,6 @@ class SubscriberInput extends Component {
     el.style="color: 'white'"
     el.classList = "tooltip invisible"
     el.innerHTML = message
-    while (cl && !e.className.includes(cl)) e = e.parentElement
     
     if([...e.children].reduce((open, el) => [...el.classList].includes('tooltip') && (open = true), false)) return
     e.appendChild(el)
