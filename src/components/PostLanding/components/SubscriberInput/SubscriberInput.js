@@ -42,7 +42,7 @@ class SubscriberInput extends Component {
       // data object to be sent in request
       let data = JSON.stringify({
         email_address: this.state.email,
-        status: 'pending'
+        status: 'subscribed'
       });
 
       // basic auth username and password
