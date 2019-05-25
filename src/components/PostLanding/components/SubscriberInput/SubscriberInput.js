@@ -41,51 +41,41 @@ class SubscriberInput extends Component {
       // data object to be sent in request
       let data = JSON.stringify({
         email_address: this.state.email,
-        status: 'pending'
+        status: 'subscribed'
       });
 
       // basic auth username and password
       var uname = process.env.REACT_APP_MAILCHIMP_USER;
       var key = process.env.REACT_APP_MAILCHIMP_SECRET;
       var err_msg;
-
-      // surrounded request with a try catch thinking I could capture the strange
-      // 400 response saying that it needs an API key... This method might not
-      // even have to be asynchronous anymore, but this is where I left off.
-      try {
-        await axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
-          auth: {
-            username: uname,
-            password: key
-          },
-          headers: {
-            'Content-Type': 'application/json',
-          }
-        }).then(response => {
-          err_msg = 'Subscribed!';
-          this.setState({message: err_msg});
-          this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
-          console.log(response);
-        }).catch(error => {
-          if (error.response) {
-            if (error.response.data.title === "Member Exists") {
-              err_msg = 'Already Subscribed!';
-              this.setState({message: err_msg});
-              this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
-            }
-          } else {
-            err_msg = 'Something Went Wrong';
-            this.setState({message: err_msg});
-            this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
-            console.log(error);
-          }
-        });
-      } catch(error) {
-        err_msg = 'Something Went Wrong';
+      
+      await axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
+        auth: {
+          username: uname,
+          password: key
+        },
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }).then(response => {
+        err_msg = 'Subscribed!';
         this.setState({message: err_msg});
         this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
-        console.log(error);
-      }
+        console.log(response);
+      }).catch(error => {
+        if (error.response) {
+          if (error.response.data.title === "Member Exists") {
+            err_msg = 'Already Subscribed!';
+            this.setState({message: err_msg});
+            this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
+          }
+        } else {
+          err_msg = 'Something Went Wrong';
+          this.setState({message: err_msg});
+          this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
+          console.log(error);
+        }
+      });
     }
   }
 
