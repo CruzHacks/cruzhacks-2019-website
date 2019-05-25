@@ -1874,6 +1874,8 @@ span.time-day {
   background: linear-gradient(68deg, #711F73, #3d027c); }
   .actionbutton__codeOfConduct:hover {
     transform: translateY(-2px) !important; }
+  .actionbutton__codeOfConduct:active {
+    transform: translateY(0.05vh) !important; }
   @media (max-width: 56.25em) {
     .actionbutton__codeOfConduct {
       margin: 1.5rem .5rem;
@@ -1901,6 +1903,8 @@ span.time-day {
   background: linear-gradient(248deg, #711F73, #3d027c); }
   .actionbutton__sponsorship:hover {
     transform: translateY(-2px) !important; }
+  .actionbutton__sponsorship:active {
+    transform: translateY(0.05vh) !important; }
   @media (max-width: 56.25em) {
     .actionbutton__sponsorship {
       margin: 1.5rem .5rem;
@@ -2328,36 +2332,56 @@ span.time-day {
 .subscriberinput {
   align-items: center;
   font-size: 2.2rem; }
-  .subscriberinput_form {
+  .subscriberinput__form {
     padding-bottom: 1.5rem; }
-  .subscriberinput_inputbox {
-    width: auto;
-    align-items: center;
-    text-align: center;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    border-bottom: 2px solid #711F73;
-    color: white; }
-  .subscriberinput_submitbutton {
-    padding: 1.25rem 2.75rem;
-    border-radius: 5rem;
-    outline: none;
-    text-transform: uppercase;
-    background: linear-gradient(-22deg, #711F73, #3d027c);
-    border: 0;
-    color: white;
-    transform: translateY(-1px);
-    transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
-    .subscriberinput_submitbutton:hover {
-      transform: translateY(1px) !important;
-      filter: hue-rotate(45deg); }
-    .subscriberinput_submitbutton:before {
-      content: "SUBSCRIBE";
-      font-weight: bold;
+  .subscriberinput__container {
+    position: relative;
+    margin-top: -.5vh; }
+    .subscriberinput__container_inputbox {
+      box-sizing: border-box;
+      padding-bottom: .15vh;
+      align-items: center;
+      text-align: center;
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid #711F73;
+      color: white; }
+      .subscriberinput__container_inputbox:focus {
+        outline: 0; }
+        .subscriberinput__container_inputbox:focus + label {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s ease-out 300ms, opacity 300ms; }
+    .subscriberinput__container_label {
+      position: absolute;
+      color: grey;
+      font-weight: 500;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s ease-in 0s, opacity 300ms;
+      cursor: text;
+      margin-left: -13.2em; }
+    .subscriberinput__container_submitbutton {
+      padding: 1.25rem 2.75rem;
+      border-radius: 5rem;
+      outline: none;
+      text-transform: uppercase;
       background: linear-gradient(-22deg, #711F73, #3d027c);
-      padding: .2rem 1rem;
-      border-radius: 24px;
+      border: 0;
+      color: white;
+      transform: translateY(-1px);
       transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
-    .subscriberinput_submitbutton:hover:before {
-      filter: hue-rotate(-60deg); }
+      .subscriberinput__container_submitbutton:hover {
+        transform: translateY(1px) !important;
+        filter: hue-rotate(45deg); }
+      .subscriberinput__container_submitbutton:active {
+        transform: translateY(-0.2vh) !important; }
+      .subscriberinput__container_submitbutton:before {
+        content: "SUBSCRIBE";
+        font-weight: bold;
+        background: linear-gradient(-22deg, #711F73, #3d027c);
+        padding: .5rem 1.6rem;
+        border-radius: 24px;
+        transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
+      .subscriberinput__container_submitbutton:hover:before {
+        filter: hue-rotate(-60deg); }

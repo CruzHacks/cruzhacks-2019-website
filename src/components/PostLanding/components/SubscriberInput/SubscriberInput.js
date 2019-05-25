@@ -12,12 +12,15 @@ class SubscriberInput extends Component {
   constructor(props) {
     super(props);
     this.form = React.createRef();
-    this.state = {email: ''}
+    this.state = {
+      email: ''
+    }
     this.validateAndSubmit = this.validateAndSubmit.bind(this)
   }
-  
+
   getEmail = (event) => {
-    this.setState({email: event.target.value});
+    this.setState({email: event.target.value})
+    event.preventDefault()
   }
 
   validateAndSubmit() {
@@ -56,19 +59,23 @@ class SubscriberInput extends Component {
   render() {
     return (
       <OnVisible className="subscriberinput">
-        <form ref={this.form} className="subscriberinput_form" onSubmit={e => e.preventDefault()}>
-          <input
-            className="subscriberinput_inputbox"
-            id="email"
-            type="email"
-            placeholder="Add your email for updates!"
-            size="25"
-            onChange={this.getEmail}
-            value={this.state.email}
-            required
-          />
+        <form ref={this.form} className="subscriberinput__form" onSubmit={e => e.preventDefault()}>
+           <div className="subscriberinput__container"> 
+            <input
+              className="subscriberinput__container_inputbox"
+              id="email"
+              type="email"
+              size="25"
+              onChange={this.getEmail}
+              value={this.state.email}
+              required
+            />
+            <label className="subscriberinput__container_label" for="email">
+              Add your email for updates!
+            </label>
+          </div>
         </form>
-        <button className="subscriberinput_submitbutton" onClick={this.validateAndSubmit}></button>
+        <button className="subscriberinput__container_submitbutton" onClick={this.validateAndSubmit}></button>
       </OnVisible>
     );
   }

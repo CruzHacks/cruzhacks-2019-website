@@ -1,36 +1,57 @@
 .subscriberinput 
     align-items: center
     font-size: 2.2rem
-    &_form
+    &__form
         padding-bottom: 1.5rem
-    &_inputbox
-        width: auto
-        align-items: center
-        text-align: center
-        background: transparent
-        border: 0
-        outline: 0
-        border-bottom: 2px solid #711F73
-        color: white
-    &_submitbutton 
-        padding: 1.25rem 2.75rem
-        border-radius: 5rem
-        outline: none
-        text-transform: uppercase
-        background: linear-gradient(-22deg, #711F73, #3d027c)
-        border: 0
-        color: white
-        transform: translateY(-1px)
-        transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-        &:hover
-            transform: translateY(1px) !important
-            filter: hue-rotate(45deg)
-        &:before
-            content: "SUBSCRIBE"
-            font-weight: bold
+    &__container
+        position: relative
+        margin-top: -.5vh
+        &_inputbox
+            box-sizing: border-box
+            padding-bottom: .15vh
+            align-items: center
+            text-align: center
+            background: transparent
+            border: 0
+            border-bottom: 2px solid #711F73
+            color: white
+            &:focus
+                outline: 0
+                + label
+                    visibility: hidden
+                    opacity: 0
+                    transition: visibility 0s ease-out 300ms, opacity 300ms
+        &_label
+            position: absolute
+            color: grey
+            font-weight: 500
+            visibility: visible
+            opacity: 1
+            transition: visibility 0s ease-in 0s, opacity 300ms
+            cursor: text
+            margin-left: -13.2em
+        &_submitbutton 
+            padding: 1.25rem 2.75rem
+            border-radius: 5rem
+            outline: none
+            text-transform: uppercase
             background: linear-gradient(-22deg, #711F73, #3d027c)
-            padding: .2rem 1rem
-            border-radius: 24px
+            border: 0
+            color: white
+            transform: translateY(-1px)
             transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-        &:hover:before
-            filter: hue-rotate(-60deg)
+            &:hover
+                transform: translateY(1px) !important
+                filter: hue-rotate(45deg)
+            &:active
+                transform: translateY(-15.vh) !important
+            &:before
+                content: "SUBSCRIBE"
+                font-weight: bold
+                background: linear-gradient(-22deg, #711F73, #3d027c)
+                padding: .5rem 1.6rem
+                border-radius: 24px
+                transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
+            &:hover:before
+                filter: hue-rotate(-60deg)
+    
