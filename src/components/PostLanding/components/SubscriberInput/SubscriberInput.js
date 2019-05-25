@@ -22,6 +22,7 @@ class SubscriberInput extends Component {
   }
 
   tooltip(e, message, cl) {
+    console.log(e)
     let el = document.createElement('div');
     // making the text white for testing, still haven't figured out the styling
     // for the tooltip yet
@@ -102,7 +103,7 @@ class SubscriberInput extends Component {
               onChange={this.getEmail}
               value={this.state.email}
               required
-            />
+            /> <span className="subscriberinput__container_underline"></span>
             <label className={this.state.email ? 'subscriberinput__container_labelhidden' : 'subscriberinput__container_label'} for="email">
               Drop an email for updates!
             </label>

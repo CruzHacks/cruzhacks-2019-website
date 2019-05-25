@@ -2342,25 +2342,27 @@ span.time-day {
       box-sizing: border-box;
       padding-bottom: .15vh;
       align-items: center;
-      text-align: center;
       background: transparent;
       border: 0;
-      border-bottom: 2px solid #711F73;
       color: white;
-      width: 13em; }
-      .subscriberinput__container_inputbox:after {
-        border-bottom: 1px solid #af2f38;
-        transition: width .5s ease;
-        width: 0; }
-      .subscriberinput__container_inputbox:focus:after {
-        border-bottom: 1px solid #af2f38;
-        width: 13em; }
-      .subscriberinput__container_inputbox:focus {
-        outline: 0; }
-        .subscriberinput__container_inputbox:focus + label {
-          visibility: hidden;
-          opacity: 0;
-          transition: visibility 0s ease-out 300ms, opacity 300ms; }
+      width: 13em;
+      outline: 0; }
+      .subscriberinput__container_inputbox:focus ~ label {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s ease 300ms, opacity 300ms; }
+      .subscriberinput__container_inputbox:focus + span {
+        width: 13em;
+        transition: width 250ms ease-in-out; }
+      .subscriberinput__container_inputbox:hover + span {
+        width: 13em;
+        transition: width 250ms ease-in-out; }
+    .subscriberinput__container_underline {
+      display: block;
+      position: absolute;
+      border-bottom: 2px solid #711F73;
+      width: 0;
+      transition: width 250ms ease-in-out; }
     .subscriberinput__container_label {
       position: absolute;
       color: grey;
