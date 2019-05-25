@@ -12,9 +12,7 @@ class SubscriberInput extends Component {
   constructor(props) {
     super(props);
     this.form = React.createRef();
-    this.state = {
-      email: ''
-    }
+    this.state = {email: '', message: 'default'}
     this.validateAndSubmit = this.validateAndSubmit.bind(this)
   }
 
@@ -23,7 +21,23 @@ class SubscriberInput extends Component {
     event.preventDefault()
   }
 
-  validateAndSubmit() {
+  tooltip(e, message, cl) {
+    let el = document.createElement('div');
+    // making the text white for testing, still haven't figured out the styling
+    // for the tooltip yet
+    el.style="color: 'white'"
+    el.classList = "tooltip invisible"
+    el.innerHTML = message
+    while (cl && !e.className.includes(cl)) e = e.parentElement
+    
+    if([...e.children].reduce((open, el) => [...el.classList].includes('tooltip') && (open = true), false)) return
+    e.appendChild(el)
+    setTimeout(() => el.classList = "tooltip", 200)
+    setTimeout(() => el.classList += " invisible", 2000)
+    setTimeout(() => e.removeChild(el), 2200)
+  }
+
+  async validateAndSubmit(target) {
     if (this.form.current.reportValidity()) {
       // data object to be sent in request
       let data = JSON.stringify({
@@ -34,25 +48,45 @@ class SubscriberInput extends Component {
       // basic auth username and password
       var uname = process.env.REACT_APP_MAILCHIMP_USER;
       var key = process.env.REACT_APP_MAILCHIMP_SECRET;
+      var err_msg;
 
-      axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
-        auth: {
-          username: uname,
-          password: key
-        },
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      }).then(response => {
-        console.log("Successfully Added New Member to List");
-        console.log(response);
-      }).catch(error => {
-        if (error.response.data.title === "Member Exists") {
-          console.log("Member Already Exists");
-        } else {
-          console.error(error);
-        }
-      });
+      // surrounded request with a try catch thinking I could capture the strange
+      // 400 response saying that it needs an API key... This method might not
+      // even have to be asynchronous anymore, but this is where I left off.
+      try {
+        await axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
+          auth: {
+            username: uname,
+            password: key
+          },
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }).then(response => {
+          err_msg = 'Subscribed!';
+          this.setState({message: err_msg});
+          this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
+          console.log(response);
+        }).catch(error => {
+          if (error.response) {
+            if (error.response.data.title === "Member Exists") {
+              err_msg = 'Already Subscribed!';
+              this.setState({message: err_msg});
+              this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
+            }
+          } else {
+            err_msg = 'Something Went Wrong';
+            this.setState({message: err_msg});
+            this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
+            console.log(error);
+          }
+        });
+      } catch(error) {
+        err_msg = 'Something Went Wrong';
+        this.setState({message: err_msg});
+        this.tooltip(target, this.state.message, "subscriberinput_submitbutton");
+        console.log(error);
+      }
     }
   }
 
@@ -65,17 +99,18 @@ class SubscriberInput extends Component {
               className="subscriberinput__container_inputbox"
               id="email"
               type="email"
-              size="25"
               onChange={this.getEmail}
               value={this.state.email}
               required
             />
-            <label className="subscriberinput__container_label" for="email">
-              Add your email for updates!
+            <label className={this.state.email ? 'subscriberinput__container_labelhidden' : 'subscriberinput__container_label'} for="email">
+              Drop an email for updates!
             </label>
           </div>
         </form>
-        <button className="subscriberinput__container_submitbutton" onClick={this.validateAndSubmit}></button>
+        <button className="subscriberinput__container_submitbutton"
+          onClick={ (e) => { this.validateAndSubmit(e.target); }} target="_blank">
+        </button>
       </OnVisible>
     );
   }

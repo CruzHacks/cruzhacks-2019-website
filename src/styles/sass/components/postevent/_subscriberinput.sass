@@ -1,4 +1,14 @@
 .subscriberinput 
+    @mixin label
+        position: absolute
+        color: grey
+        font-weight: 500
+        visibility: visible
+        opacity: 1
+        transition: visibility 0s ease-in 0s, opacity 300ms
+        cursor: text
+        top: 0
+        left: 4px
     align-items: center
     font-size: 2.2rem
     &__form
@@ -6,6 +16,7 @@
     &__container
         position: relative
         margin-top: -.5vh
+        display: inline-block
         &_inputbox
             box-sizing: border-box
             padding-bottom: .15vh
@@ -15,6 +26,14 @@
             border: 0
             border-bottom: 2px solid #711F73
             color: white
+            width: 13em
+            &:after
+                border-bottom: 1px solid #af2f38
+                transition: width .5s ease
+                width: 0
+            &:focus:after
+                border-bottom: 1px solid #af2f38
+                width: 13em
             &:focus
                 outline: 0
                 + label
@@ -22,14 +41,11 @@
                     opacity: 0
                     transition: visibility 0s ease-out 300ms, opacity 300ms
         &_label
-            position: absolute
-            color: grey
-            font-weight: 500
-            visibility: visible
-            opacity: 1
-            transition: visibility 0s ease-in 0s, opacity 300ms
-            cursor: text
-            margin-left: -13.2em
+            @include label
+        &_labelhidden
+            @include label
+            visibility: hidden
+            opacity: 0
         &_submitbutton 
             padding: 1.25rem 2.75rem
             border-radius: 5rem
@@ -44,7 +60,7 @@
                 transform: translateY(1px) !important
                 filter: hue-rotate(45deg)
             &:active
-                transform: translateY(-15.vh) !important
+                transform: translateY(-.15vh) !important
             &:before
                 content: "SUBSCRIBE"
                 font-weight: bold
