@@ -140,6 +140,12 @@ a {
   opacity: 1;
   transform: translateY(0);
   transition: opacity .2s ease, transform .2s ease; }
+  .tooltip.emailsubmit {
+    width: auto;
+    font-size: .7em;
+    top: 45px;
+    left: 1px;
+    transition: opacity 1s ease, transform 1s ease; }
   .tooltip.invisible {
     transform: translateY(-3px);
     opacity: 0; }
@@ -1875,7 +1881,8 @@ span.time-day {
   .actionbutton__codeOfConduct:hover {
     transform: translateY(-2px) !important; }
   .actionbutton__codeOfConduct:active {
-    transform: translateY(0.05vh) !important; }
+    transform: translateY(0.05vh) !important;
+    outline: none; }
   @media (max-width: 56.25em) {
     .actionbutton__codeOfConduct {
       margin: 1.5rem .5rem;
@@ -1904,7 +1911,8 @@ span.time-day {
   .actionbutton__sponsorship:hover {
     transform: translateY(-2px) !important; }
   .actionbutton__sponsorship:active {
-    transform: translateY(0.05vh) !important; }
+    transform: translateY(0.05vh) !important;
+    outline: none; }
   @media (max-width: 56.25em) {
     .actionbutton__sponsorship {
       margin: 1.5rem .5rem;
@@ -2408,19 +2416,23 @@ span.time-day {
       opacity: 0; }
     .subscriberinput__container_submitbutton {
       padding: 1.25rem 2.75rem;
+      position: absolute;
       border-radius: 5rem;
       text-transform: uppercase;
       background: linear-gradient(-22deg, #711F73, #3d027c);
       border: 0;
+      display: block;
+      right: 347.5px;
+      top: 26.5px;
       color: white;
       transform: translateY(-1px);
-      transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
+      transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
+      outline: none; }
       .subscriberinput__container_submitbutton:hover {
         transform: translateY(1px) !important;
         filter: hue-rotate(45deg); }
       .subscriberinput__container_submitbutton:active {
-        transform: translateY(-0.15vh) !important;
-        outline: none; }
+        transform: translateY(-0.15vh) !important; }
       .subscriberinput__container_submitbutton:before {
         content: "SUBSCRIBE";
         font-weight: bold;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { loadReCaptcha } from 'react-recaptcha-v3'
 
 import Hero from "components/PostLanding/components/Hero";
 import ColumnStats from "components/PostLanding/components/ColumnStats"
@@ -13,6 +14,10 @@ import ActionButton from "components/PostLanding/components/ActionButton"
 import MediaButtons from "components/PostLanding/components/MediaButtons"
 
 class PostLanding extends Component {
+  componentDidMount() {
+    loadReCaptcha(process.env.REACT_APP_RECAPTCHA_SITE_KEY)
+  }
+
   render() {
     let componentImport = c => ({
       "Hero": <Hero {...c.props} />,

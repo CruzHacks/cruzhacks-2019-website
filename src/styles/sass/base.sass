@@ -172,17 +172,23 @@ a
       justify-items: center
 
 .tooltip
-  position: absolute;
-  background: rgba(0,0,0,.3);
-  color: white;
-  padding: 11px;
-  font-size: 2.1em;
-  width: 95px;
-  border-radius: 8px;
-  top: 95px;
-  opacity: 1
+  position: absolute
+  background: rgba(0,0,0,.3)
+  color: white
+  padding: 11px
+  font-size: 2.1em
+  width: 95px
+  border-radius: 8px
+  top: 95px
+  opacity: 1   
   transform: translateY(0)
   transition: opacity .2s ease, transform .2s ease
+  &.emailsubmit
+    width: auto
+    font-size: .7em
+    top: 45px
+    left: 1px
+    transition: opacity 1s ease, transform 1s ease
   &.invisible
     transform: translateY(-3px)
     opacity: 0
