@@ -1847,7 +1847,7 @@ span.time-day {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 32px;
   width: 640px;
-  margin: 0 auto 10em auto;
+  margin: 4.25em auto 10em auto;
   padding: 50px; }
   @media (max-width: 56.25em) {
     .postlanding__container {
@@ -2336,12 +2336,12 @@ span.time-day {
     padding-bottom: 1.5rem; }
   .subscriberinput__container {
     position: relative;
-    margin-top: -.5vh;
     display: inline-block; }
     .subscriberinput__container_inputbox {
       box-sizing: border-box;
       padding-bottom: .15vh;
       align-items: center;
+      text-align: center;
       background: transparent;
       border: 0;
       color: white;
@@ -2350,38 +2350,47 @@ span.time-day {
       .subscriberinput__container_inputbox:focus ~ label {
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0s ease 300ms, opacity 300ms; }
-      .subscriberinput__container_inputbox:focus + span {
-        width: 13em;
-        transition: width 250ms ease-in-out; }
-      .subscriberinput__container_inputbox:hover + span {
-        width: 13em;
-        transition: width 250ms ease-in-out; }
+        transition: visibility 0s ease-in .2s, opacity .2s; }
+      .subscriberinput__container_inputbox:focus ~ span {
+        width: 100%;
+        transition: 0.4s ease-out;
+        left: 0; }
+      .subscriberinput__container_inputbox:hover ~ span {
+        width: 100%;
+        transition: 0.4s ease-out;
+        left: 0; }
+      .subscriberinput__container_inputbox:invalid {
+        box-shadow: none; }
     .subscriberinput__container_inputboxfilled {
       box-sizing: border-box;
       padding-bottom: .15vh;
       align-items: center;
+      text-align: center;
       background: transparent;
       border: 0;
       color: white;
       width: 13em;
       outline: 0; }
-      .subscriberinput__container_inputboxfilled + span {
-        width: 13em;
-        transition: width 250ms ease-in-out; }
+      .subscriberinput__container_inputboxfilled ~ span {
+        width: 100%;
+        transition: 0.4s ease-out;
+        left: 0; }
     .subscriberinput__container_underline {
       display: block;
       position: absolute;
-      border-bottom: 2px solid #711F73;
+      bottom: -2px;
+      left: 50%;
       width: 0;
-      transition: width 250ms ease-in-out; }
+      height: 2px;
+      background-color: #711F73;
+      transition: 0.4s ease-in; }
     .subscriberinput__container_label {
       position: absolute;
       color: grey;
       font-weight: 500;
       visibility: visible;
       opacity: 1;
-      transition: visibility 0s ease-in 0s, opacity 300ms;
+      transition: visibility 0s ease-in 0s, opacity .2s;
       cursor: text;
       top: 0;
       left: 4px; }
@@ -2391,7 +2400,7 @@ span.time-day {
       font-weight: 500;
       visibility: visible;
       opacity: 1;
-      transition: visibility 0s ease-in 0s, opacity 300ms;
+      transition: visibility 0s ease-in 0s, opacity .2s;
       cursor: text;
       top: 0;
       left: 4px;
@@ -2421,3 +2430,5 @@ span.time-day {
         transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
       .subscriberinput__container_submitbutton:hover:before {
         filter: hue-rotate(-60deg); }
+      .subscriberinput__container_submitbutton:active:before {
+        transform: translateY(0.05vh) !important; }

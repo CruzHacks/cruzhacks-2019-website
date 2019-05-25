@@ -26,7 +26,7 @@ class SubscriberInput extends Component {
     let el = document.createElement('div');
     // making the text white for testing, still haven't figured out the styling
     // for the tooltip yet
-    el.style="color: 'white'"
+
     el.classList = "tooltip invisible"
     el.innerHTML = message
     

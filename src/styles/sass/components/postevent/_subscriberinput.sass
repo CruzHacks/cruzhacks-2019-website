@@ -5,18 +5,20 @@
         font-weight: 500
         visibility: visible
         opacity: 1
-        transition: visibility 0s ease-in 0s, opacity 300ms
+        transition: visibility 0s ease-in 0s, opacity .2s
         cursor: text
         top: 0
         left: 4px
     @mixin span
-        + span
-            width: 13em
-            transition: width 250ms ease-in-out
+        ~ span
+            width: 100%
+            transition: 0.4s ease-out
+            left: 0
     @mixin input
         box-sizing: border-box
         padding-bottom: .15vh
         align-items: center
+        text-align: center
         background: transparent
         border: 0
         color: white
@@ -28,7 +30,6 @@
         padding-bottom: 1.5rem
     &__container
         position: relative
-        margin-top: -.5vh
         display: inline-block
         &_inputbox
             @include input
@@ -36,19 +37,24 @@
                 ~ label
                     visibility: hidden
                     opacity: 0
-                    transition: visibility 0s ease 300ms, opacity 300ms
+                    transition: visibility 0s ease-in .2s, opacity .2s
                 @include span
             &:hover
                 @include span
+            &:invalid
+                box-shadow: none
         &_inputboxfilled
             @include input
             @include span
         &_underline
             display: block
             position: absolute
-            border-bottom: 2px solid #711F73
+            bottom: -2px
+            left: 50%
             width: 0
-            transition: width 250ms ease-in-out
+            height: 2px
+            background-color: #711F73
+            transition: 0.4s ease-in
         &_label
             @include label
         &_labelhidden
@@ -79,4 +85,6 @@
                 transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
             &:hover:before
                 filter: hue-rotate(-60deg)
+            &:active:before
+                transform: translateY(.05vh) !important
     
