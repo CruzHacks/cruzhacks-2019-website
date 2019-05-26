@@ -156,10 +156,12 @@ a {
   opacity: 1;
   transform: translateY(0);
   transition: opacity .2s ease, transform .2s ease;
-  width: auto;
+  width: 10em;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 68.5px;
   font-size: .8em;
-  top: 45px;
-  left: 1px;
   transition: opacity .2s ease, transform .2s ease; }
   .emailsubmit.invisible {
     transform: translateY(-3px);
