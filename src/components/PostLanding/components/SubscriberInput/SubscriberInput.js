@@ -50,8 +50,12 @@ class SubscriberInput extends Component {
       var uname = process.env.REACT_APP_MAILCHIMP_USER
       var key = process.env.REACT_APP_MAILCHIMP_SECRET
       var err_msg
+
+      // fix CORS header
+      var proxy = "https://cors-anywhere.herokuapp.com/"
+      console.log(proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT)
       
-      await axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
+      await axios.post(proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
         auth: {
           username: uname,
           password: key
