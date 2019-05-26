@@ -32,8 +32,8 @@ class SubscriberInput extends Component {
     if([...e.children].reduce((open, el) => [...el.classList].includes('emailsubmit') && (open = true), false)) return
     e.appendChild(el)
     setTimeout(() => el.classList =  "emailsubmit", 200)
-    setTimeout(() => el.classList += " invisible", 2000)
-    setTimeout(() => e.removeChild(el), 2200)
+    setTimeout(() => el.classList += " invisible", 4000)
+    setTimeout(() => e.removeChild(el), 4200)
   }
 
   async validateAndSubmit(target) {
@@ -48,8 +48,10 @@ class SubscriberInput extends Component {
       var uname = process.env.REACT_APP_MAILCHIMP_USER
       var key = process.env.REACT_APP_MAILCHIMP_SECRET
       var err_msg
-      
-      await axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
+      // use external proxy to add CORS headers to response
+      var proxy = "https://cors-anywhere.herokuapp.com/"
+
+      await axios.post(proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
         auth: {
           username: uname,
           password: key
