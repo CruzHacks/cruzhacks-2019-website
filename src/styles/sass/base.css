@@ -1911,6 +1911,8 @@ span.time-day {
       font-size: 2rem; } }
   .actionbutton__codeOfConduct:hover {
     filter: hue-rotate(45deg); }
+  .actionbutton__codeOfConduct:active {
+    filter: hue-rotate(-60deg); }
 
 .actionbutton__sponsorship {
   font-weight: 400;
@@ -1941,6 +1943,8 @@ span.time-day {
       font-size: 2rem; } }
   .actionbutton__sponsorship:hover {
     filter: hue-rotate(45deg); }
+  .actionbutton__sponsorship:active {
+    filter: hue-rotate(-60deg); }
 
 .actionbutton__container {
   display: flex;
@@ -2469,4 +2473,5 @@ span.time-day {
         transform: translateY(1px) !important;
         filter: hue-rotate(45deg); }
       .subscriberinput__container_submitbutton:active {
-        transform: translateY(-0.15vh) !important; }
+        transform: translateY(-0.15vh) !important;
+        filter: hue-rotate(-60deg); }
