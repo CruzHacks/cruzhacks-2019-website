@@ -23,6 +23,7 @@ class SubscriberInput extends Component {
   }
 
   tooltip(e, message) {
+    this.setState({emailbutton: "SUBSCRIBE"})
     let el = document.createElement('div');
 
     el.classList = "emailsubmit invisible"
@@ -80,7 +81,6 @@ class SubscriberInput extends Component {
           this.tooltip(target, this.state.message)
           console.log(error)
         }
-        this.setState({emailbutton: "SUBSCRIBE"})
       });
     }
   }
