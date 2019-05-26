@@ -156,7 +156,7 @@ a {
   opacity: 1;
   transform: translateY(0);
   transition: opacity .2s ease, transform .2s ease;
-  width: 10em;
+  width: max-content;
   margin: auto;
   left: 0;
   right: 0;
