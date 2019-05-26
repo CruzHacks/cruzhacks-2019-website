@@ -102,13 +102,14 @@ class SubscriberInput extends Component {
               value={this.state.email}
               required
             /> <span className="subscriberinput__container_underline"></span>
-            <label id='label' className={this.state.email ? 'subscriberinput__container_labelhidden' : 'subscriberinput__container_label'} for="email">
+            <label id='label' title="Using ReCaptcha v3." className={this.state.email ? 'subscriberinput__container_labelhidden' : 'subscriberinput__container_label'} for="email">
               Drop an email for updates!
             </label>
           </div>
         </form>
         <button 
           type="submit" 
+          title="Using ReCaptcha v3."
           className="subscriberinput__container_submitbutton"
           onClick={ (e) => { this.validateAndSubmit(e.target); }}
           form="emailform"
