@@ -20,14 +20,13 @@ const uuidv5 = require('uuid/v5');
 
 const GlobalStyle = createGlobalStyle`
   #mlh-trust-badge {
-    display:block;
+    display: block;
     max-width:100px;
     min-width:60px;
-    position:fixed;
+    position:sticky;
     right:50px;
     top:0;
     width:10%;
-    z-index:10000
     @media(max-width: 900px) {
       display: none !important;
     }
