@@ -140,13 +140,28 @@ a {
   opacity: 1;
   transform: translateY(0);
   transition: opacity .2s ease, transform .2s ease; }
-  .tooltip.emailsubmit {
-    width: auto;
-    font-size: .7em;
-    top: 45px;
-    left: 1px;
-    transition: opacity 1s ease, transform 1s ease; }
   .tooltip.invisible {
+    transform: translateY(-3px);
+    opacity: 0; }
+
+.emailsubmit {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 11px;
+  font-size: 2.1em;
+  width: 95px;
+  border-radius: 8px;
+  top: 95px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .2s ease, transform .2s ease;
+  width: auto;
+  font-size: .75em;
+  top: 45px;
+  left: 1px;
+  transition: opacity .2s ease, transform .2s ease; }
+  .emailsubmit.invisible {
     transform: translateY(-3px);
     opacity: 0; }
 

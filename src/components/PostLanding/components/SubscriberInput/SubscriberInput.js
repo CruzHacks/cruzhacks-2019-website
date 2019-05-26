@@ -25,15 +25,13 @@ class SubscriberInput extends Component {
   tooltip(e, message) {
     console.log(e)
     let el = document.createElement('div');
-    // making the text white for testing, still haven't figured out the styling
-    // for the tooltip yet
 
-    el.classList = "tooltip emailsubmit invisible"
+    el.classList = "emailsubmit invisible"
     el.innerHTML = message
     
-    if([...e.children].reduce((open, el) => [...el.classList].includes('tooltip') && (open = true), false)) return
+    if([...e.children].reduce((open, el) => [...el.classList].includes('emailsubmit') && (open = true), false)) return
     e.appendChild(el)
-    setTimeout(() => el.classList = "tooltip emailsubmit", 200)
+    setTimeout(() => el.classList =  "emailsubmit", 200)
     setTimeout(() => el.classList += " invisible", 2000)
     setTimeout(() => e.removeChild(el), 2200)
   }
@@ -50,12 +48,8 @@ class SubscriberInput extends Component {
       var uname = process.env.REACT_APP_MAILCHIMP_USER
       var key = process.env.REACT_APP_MAILCHIMP_SECRET
       var err_msg
-
-      // fix CORS header
-      var proxy = "https://cors-anywhere.herokuapp.com/"
-      console.log(proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT)
       
-      await axios.post(proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
+      await axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT, data, {
         auth: {
           username: uname,
           password: key
@@ -66,7 +60,7 @@ class SubscriberInput extends Component {
       }).then(response => {
         err_msg = 'Watch out for our emails!'
         this.setState({message: err_msg})
-        this.tooltip(target, this.state.message, "subscriberinput_submitbutton")
+        this.tooltip(target, this.state.message)
         console.log(response)
       }).catch(error => {
         if (error.response) {
@@ -74,12 +68,12 @@ class SubscriberInput extends Component {
           if (error.response.data.title === "Member Exists") {
             err_msg = 'Already Subscribed!'
             this.setState({message: err_msg})
-            this.tooltip(target, this.state.message, "subscriberinput_submitbutton")
+            this.tooltip(target, this.state.message)
           }
         } else {
           err_msg = 'Something Went Wrong'
           this.setState({message: err_msg})
-          this.tooltip(target, this.state.message, "subscriberinput_submitbutton")
+          this.tooltip(target, this.state.message)
           console.log(error)
         }
       });

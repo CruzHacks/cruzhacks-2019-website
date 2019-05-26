@@ -12,13 +12,13 @@ setDefaultProps({
 class ShareButton extends Component {
   tooltip(e, message, cl, link) {
     let el = document.createElement('div');
-    el.classList = "tooltip emailsubmit invisible"
+    el.classList = "tooltip invisible"
     el.innerHTML = message
     while (cl && !e.className.includes(cl)) e = e.parentElement;
     
     if([...e.children].reduce((open, el) => [...el.classList].includes('tooltip') && (open = true), false)) return
     e.appendChild(el)
-    setTimeout(() => el.classList = "tooltip emailsubmit", 200)
+    setTimeout(() => el.classList = "tooltip", 200)
     setTimeout(() => el.classList += " invisible", 2000)
     setTimeout(() => e.removeChild(el), 2200)
     if (link) {
