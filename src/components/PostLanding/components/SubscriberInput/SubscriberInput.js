@@ -23,7 +23,6 @@ class SubscriberInput extends Component {
   }
 
   tooltip(e, message) {
-    console.log(e)
     let el = document.createElement('div');
 
     el.classList = "emailsubmit invisible"
@@ -31,9 +30,9 @@ class SubscriberInput extends Component {
     
     if([...e.children].reduce((open, el) => [...el.classList].includes('emailsubmit') && (open = true), false)) return
     e.appendChild(el)
-    setTimeout(() => el.classList =  "emailsubmit", 200)
-    setTimeout(() => el.classList += " invisible", 4000)
-    setTimeout(() => e.removeChild(el), 4200)
+    setTimeout(() => el.classList =  "emailsubmit", 300)
+    setTimeout(() => el.classList += " invisible", 4500)
+    setTimeout(() => e.removeChild(el), 4800)
   }
 
   async validateAndSubmit(target) {
@@ -67,8 +66,9 @@ class SubscriberInput extends Component {
       }).catch(error => {
         if (error.response) {
           console.log(error.response)
-          if (error.response.data.title === "Member Exists") {
-            err_msg = 'Already Subscribed!'
+          if (error.response.status === 400) {
+            if (error.response.data.title === "Member Exists") err_msg = "Already subscribed!"
+            else if (error.response.data.title === "Forgotten Email Not Subscribed") err_msg = "Previously unsubscribed! Can't add email :("
             this.setState({message: err_msg})
             this.tooltip(target, this.state.message)
           }

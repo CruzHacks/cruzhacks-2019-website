@@ -165,6 +165,10 @@ a {
     transform: translateY(-3px);
     opacity: 0; }
 
+.grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden; }
+
 .hero {
   min-height: 100vh;
   position: relative;
