@@ -24,8 +24,32 @@
         color: white
         width: 13em
         outline: 0
+    @mixin submitbutton
+        font-size: 2.2rem
+        position: static
+        border-radius: 5rem
+        text-transform: uppercase
+        background: linear-gradient(-22deg, #711F73, #3d027c)
+        border: 0
+        display: block
+        margin: auto
+        margin-top: -.25em
+        color: white
+        transform: translateY(-1px)
+        transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
+        outline: none
+        @include respond(tab-port)
+            padding: 1rem
+            margin-top: -.4em
+        &:hover
+            transform: translateY(1px) !important
+            filter: hue-rotate(45deg)
+        &:active
+            transform: translateY(-.15vh) !important
     align-items: center
     font-size: 2.2rem
+    @include respond(tab-port)
+        font-size: 2em
     &__form
         padding-bottom: 1.5rem
         @include respond(tab-port)
@@ -58,6 +82,8 @@
             height: 2px
             background-color: #711F73
             transition: 0.4s ease-in
+            @include respond(tab-port)
+                bottom: -0.95px
         &_label
             @include label
         &_labelhidden
@@ -65,33 +91,5 @@
             visibility: hidden
             opacity: 0
         &_submitbutton 
+            @include submitbutton
             padding: 1.25rem 2.75rem
-            position: static
-            border-radius: 5rem
-            text-transform: uppercase
-            background: linear-gradient(-22deg, #711F73, #3d027c)
-            border: 0
-            display: block
-            margin: auto
-            margin-top: -.25em
-            color: white
-            transform: translateY(-1px)
-            transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-            outline: none
-            &:hover
-                transform: translateY(1px) !important
-                filter: hue-rotate(45deg)
-            &:active
-                transform: translateY(-.15vh) !important
-            &:before
-                content: "SUBSCRIBE"
-                font-weight: bold
-                background: linear-gradient(-22deg, #711F73, #3d027c)
-                padding: .3rem 1.2rem
-                border-radius: 24px
-                transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease
-            &:hover:before
-                filter: hue-rotate(-60deg)
-            &:active:before
-                transform: translateY(.05vh) !important
-    

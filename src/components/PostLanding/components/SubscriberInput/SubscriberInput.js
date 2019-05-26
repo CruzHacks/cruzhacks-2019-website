@@ -13,7 +13,7 @@ class SubscriberInput extends Component {
   constructor(props) {
     super(props);
     this.form = React.createRef();
-    this.state = {email: '', message: 'default'}
+    this.state = {email: '', message: 'default',  emailbutton: 'SUBSCRIBE'}
     this.validateAndSubmit = this.validateAndSubmit.bind(this)
   }
 
@@ -27,22 +27,24 @@ class SubscriberInput extends Component {
 
     el.classList = "emailsubmit invisible"
     el.innerHTML = message
-    
+    let anchor = document.getElementById("emailform")
+
     if([...e.children].reduce((open, el) => [...el.classList].includes('emailsubmit') && (open = true), false)) return
-    e.appendChild(el)
+    anchor.appendChild(el)
     setTimeout(() => el.classList =  "emailsubmit", 300)
     setTimeout(() => el.classList += " invisible", 4500)
-    setTimeout(() => e.removeChild(el), 4800)
+    setTimeout(() => anchor.removeChild(el), 4800)
   }
 
   async validateAndSubmit(target) {
     if (this.form.current.reportValidity()) {
+      this.setState({emailbutton: "SENDING EMAIL..."})
       // data object to be sent in request
       let data = JSON.stringify({
         email_address: this.state.email,
         status: 'subscribed'
       });
-
+      
       // basic auth username and password
       var uname = process.env.REACT_APP_MAILCHIMP_USER
       var key = process.env.REACT_APP_MAILCHIMP_SECRET
@@ -78,6 +80,7 @@ class SubscriberInput extends Component {
           this.tooltip(target, this.state.message)
           console.log(error)
         }
+        this.setState({emailbutton: "SUBSCRIBE"})
       });
     }
   }
@@ -99,7 +102,7 @@ class SubscriberInput extends Component {
               value={this.state.email}
               required
             /> <span className="subscriberinput__container_underline"></span>
-            <label className={this.state.email ? 'subscriberinput__container_labelhidden' : 'subscriberinput__container_label'} for="email">
+            <label id='label' className={this.state.email ? 'subscriberinput__container_labelhidden' : 'subscriberinput__container_label'} for="email">
               Drop an email for updates!
             </label>
           </div>
@@ -110,6 +113,7 @@ class SubscriberInput extends Component {
           onClick={ (e) => { this.validateAndSubmit(e.target); }}
           form="emailform"
         >
+          {this.state.emailbutton}
         </button>
       </OnVisible>
     );

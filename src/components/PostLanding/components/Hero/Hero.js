@@ -75,7 +75,7 @@ class Hero extends Component {
 
   render() {
     return (
-      <div className="hero">
+      <div className="hero" id="hero">
         <img className="live-hero__left" src={heroLive} alt=""/>
         <img className="live-hero__right" src={heroLive} alt=""/>
         <div className="hero__background">

@@ -2360,6 +2360,9 @@ span.time-day {
 .subscriberinput {
   align-items: center;
   font-size: 2.2rem; }
+  @media (max-width: 56.25em) {
+    .subscriberinput {
+      font-size: 2em; } }
   .subscriberinput__form {
     padding-bottom: 1.5rem; }
     @media (max-width: 56.25em) {
@@ -2416,6 +2419,9 @@ span.time-day {
       height: 2px;
       background-color: #711F73;
       transition: 0.4s ease-in; }
+      @media (max-width: 56.25em) {
+        .subscriberinput__container_underline {
+          bottom: -0.95px; } }
     .subscriberinput__container_label {
       position: absolute;
       color: grey;
@@ -2439,7 +2445,7 @@ span.time-day {
       visibility: hidden;
       opacity: 0; }
     .subscriberinput__container_submitbutton {
-      padding: 1.25rem 2.75rem;
+      font-size: 2.2rem;
       position: static;
       border-radius: 5rem;
       text-transform: uppercase;
@@ -2451,20 +2457,14 @@ span.time-day {
       color: white;
       transform: translateY(-1px);
       transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-      outline: none; }
+      outline: none;
+      padding: 1.25rem 2.75rem; }
+      @media (max-width: 56.25em) {
+        .subscriberinput__container_submitbutton {
+          padding: 1rem;
+          margin-top: -.4em; } }
       .subscriberinput__container_submitbutton:hover {
         transform: translateY(1px) !important;
         filter: hue-rotate(45deg); }
       .subscriberinput__container_submitbutton:active {
         transform: translateY(-0.15vh) !important; }
-      .subscriberinput__container_submitbutton:before {
-        content: "SUBSCRIBE";
-        font-weight: bold;
-        background: linear-gradient(-22deg, #711F73, #3d027c);
-        padding: .3rem 1.2rem;
-        border-radius: 24px;
-        transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease; }
-      .subscriberinput__container_submitbutton:hover:before {
-        filter: hue-rotate(-60deg); }
-      .subscriberinput__container_submitbutton:active:before {
-        transform: translateY(0.05vh) !important; }
