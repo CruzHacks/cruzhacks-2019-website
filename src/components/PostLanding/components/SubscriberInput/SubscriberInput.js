@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import axios from "axios";
-import OnVisible, { setDefaultProps } from "react-on-visible";
+import React, { Component } from "react"
+import axios from "axios"
+import OnVisible, { setDefaultProps } from "react-on-visible"
 import { ReCaptcha } from 'react-recaptcha-v3'
 
 setDefaultProps({
@@ -24,7 +24,7 @@ class SubscriberInput extends Component {
 
   tooltip(e, message) {
     this.setState({emailbutton: "SUBSCRIBE"})
-    let el = document.createElement('div');
+    let el = document.createElement('div')
 
     el.classList = "emailsubmit invisible"
     el.innerHTML = message
@@ -37,7 +37,7 @@ class SubscriberInput extends Component {
     setTimeout(() => anchor.removeChild(el), 4800)
   }
 
-  async validateAndSubmit(target) {
+  async validateAndSubmit(e) {
     if (this.form.current.reportValidity()) {
       this.setState({emailbutton: "SENDING EMAIL..."})
       // data object to be sent in request
@@ -64,22 +64,19 @@ class SubscriberInput extends Component {
       }).then(response => {
         err_msg = 'Watch out for our emails!'
         this.setState({message: err_msg})
-        this.tooltip(target, this.state.message)
-        console.log(response)
+        this.tooltip(e, this.state.message)
       }).catch(error => {
         if (error.response) {
-          console.log(error.response)
           if (error.response.status === 400) {
             if (error.response.data.title === "Member Exists") err_msg = "Already subscribed!"
             else if (error.response.data.title === "Forgotten Email Not Subscribed") err_msg = "Previously unsubscribed! Can't add email :("
             this.setState({message: err_msg})
-            this.tooltip(target, this.state.message)
+            this.tooltip(e, this.state.message)
           }
         } else {
           err_msg = 'Something Went Wrong'
           this.setState({message: err_msg})
-          this.tooltip(target, this.state.message)
-          console.log(error)
+          this.tooltip(e, this.state.message)
         }
       });
     }
@@ -88,7 +85,7 @@ class SubscriberInput extends Component {
   render() {
     return (
       <OnVisible className="subscriberinput">
-        <form ref={this.form} id="emailform" className="subscriberinput__form" onSubmit={e => e.preventDefault()}>
+        <form ref={this.form} id="emailform" className="subscriberinput__form" onSubmit={this.validateAndSubmit}>
            <div className="subscriberinput__container">
            <ReCaptcha
                 sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
@@ -108,10 +105,8 @@ class SubscriberInput extends Component {
           </div>
         </form>
         <button 
-          type="submit" 
           title="Protected by ReCaptcha v3."
           className="subscriberinput__container_submitbutton"
-          onClick={ (e) => { this.validateAndSubmit(e.target); }}
           form="emailform"
         >
           {this.state.emailbutton}

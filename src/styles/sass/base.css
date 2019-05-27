@@ -2112,7 +2112,7 @@ span.time-day {
   .hero__background {
     position: sticky;
     top: 120px;
-    z-index: 1;
+    z-index: 0;
     margin-top: 13vh;
     padding-bottom: 15vh;
     background: #1d1922;
@@ -2463,7 +2463,6 @@ span.time-day {
       color: white;
       transform: translateY(-1px);
       transition: opacity 0.4s ease .27s, transform 0.2s ease, 0.8s filter ease;
-      outline: none;
       padding: 1.25rem 2.75rem; }
       @media (max-width: 56.25em) {
         .subscriberinput__container_submitbutton {
@@ -2474,4 +2473,5 @@ span.time-day {
         filter: hue-rotate(45deg); }
       .subscriberinput__container_submitbutton:active {
         transform: translateY(-0.15vh) !important;
-        filter: hue-rotate(-60deg); }
+        filter: hue-rotate(-60deg);
+        outline: 0; }
