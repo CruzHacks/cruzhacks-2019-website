@@ -143,6 +143,12 @@ a {
   .tooltip.invisible {
     transform: translateY(-3px);
     opacity: 0; }
+  @media (max-width: 37.5em) {
+    .tooltip {
+      padding: 6px;
+      font-size: 1.8em;
+      width: 75px;
+      top: -30px; } }
 
 .emailsubmit {
   position: absolute;
@@ -1907,7 +1913,7 @@ span.time-day {
   @media (max-width: 56.25em) {
     .actionbutton__codeOfConduct {
       margin: 1rem 0 1rem 0;
-      padding: 1rem;
+      padding: 1.5rem 2rem;
       font-size: 2rem; } }
   .actionbutton__codeOfConduct:hover {
     filter: hue-rotate(45deg); }
@@ -1939,7 +1945,7 @@ span.time-day {
   @media (max-width: 56.25em) {
     .actionbutton__sponsorship {
       margin: 1rem 0 1rem 0;
-      padding: 1rem;
+      padding: 1.5rem 2rem;
       font-size: 2rem; } }
   .actionbutton__sponsorship:hover {
     filter: hue-rotate(45deg); }
@@ -1951,8 +1957,10 @@ span.time-day {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  margin-top: 1rem;
   margin-bottom: 2rem; }
+  @media (max-width: 56.25em) {
+    .actionbutton__container {
+      margin-top: .75rem; } }
 
 .hero {
   min-height: 70vh;
@@ -2467,7 +2475,7 @@ span.time-day {
       padding: 1.25rem 2.75rem; }
       @media (max-width: 56.25em) {
         .subscriberinput__container_submitbutton {
-          padding: 1rem;
+          padding: 1.25rem 1.75rem;
           margin-top: -.4em; } }
       .subscriberinput__container_submitbutton:hover {
         transform: translateY(1px) !important;

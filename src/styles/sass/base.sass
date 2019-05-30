@@ -190,6 +190,11 @@ a
 
 .tooltip
   @include tooltip
+  @include respond(phone)
+    padding: 6px
+    font-size: 1.8em
+    width: 75px
+    top: -30px
 
 .emailsubmit
   @include tooltip 
