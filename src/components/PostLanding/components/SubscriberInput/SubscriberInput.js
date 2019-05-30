@@ -65,10 +65,8 @@ class SubscriberInput extends Component {
         err_msg = 'Watch out for our emails!'
         this.setState({message: err_msg})
         this.tooltip(target, this.state.message)
-        console.log(response)
       }).catch(error => {
         if (error.response) {
-          console.log(error.response)
           if (error.response.status === 400) {
             if (error.response.data.title === "Member Exists") err_msg = "Already subscribed!"
             else if (error.response.data.title === "Forgotten Email Not Subscribed") err_msg = "Previously unsubscribed! Can't add email :("
@@ -79,7 +77,6 @@ class SubscriberInput extends Component {
           err_msg = 'Something Went Wrong'
           this.setState({message: err_msg})
           this.tooltip(target, this.state.message)
-          console.log(error)
         }
       });
     }
