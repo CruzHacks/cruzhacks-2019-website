@@ -97,12 +97,12 @@ let sponsors = [{
 		name: 'Andrew Zhu',
 		email: 'me@andrew-zhu.com',
 		linkedin: 'https://www.linkedin.com/in/angzhu/',
-		photo: 'https://media.licdn.com/dms/image/C4E03AQFAcM1XrF72Vg/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=IgDe_1f0odC9mtOTCeVwlAyLDR15pQQBkCz7wvZnxd0',
+		photo: 'https://media.licdn.com/dms/image/C4E03AQFAcM1XrF72Vg/profile-displayphoto-shrink_800_800/0?e=1570665600&v=beta&t=4790mjF63EHFdJxqKgp1gBaqM1wy0UrhDFO7QtGbd78',
 	}, {
 		name: 'Tejas Shah',
 		email: 'tejashah88@gmail.com',
 		linkedin: 'https://www.linkedin.com/in/t-shah/',
-		photo: 'https://media.licdn.com/dms/image/C5603AQH5dX8BQXzDCA/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=Rb9a33a04S9qjVIapyJ5Jw0Wn0CGhcJL7P_BJZbpl94',
+		photo: 'https://media.licdn.com/dms/image/C5603AQH5dX8BQXzDCA/profile-displayphoto-shrink_800_800/0?e=1570665600&v=beta&t=IozN6T867HDIGby6t1Ta5NtI7sxQqFG1Noeu0Ez9Y_8',
   }],
   project: {
 		name: 'Iris',
