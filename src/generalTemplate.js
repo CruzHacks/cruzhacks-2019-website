@@ -75,23 +75,23 @@ const sponsorTemplate = [
 				},
 				info: [{
           name: 'Torin Foss',
-          photo: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/747/339/datas/profile.JPG',
+          photo: '/winner_torin_foss.jpeg',
           linkedin: 'https://www.linkedin.com/in/trfoss',
         }, {
           name: 'Esteban Vasquez',
-          photo: 'https://avatars3.githubusercontent.com/u/46833726?v=4?height=180&width=180',
+          photo: '/winner_esteban_vasquez.jpeg',
           linkedin: 'https://www.linkedin.com/in/vasquezesteban/',
         }, {
           name: 'Stewart Dulaney',
-          photo: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/429/527/datas/profile.jpg',
+          photo: '/winner_stewart_dulaney.jpg',
           linkedin: 'https://www.linkedin.com/in/stewartdulaney',
         }, {
           name: 'Andrew Zhu',
-          photo: 'https://media.licdn.com/dms/image/C4E03AQFAcM1XrF72Vg/profile-displayphoto-shrink_800_800/0?e=1570665600&v=beta&t=4790mjF63EHFdJxqKgp1gBaqM1wy0UrhDFO7QtGbd78',
+          photo: '/winner_andrew_zhu.jpeg',
           linkedin: 'https://www.linkedin.com/in/angzhu/',
         }, {
           name: 'Tejas Shah',
-          photo: 'https://media.licdn.com/dms/image/C5603AQH5dX8BQXzDCA/profile-displayphoto-shrink_800_800/0?e=1570665600&v=beta&t=IozN6T867HDIGby6t1Ta5NtI7sxQqFG1Noeu0Ez9Y_8',
+          photo: '/winner_tejas_shah.jpeg',
           linkedin: 'https://www.linkedin.com/in/t-shah/',
         }]
 			}
