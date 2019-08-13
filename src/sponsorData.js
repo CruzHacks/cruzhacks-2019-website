@@ -82,27 +82,27 @@ let sponsors = [{
 		name: 'Torin Foss',
 		email: 'tfoss@csumb.edu',
 		linkedin: 'https://www.linkedin.com/in/trfoss',
-		photo: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/747/339/datas/profile.JPG',
+		photo: '/winner_torin_foss.jpeg',
 	}, {
 		name: 'Esteban Vasquez',
 		email: 'eamaru.i@gmail.com',
 		linkedin: 'https://www.linkedin.com/in/vasquezesteban/',
-		photo: 'https://avatars3.githubusercontent.com/u/46833726?v=4?height=180&width=180',
+		photo: '/winner_esteban_vasquez.jpeg',
 	}, {
 		name: 'Stewart Dulaney',
 		email: 'stewart.dulaney@gmail.com',
 		linkedin: 'https://www.linkedin.com/in/stewartdulaney',
-		photo: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/429/527/datas/profile.jpg',
+		photo: '/winner_stewart_dylaney.jpg',
 	}, {
 		name: 'Andrew Zhu',
 		email: 'me@andrew-zhu.com',
 		linkedin: 'https://www.linkedin.com/in/angzhu/',
-		photo: 'https://media.licdn.com/dms/image/C4E03AQFAcM1XrF72Vg/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=IgDe_1f0odC9mtOTCeVwlAyLDR15pQQBkCz7wvZnxd0',
+		photo: '/winner_andrew_zhu.jpeg',
 	}, {
 		name: 'Tejas Shah',
 		email: 'tejashah88@gmail.com',
 		linkedin: 'https://www.linkedin.com/in/t-shah/',
-		photo: 'https://media.licdn.com/dms/image/C5603AQH5dX8BQXzDCA/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=Rb9a33a04S9qjVIapyJ5Jw0Wn0CGhcJL7P_BJZbpl94',
+		photo: '/winner_tejas_shah.jpeg',
   }],
   project: {
 		name: 'Iris',
