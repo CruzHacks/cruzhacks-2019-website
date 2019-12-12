@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
-import { loadReCaptcha } from 'react-recaptcha-v3'
+import React, { Component } from "react";
 
 import Hero from "components/PostLanding/components/Hero";
-import ColumnStats from "components/PostLanding/components/ColumnStats"
-import Collage from "components/PostLanding/components/Collage"
-import DisplayText from "components/PostLanding/components/DisplayText"
-import BigStat from "components/PostLanding/components/BigStat"
-import ColumnButtons from "components/PostLanding/components/ColumnButtons"
-import WinnerHighlight from "components/PostLanding/components/WinnerHighlight"
-import ProjectHighlight from "components/PostLanding/components/ProjectHighlight"
-import ShareButton from "components/PostLanding/components/ShareButton"
-import ActionButton from "components/PostLanding/components/ActionButton"
-import MediaButtons from "components/PostLanding/components/MediaButtons"
+import ColumnStats from "components/PostLanding/components/ColumnStats";
+import Collage from "components/PostLanding/components/Collage";
+import DisplayText from "components/PostLanding/components/DisplayText";
+import BigStat from "components/PostLanding/components/BigStat";
+import ColumnButtons from "components/PostLanding/components/ColumnButtons";
+import WinnerHighlight from "components/PostLanding/components/WinnerHighlight";
+import ProjectHighlight from "components/PostLanding/components/ProjectHighlight";
+import ShareButton from "components/PostLanding/components/ShareButton";
+import ActionButton from "components/PostLanding/components/ActionButton";
+import MediaButtons from "components/PostLanding/components/MediaButtons";
 
 class PostLanding extends Component {
-  componentDidMount() {
-    loadReCaptcha(process.env.REACT_APP_RECAPTCHA_SITE_KEY)
-  }
-
   render() {
-    let componentImport = c => ({
-      "Hero": <Hero {...c.props} />,
-      "DisplayText": <DisplayText {...c.props} />,
-      "ColumnStats": <ColumnStats {...c.props} />,
-      "Collage": <Collage {...c.props} />,
-      "BigStat": <BigStat {...c.props} />,
-      "ColumnButtons": <ColumnButtons {...c.props} />,
-      "WinnerHighlight": <WinnerHighlight {...c.props} />,
-      "ProjectHighlight": <ProjectHighlight {...c.props} />,
-      "ShareButton": <ShareButton {...c.props} />,
-      "ActionButton" : <ActionButton {...c.props} />,
-      "MediaButtons": <MediaButtons {...c.props} />
-    })[c.name]
+    let componentImport = c =>
+      ({
+        Hero: <Hero {...c.props} />,
+        DisplayText: <DisplayText {...c.props} />,
+        ColumnStats: <ColumnStats {...c.props} />,
+        Collage: <Collage {...c.props} />,
+        BigStat: <BigStat {...c.props} />,
+        ColumnButtons: <ColumnButtons {...c.props} />,
+        WinnerHighlight: <WinnerHighlight {...c.props} />,
+        ProjectHighlight: <ProjectHighlight {...c.props} />,
+        ShareButton: <ShareButton {...c.props} />,
+        ActionButton: <ActionButton {...c.props} />,
+        MediaButtons: <MediaButtons {...c.props} />,
+      }[c.name]);
     return (
       <div className="postlanding">
-        {this.props.data.slice(0,1).map(c => componentImport(c))}
+        {this.props.data.slice(0, 1).map(c => componentImport(c))}
         <div className="postlanding__container">
           {this.props.data.slice(1).map(c => componentImport(c))}
         </div>
@@ -42,20 +38,22 @@ class PostLanding extends Component {
     );
   }
   static defaultProps = {
-    data: [{
-      name: `Hero`,
-      props: {
-        minimal: true,
-      }
-    },
-    {
-      name: `DisplayText`,
-      props: {
-        header: `404 Page Not Found`,
-        paragraph: `This isn't a real postlanding page.`
-      }
-    }]
-  }
+    data: [
+      {
+        name: `Hero`,
+        props: {
+          minimal: true,
+        },
+      },
+      {
+        name: `DisplayText`,
+        props: {
+          header: `404 Page Not Found`,
+          paragraph: `This isn't a real postlanding page.`,
+        },
+      },
+    ],
+  };
 }
 
 export default PostLanding;
