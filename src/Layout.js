@@ -17,6 +17,8 @@ import 'styles/css/normalize.css';
 import 'styles/sass/base.css';
 
 const uuidv5 = require('uuid/v5');
+const uuid = require('uuid');
+
 
 const GlobalStyle = createGlobalStyle`
   #mlh-trust-badge {
@@ -59,7 +61,7 @@ class Layout extends Component {
                 }
               }/>
               <Route path="/live" exact component={Live}/>
-              {sponsorData.map(el => <Route path={`/${uuidv5(el.name, String(process.env.REACT_APP_SECRET_TOKEN))}/${el.name}`} exact render={() => <PostLanding data={sponsorTemplate(el).filter(e => e)}/>}/> )}
+              {/* {sponsorData.map(el => <Route path={`/${uuidv5(String(process.env.REACT_APP_SECRET_TOKEN),el.name)}/${el.name}`} exact render={() => <PostLanding data={sponsorTemplate(el).filter(e => e)}/>}/> )} */}
               <Route path={`/thankyou`} exact render={() => <PostLanding data={generalTemplate} />}/>
               <Route path="/" render={() => <PostLanding data={generalTemplate} />}/>
               {/* <Route path="/" component={Landing}/> */}
